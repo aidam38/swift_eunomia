@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Sort asteroid names (Milani & Knezevic style, hcluster output) according to astorb.dat.
+# Miroslav Broz (miroslav.broz@email.cz), Nov 5th 2002
+
+for FILE in $@ ; do
+
+# comments
+awk '/^#/{ print $0; }' $FILE
+
+# numbered
+awk '/^ *[0-9]+ /{ print $0; }' $FILE \
+  | sort -n
+
+# multi-opp
+cat $FILE \
+  | awk --re-interval '/^[0-9]{4}[A-Z]{2}[0-9]* /{ printf substr($1,1,5); printf "%03d", substr($1,7,3)+0; print substr($1,6,1) " " gensub("[0-9A-Z]+(.*)", "\\1", 1, $0);}' \
+  | sort -n \
+  | awk '{ printf substr($1,1,5) substr($1,9,1); n=substr($1,6,3); if (n!="000"){printf "%d",n;} print substr($0,11); }' \
+
+# P-L
+awk '/^[0-9]+P-L /{ print $0; }' $FILE \
+  | sort -n
+
+# T-?
+cat $FILE \
+  | awk '/^[0-9]+T-[0-9]+ /{ print substr($1,7,1) substr($1,1,4) " " gensub("[0-9A-Z]+(.*)", "\\1", 1, $0); }' $FILE \
+  | sort -n \
+  | awk '{ print substr($1,2,4) "T-" substr($1,1,1) substr($0,9); }' \
+
+done
+

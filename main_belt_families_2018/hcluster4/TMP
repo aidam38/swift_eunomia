@@ -1,0 +1,40 @@
+  printf("Enter the filename of the catalogue : ");
+  scanf("%80s",&catalogue);
+  printf("\ndesig_to_start = %s\n",desig_to_start);
+
+//  fp = fopen("input.list","w");	// dbg
+//  for(i=1;i<=ntp;i++){ fprintf(fp,"%s",cats[i]); }
+//  fclose(fp);
+
+//  for (i=1; i<=ntp; i++) { printf("%10s\n", desig[i]); }	// dbg
+//  printf("ahoj!\n");	// dbg
+
+
+  // READ THE PROPER ELEMENTS OF MULTI-OPPOSITION ASTEROIDS
+  fp = fopen(MULTANA,"r");
+  if (fp == NULL) {
+    printf("Error reading file %s.\n",MULTANA);
+    return;
+  }
+
+  while(fgetc(fp) != '\n');
+  while(fgetc(fp) != '\n');
+//  while(fgetc(fp) != '\n');
+
+  i=ntpnumb+1;
+
+  fgetfield(fp,field,LREC);
+
+  while (! feof(fp)) {
+    sscanf(field,"%10s %lg %lg %lg %lg %lg %d %d %d %lg",
+      &desig1,&mag[i],&sema[i],&ecc[i],&sinc[i],&n,&g,&s,&LCE,&My);
+    strcpy(cats[i],field);
+    strcpy(desig[i],desig1);
+
+    i++;
+    fgetfield(fp,field,LREC);
+  }
+
+  ntpmult=i-ntpnumb-1;
+  printf("Number of multioposition asteroids: %ld\n",ntpmult);
+

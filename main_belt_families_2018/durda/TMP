@@ -1,0 +1,7 @@
+
+
+    print "D_obs = " + str(D_obs)
+    print "N_obs = " + str(N_obs)
+    print "D = " + str(D)
+    print "N = " + str(N)
+

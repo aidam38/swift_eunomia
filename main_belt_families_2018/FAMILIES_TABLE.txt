@@ -1,0 +1,192 @@
+# FAMILIES_TABLE.txt
+# Families: a summary of ages, albedos, parent body sizes, escape velocities, etc.
+# Miroslav Broz (miroslav.broz@email.cz), Oct 23rd 2014
+# Original ref.: Broz et al. (2013) Astron. Astrophys. 551, A117.
+
+#  1. designation
+#  2. "traditional" name
+#  3. cutoff velocity v_cutoff (m/s)
+#  4. number of members
+#  5. mean geometric albedo p_V, a letter "w" denotes we used WISE data to determine the median albedo (and improve membership)
+#  6. taxonomic classification, or a proxy of it inferred from SDSS colours
+#  7. parent body size (km) from SFD, an additional "c" letter indicates that we prolonged the slope down to zero D
+#  8. PB size from SPH simulations (monoliths, Durda et al. 2007)
+#  9. largest fragment LF/PB volumetric ratio (our estimate and also the value inferred from D_Durda - the range is given in this case)
+# 10. escape velocity (m/s)
+# 11. SFD slope_1 (for larger D)
+# 12. slope_2 (for smaller D)
+# 13. value of the C parameter (expressed in 10^-4 AU units): 0.2 H = log_10(|a-a_c|/C) (Vokrouhlicky et al. 2006)
+# 14. age (Gyr) ... these ages should be adjusted according to Table 1 from Asteroid IV chapter (and Eq. 1)
+# 15. +-
+# 16. uncertainty
+# 17. PDS cross-identification of the family (Planetary Data System, by D. Nesvorny)
+# 18. notes, refs
+
+# dsg 	name		v_cutoff	N_members	p_V	tax.	D_PB	D_Durda		LF/PB		v_esc		slope_1		slope_2		C (10^-4 AU)	age +- uncertainty	PDS_id	notes, refs
+
+# REFERENCES:
+# Nesvorny et al. (2005)
+# Nesvorny, PDS node (2010)
+# Nesvorny, PDS node (2012)
+# Parker et al. (2008)
+# Carruba (2010), Novakovic et al (2011), Foglia & Masi (2004) - high-I families
+# Nesvorny & Vokrouhlicky (2006) - young clusters in osculating-element space
+# Vokrouhlicky et al. (2010) - Cybele region
+# Broz & Vokrouhlicky (2008) - J3/2 resonance
+# Broz & Rozehnal (2011) - Trojans
+# Milani et al. (2014)
+
+# CATALOGUES:
+# proper elements from AstDyS, numb.syn version May 1st 2014 (Novakovic et al. 2013)
+# WISE albedos (Mainzer et al. 2011)
+# Sloan DSS MOC4 colour indices (Parker et al. 2008)
+
+# Hungaria
+434 Hungaria		200		4598		0.35	E	25	-		0.15		15		-5.9		-3.1		-		0.5 +- 0.2		003	Hungaria, Warner et al. (2009)
+
+# inner main belt (a_p = 2.1 to 2.5 AU)
+4 Vesta			60		11169		0.351w	V	530	425!		0.995		314		-4.5		-2.9		1-3		<2.0 +- 1.0		401	old? but steep SFD, cratering, halo, unreliable V-shape		!!!
+8 Flora			112!		1926!		0.286w	S	148c	162		0.92-0.65	112		-3.7		-2.7		1.5-2.5		1.0 +- 0.5		402	cut by nu_6 resonance, LL chondrites, halo, H_limit = 15 mag
+20 Massalia		40		2980		0.215	S	146	144		0.995		86		-5.0		-3.0		0.2-0.3		0.3 +- 0.1		404		
+27 Euterpe		70		268		0.260w	S	118c	-		0.998		70		-2.9		-2.2		0.5-1.0		<1.0 +- 0		410	cratering					!!!
+44 Nysa_(Polana)	60		9957		0.278w	S	81c	?		0.65		48		-6.9		-2.6(0.5)	0.5-1.5		<1.5 +- 0		405	overlaps with (142) Polana and (495) Eulalia, halo	!!!
+84 Klio			125		107		0.060w	C/X	80c	85-90		0.74-0.68	50		-2.6		-1.7(0.3)	0.5-1.0		<1.0 +- 0		413	detectable in low-albedo data
+142 Polana_(Nysa)	100!		708		0.056w	C	>83c	110		0.31-0.12	49		-2.8		-2.5		-		>2.0 +- 0		-	Walsh et al. (2013), halo
+163 Erigone		60		1059		0.056	C/X	79	114		0.79-0.26	46		?		-3.6		0.2-0.3		0.3 +- 0.2		406	halo
+298 Baptistina		50		1249		0.160w	X	36c	95?		0.17		21		-3.6		-2.4		0.2-0.3		<0.3 +- 0		403	buried in (8) Flora
+302 Clarissa		30		75		0.054	C	39	-		0.96		23		?		-3.1		0.05-0.1	<0.1 +- 0		407	cratering
+313 Chaldaea		130		171		0.061w	C/X	97c	90-100		0.897-0.72	60		-3.2		-1.8(0.3)	0.5-1.5		<1.5 +- 0		415	low-albedo
+329 Svea		120		40		0.052w	C	69c	74		0.99-0.81	44		-6.6		-0.8?		0.3-0.5		<0.3 +- 0		416	
+495 Eulalia_(Polana)	100!		8090		0.06	C	100	110-160		0.064-0.016	58		-3.3		-2.8		-		1.2 +- 0.3		-	Walsh et al. (2013)
+623 Chimaera		120		86		0.054w	C/X	45c	54		0.54		32		?		-3.1		0.2-0.4		<0.4 +- 0		414	
+752 Sulamitis		60		191		0.042	C	65	-		0.83		39		-6.5		-2.3		0.2-0.4		<0.4 +- 0		408	
+1270 Datura		5		6		0.211w	S	9.6	?		0.98		5.7		?		?		?		0.00045 to 0.00060	411	Vokrouhlicky et al. (2009)
+1296 Andree		60		401		0.290w	S	17-74	-		0.010-0.95	10-43		?		-2.9(0.5)	0.5-1.0		<1.0 +- 0		?	depends on (79) Eurynome membership, (1296) is interloper? uncertain		!!!
+1892 Lucienne		100		57		0.223w	S	14	-		0.71		8		?		-4.4		0.1-0.3		<0.3 +- 0		409	
+1942 Jablunka		84		200		0.058w	C/X	30	?		0.19		17		?		-2.7		0.3-0.4		<0.4 +- 0		?	low-albedo
+6070 Rheinland		1		2		0.213	S	5.4	?		0.943		3.2		?		?		?		0.00001722 +- 0.00000028	-	a pair with (54827) 2001_NQ, Vokrouhlicky & Nesvorny (2009)
+21509 Lucascavin	1		3		?	S	4.1	?		0.92		2.4		?		?		?		0.0003 to 0.0008	412	Nesvorny & Vokrouhlicky (2006)	
+108138 2001_GB11	30		4		?	?	2.6	?		0.68		1.6		?		?		0.005?		<0.005 +- 0		417	
+
+# middle (a_p = 2.5 to 2.823 AU)
+3 Juno			50		449		0.250	S	233	?		0.999		139		-4.9		-3.2		0.3-0.7		<0.7 +- 0		501	cratering
+15 Eunomia		50		2867		0.187	S	259	292		0.958-0.66	153		-5.6		-2.3		1.5-2.5		2.5 +- 0.5		502	LHB? Michel et al. (2003) halo
+89 Julia		80		21		0.184	S	148	?		0.99996		87		?		-3.8?		0.05-0.1	<0.1 +- 0		540	
+128 Nemesis		60		654		0.052	C	189	197		0.987-0.87	112		-3.4		-3.3		0.2-0.3		0.2 +- 0.1		504	
+144 Vibilia		100!		433		0.063w	C	143c	145-155		0.99-0.80	84		-3.6		-1.8		0.4-0.6		<0.6 +- 0		529	
+145 Adeona		50		1161		0.065	C	171c	185		0.69-0.54	101		-5.2		-2.8		0.4-0.9		0.7 +- 0.5		505	cut by J5/2 resonance
+170 Maria		80		3094		0.249w	S	107c	120-130		0.070-0.048	63		-2.5(0.3)	-2.8		-		3.0 +- 1.0		506	LHB? halo
+173 Ino			55		494		0.25w	S	>20	50-60		0.0011-0.0008	12		-6.3		-3.5(0.3)	0.5-0.7		0.6 +- 0.1		522	(173) Ino is interloper, formerly (18466) 1995 SU37 which is not in the centre
+322 Phaeo		60		241		0.065w	C/X	68	85-90		0.86-0.39	40		-3.1		-2.0		0.2-0.5		<0.5 +- 0		530	
+363 Padua		50		596		0.097	C/X	76	106		0.045-0.017	45		-1.8		-3.0		0.4-0.6		0.3 +- 0.2		507	(110) Lydia is interloper
+369 Aeria		86		103		0.17w	C/X	71	71.5		0.97		42		?		-3.8		0.2-0.4		<0.04 +- 0		539	only part with sin I > 0.201
+396 Aeolia		20		124		0.171	C/X	35	39		0.966-0.70	20		?		-4.3		0.05-0.1	<0.1 +- 0		508	cratering
+410 Chloris		90		259		0.057	C	126c	154		0.952-0.52	74		?		-2.1		0.5-1.0		0.7 +- 0.4		509	
+569 Misa		70		543		0.031	C	88c	117		0.58-0.25	52		-3.9		-2.3		0.5-0.7		0.5 +- 0.2		510	
+606 Brangane		30		81		0.102	S	37	46		0.92-0.48	22		?		-3.8		0.01-0.1	0.05 +- 0.04		511	cut by J3/1 resonance
+668 Dora		50		837		0.054	C	85	165!		0.031-0.004	50		-4.2		-1.9		0.4-0.9		0.5 +- 0.2		512	possibly, (1734) Zhongolovich is an overlapping family
+808 Merxia		50		549		0.227	S	37	121!		0.66-0.018	22		-2.7		-3.4		0.3-0.5		0.3 +- 0.2		513	
+847 Agnia		40		1077		0.177	S	39	61		0.38-0.10	23		-2.8		-3.1		0.2-0.4		0.2 +- 0.1		514	
+1128 Astrid		50		265		0.044w	C	51	63?		0.66-0.34	30		-1.8		-3.2		0.1-0.15	0.1 +- 0.05		515	
+1272 Gefion		60		1947		0.20	S	74c	100-150!	0.001-0.004	60		-4.3		-2.5		-		0.48 +- 0.05		516	Nesvorny et al. (2009), L chondrites, halo
+1484 Postrema		80		41		0.048w	C/X	42	?		0.57		25		?		-3.2?		0.15-0.25	<0.25 +- 0		541	
+1644 Rafita		70		621		0.246w	S	27	?		0.14		16		-4.9		-3.5		0.4-0.7		<0.7 +- 0		518	(1644) Rafita is interloper
+1668 Hanna		80		251		0.051w	C/X	36	45-55		0.39-0.12	21		-3.6		-2.3		0.2-0.7		<0.7 +- 0		533	
+1726 Hoffmeister	40		822		0.035	C	93c	134		0.022-0.007	55		-4.5		-2.7		0.2-0.4		0.3 +- 0.2		519	
+2085 Henan		54		946		0.200w	S	27	-		0.13		16		-4.1		-3.2		0.5-1.0		<1.0 +- 0		542	halo				!!!
+2262 Mitidika		83		410		0.064w	C	49-79c	-		0.037-0.81	26-46		-4.5		-2.2		0.5-1.0		<1.0 +- 0		531	depends on (785) Zwetana membership, (2262) is interloper, overlaps with (3) Juno	!!!
+2344 Xizang		68		245		0.14w	?	12	?		0.063		7.2		?		-3.2?		0.2-0.3		<0.3 +- 0		536	
+2384 Schulhof		5		4		0.273	S	12	?		0.98		7		?		?		?		0.0007 to 0.0009	525	Vokrouhlicky & Nesvorny (2011)
+2732 Witt		60		985		0.260w	S	25	-		0.082		15		-4.0(0.3)	-3.8		0.5-1.0		<1.0 +- 0		535	only part with sin I > 0.099, above (363) Padua
+2782 Leonidas		50		130		0.065	C/X	26c	?		0.069		15		-2.5		-0.8		0.2-0.5		<0.5 +- 0		528	
+3152 Jones		40		20		0.053w	C/X	33	?		0.97		19		?		-2.0?		0.03-0.05	<0.05 +- 0		538	
+3811 Karma		80		125		0.053w	C/X	34	45-55		0.72-0.17	20		-4.3		-3.0		0.2-0.3		<0.3 +- 0		534	
+3815 Konig		60		177		0.044	C	33	?		0.32		20		?		-3.0		0.05-0.1	<0.1 +- 0		517	(1639) Bower is interloper
+4652 Iannini		20		119		0.315w	S	9.8	18-24		0.14-0.0095	5.8		?		-3.6		-		0.005 +- 0.005		520	
+5438 Lorre		20		19		0.053w	C	30	?		0.67		13		?		-3.2		?		0.0019 +- 0.0003	527	Novakovic et al. (2012)
+7353 Kazuia		50		23		0.206w	S	16	-		0.57		8		?		-1.8		0.05-0.1	<0.1 +- 0		532	
+14627 Emilkowalski	10		4		0.20w	S	7.4	?		0.90		4.4		?		-1.5?		?		0.00019 to 0.00025	523	Nesvorny & Vokrouhlicky (2006)
+16598 1992_YC2		5		3		?	S	4.7	?		0.94		2.8		?		?		?		0.00005 to 0.00025	524	Nesvorny & Vokrouhlicky (2006)
+53546 2000_BY6		40		52		0.139	?	11	?		0.086		6.7		?		-1.5?		0.15?		<0.15 +- 0		526	
+
+# pristine (a_p = 2.823 to 2.956 AU)
+81 Terpsichore		120		70		0.052	C	119	-		0.993		71		?		-4.4		0.1-0.5		<0.5 +- 0		622	younger? cratering
+158 Koronis		50		4225		0.147	S	122c	170-180		0.024-0.009	68		-3.6(0.3)	-2.3		-		2.5 +- 1.0		605	LHB? halo
+158 Koronis_(2)		10		222		0.144	S	48	49-53		0.986-0.72	28		?		-4.7		0.01-0.02	<0.02 +- 0		621	cratering, Molnar & Haegert (2009)
+627 Charis		80		235		0.067w	S	49	55?		0.55		32		?		-5.3		0.5-1.0		<1.0 +- 0		616	
+656 Beagle		24		63		0.089	C	64	-		0.56		38		-1.3		-1.4		0.1-0.2		<0.2 +- 0		620	
+832 Karin		6		432		0.174w	S	21	35-40		0.49-0.068	13		-5.6		-3.0		-		0.0058 +- 0.0002	610	Nesvorny & Bottke (2004)
+709 Fringilla		140		60		0.047	X	99c	130-140		0.93-0.41	59		-6.2		-1.7		1.5-2.5		<2.5 +- 0		623	old?				!!!
+918 Itha		120		61		0.240w	S	40c	?		0.21		24		-1.3		-1.1		1.0-1.5		<1.5 +- 0		633	strange SFD			!!!
+5567 Durisen		100		18		0.044w	X	42	-		0.89		25		?		-1.7		0.3-0.5		<0.5 +- 0		624	strange SFD
+5614 Yakovlev		100		34		0.05	C	22	-		0.28		13		?		-3.2		0.1-0.2		<0.2 +- 0		625	
+7481 San_Marcello	80		73		0.199w	C	21	-		0.10		13		?		-1.6(0.5)	0.5-1.5		<1.5 +- 0		626	incomplete SFD
+15454 1998YB3		50		14		0.054w	C	21	-		0.41		13		?		-1.6(0.3)	0.1-0.5		<0.5 +- 0		627	strange SFD
+15477 1999CG1		110		144		0.098w	S	25	-		0.065		14		?		-4.6(0.5)	1.0-1.5		<1.5 +- 0		628					!!!
+36256 1999XT17		60		30		0.210w	S	17	-		0.037		10		?		-1.4(0.5)	0.2-0.3		<0.3 +- 0		629	strange SFD	
+
+# outer (a_p = 2.956 to 3.28 AU)
+10 Hygiea		70		3122		0.055	C,B	410	442		0.976-0.78	243		-4.2		-3.2		-		2.0 +- 1.0		601	LHB? cratering, halo, no V-shape
+24 Themis		70		3581		0.066	C	268c	380-430!	0.43-0.09	158		-2.7		-2.4		-		2.5 +- 1.0		602	LHB? PB size? halo
+96 Aegle		60		108		0.071w	C/X	171	175-180		0.981-0.84	100		-7.3?		-3.3		0.3-0.4		<0.4 +- 0		630	
+137 Meliboea		95		199		0.054	C	174c	240-290!	0.59-0.20	102		-1.9		-1.8		2-3		<3.0 +- 0		604	old?				!!!
+221 Eos			50		5976		0.130 	K	208c	381!		0.13-0.020	123		-3.5		-2.1		1.5-2.0		1.3 +- 0.2		606	halo, Broz & Morbidelli (2013)
+283 Emma		75		345		0.050	C/X	152	185		0.92-0.51	90		?		-3.2		0.5-1.0		<1.0 +- 0		607	satellite
+293 Brasilia		60		282		0.175w	C/X	34	?		0.020		20		-1.4(0.5)	-3.7		0.15-0.3	0.05 +- 0.04		608	(293) is interloper
+375 Ursula		80		777		0.057w	C	203c	240-280		0.71-0.43	120		-4.1		-2.3		2.0-3.5		<3.5 +- 0		631	old? halo			!!!
+490 Veritas		40		1226		0.065w	C,P,D	148c	100-177		0.48-0.27	87		-3.3		-2.8		-		0.0083 +- 0.0005	609	(490) is interloper? (Michel et al. 2011)
+589 Croatia		57		165		0.055w	C/X	99c	105-110		0.78-0.61	65		-3.8		-2.4		0.6-0.7		<0.7 +- 0		638	
+618 Elfriede		60		56		0.052w	C	132c	132-137		0.975-0.874	78		-7.0(2.0)	-3.0?		0.15-0.2	<0.2 +- 0		632	secondary disruption in (375) Ursula
+778 Theobalda		60		154		0.060	C	97c	-		0.29		57		?		-2.9		0.1-0.3		0.007 +- 0.002		617	Novakovic (2010), contradicting D_PB and young age?			!!!
+816 Juliana		80		53		0.045w	C/X	52	?		0.88		31		?		-3.7		0.3-0.4		<0.4 +- 0		641	
+845 Naema		30		173		0.081	C	77c	81		0.35-0.30	46		-5.2		-2.9		0.15-0.25	0.1 +- 0.05		611	
+926 Imhilde		100		40		0.047w	C/X	49	54-62		0.74-0.48	29		?		-5.4(0.3)	0.1-0.2		<0.2 +- 0		639	
+1189 Terentia		50		18		0.070	C	56	-		0.990		33		?		-2.6?		0.1-0.2		<0.2 +- 0		618	cratering
+1332 Marconia		20		16		0.045w	C/X	52	?		?		31		?		-5.9		0.01-0.02	<0.02 +- 0		636	
+1400 Tirela		80		1001		0.070	S	86	-		0.12		86		-4.2		-3.4		0.5-1		<1.0 +- 0		612	halo
+3438 Inarrados		80		36		0.073w	C/X	36	-		0.35		21		-3.9		-0.8		0.2-0.5		<0.5 +- 0		634	
+3556 Lixiaohua		60		439		0.044w	C/X	62	120-220		0.029-0.001	35		-6.1		-3.3		0.2-0.3		0.15 +- 0.05		613	Novakovic et al. (2010), if large D_Durda must be older	!!!
+7468 Anfimov		40		45		0.162w	S	14c	?		0.37		8.2		-6.8?		-1.6		0.2-0.35	<0.35 +- 0		635	
+9506 Telramund		40		146		0.217w	S	22	-		0.05		13		-3.9		-3.7		0.1-0.5		<0.5 +- 0		614	
+10811 Lau		100		15		0.273w	S	11	-		0.77		5		?		-2.8		0.05-0.1	<0.1 +- 0		619	
+18405 1993_FY12		50		44		0.171w	C/X	15	-		0.23		15		-2.4		-2.4		0.1-0.2		<0.2 +- 0		615	cut by J5/2 resonance
+20647 P2012_F5_Gibbs	10		9		?	?	>9	?		0.9		5.4		?		?		?		0.0015 +- 0.0001	640	Novakovic et al. (2014)
+106302 2000_UJ87	60		52		0.046w	C/X	14.5	?		0.11		8.6		?		-4.1		0.06-0.12	<0.12 +- 0		637	
+
+# high-inclination
+25 Phocaea		160		1370		0.22	S	92c	-		0.54		55		-3.1		-2.4		1.5-3.0		<2.2 +- 0		701	old? high-I/e, cut by nu_6-nu_16 resonance, Carruba (2009)	!!!
+
+2 Pallas		200		64		0.163	B	498c	-		0.9996		295		?		-2.2		0.5-1.5		<0.5 +- 0		801	high-I, cratering, no V-shape
+148 Gallia		150		57		0.169	S	98	-		0.058		58		?		-3.6		0.4-0.6		<0.45 +- 0		802	high-I
+480 Hansa		150		651		0.256	S	60	-		0.83		35		-4.9		-3.2		1.5-2.0		<1.6 +- 0		803	high-I
+686 Gersuind		130		178		0.146	S	52c	-		0.48		40		?		-2.7		0.8-1.0		<0.8 +- 0		804	high-I, Gil-Hutton (2006)
+729 Watsonia		110		69		0.130w	S	52c	65-70		0.90-0.37	31		-2.6		-1.1(0.5)	0.4-1.0		<1.0 +- 0		537	Cellino et al. (2014)
+945 Barcelona		110		129		0.248	S	28	-		0.77		16		?		-3.5		0.2-0.3		<0.35 +- 0		805	high-I, Foglia & Masi (2004)
+1222 Tina		110		37		0.338	S	21	-		0.94		12		?		-4.1		0.1-0.2		<0.15 +- 0		806	high-I
+4203 Brucato		200		297		0.063w	C	45	80-90		0.066-0.008	27		?		-4.5		0.6-1.3		<1.3 +- 0		807	high-I, Carruba (2010)
+
+31 Euphrosyne		100		851		0.056	C	259	-		0.97		153		-4.9		-3.9		1.0-1.5		<1.5 +- 0		901	cratering, high-I					!!!
+702 Alauda		120		791		0.070	B	218c	290-330!	0.025		129		-3.9		-2.4		2.5-3.5		<3.5 +- 0		902	old? high-I, cut by J2/1 resonance, satellite (Margot & Rojo 2007)	!!!
+780 Armenia		60		34		0.051w	C/X	103c	105-110		0.992-0.82	61		-4.7		-1.5?		0.1-0.4		<0.4 +- 0		905	high-I
+1303 Luthera		100		142		0.043	X	92	-		0.81		54		-3.9		-2.7		0.3-0.5		<0.5 +- 0		904	high-I, above (375) Ursula
+
+# Cybele
+87 Sylvia		110		71		0.045	C/X	261	272		0.994-0.88	154		-5.2		-2.4		-		1.0 to 3.8		603	LHB? cratering, Cybele, Vokrouhlicky et al. (2010)
+107 Camilla		?		?		0.054	-	>226	?		?		?		?		?		-		3.8? +- 0		-	Cybele, non-existent, LHB?
+121 Hermione		?		?		0.058	-	>209	?		?		?		?		?		-		3.8? +- 0		-	Cybele, non-existent, LHB?
+909 Ulla		140		23		0.048w	C/X	117	120-130		0.992-0.72	69		?		-2.9		0.1-0.4		<0.4 +- 0		903	
+
+# Hildas
+153 Hilda		150		400		0.044	C	200	-		0.8		118		?		-2.8		-		3.8 +- 1.0		001	Hildas, LHB
+1911 Schubart		60		275		0.025	C	130	-		0.2		77		?		-2.7		-		1.7 +- 0.7		002	Hildas
+
+# Trojans
+624 Hektor		70		59		0.078	D	-	-		-		-		-		-		-		- +- 0			004	L4 Trojans, cratering, binary, satellite (Marchis et al. 2014)
+3548 Eurybates		50		171		0.055	C/P	110	-		-		-		-		-		-		1.0 to 3.8		005	L4 Trojans, old?
+9799 1996_RJ		20		9		0.058	?	-	-		-		-		-		-		-		- +- 0			006	L4 Trojans, young? very compact, Broz & Rozehnal (2011)
+20961 Arkesilaos	55		35		?	?	37	87		0.01		16		?		?		?		- +- 0			008	L4 Trojans
+
+4709 Ennomos		100		34		0.064	?	67	-		-		-		-		-		-		1.5 +- 0.5 		009	L5 Trojans
+247341 2001_UV209	120		30		0.088	?	32	80		0.005		14		?		?		?		- +- 0			010	L5 Trojans, Rozehnal & Broz (2013)
+
+

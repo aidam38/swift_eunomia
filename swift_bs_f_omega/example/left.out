@@ -1,0 +1,34 @@
+ Time =   0.40000E+03 =    0.00000 Myr
+  Fraction done =   1.09514031E-05
+ 1 out of  1 still active 
+  
+  Planet : 
+        #          a                e             i 
+        2         5.2022         0.0489         0.3280
+        3         9.5420         0.0539         0.9320
+        4        19.2018         0.0467         1.0293
+        5        30.1531         0.0077         0.7249
+  
+  Active Particles : 
+        #          a                 e            i             q              Q 
+        1         3.9889         0.1411         8.7414         3.4262         4.5517
+  
+  Discarded Particles :  0 out of  1
+  
+      #     why?  Last pl      a           q           Q             i
+                encountered 
+  
+  Fate of Discarded Particles : 
+     0 have istat(i,2) = -1  ==> Danby did not converge 
+     0 have istat(i,2) = -2  ==> Ejected from the system 
+     0 have istat(i,2) = -3  ==> Too far from the Sun 
+     0 have istat(i,2) = -4  ==> Too small a perihelion 
+     0 have istat(i,2) = -5  ==> Disrupted due to a collision 
+     0 have istat(i,2) = -6  ==> Mean semimajor axis criterion 
+     0 have istat(i,2) =  1  ==> Too close to the Sun 
+     0 have istat(i,2) =  2  ==> Too close to planet 2
+     0 have istat(i,2) =  3  ==> Too close to planet 3
+     0 have istat(i,2) =  4  ==> Too close to planet 4
+     0 have istat(i,2) =  5  ==> Too close to planet 5
+    --- 
+     0/   1

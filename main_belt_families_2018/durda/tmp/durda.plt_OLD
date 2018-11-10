@@ -1,0 +1,23 @@
+#!/usr/bin/gnuplot
+
+set xl "D [km]"
+set yl "N(>D)"
+
+set logscale xy
+
+load "durda.tmp2"
+
+set label sprintf("D_PB = %f", D_PB) at graph 0.1, graph 0.1
+set label sprintf("chi2 = %f", chi2) at graph 0.1, graph 0.05
+
+p "family.dat_hc" u 1:2 t "observed family" w lp lt 8,\
+  filename u ($1*D_PB/100.):2 t filename w lp lt 3,\
+  "durda.tmp1" u 1:2 t "chi^2" w l lt 1 lw 3
+pa -1
+
+set term png small
+set out sprintf("png/%s", filename)
+rep
+
+
+

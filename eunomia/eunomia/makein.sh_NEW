@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# geometry of the impact disruption
+F=180
+#F=0
+OMEGA=80
+
+# velocity field modifications
+v_R_koef=1.0
+v_T_koef=1.0
+v_W_koef=1.0
+v_R_shift=0.0
+v_T_shift=0.0
+v_W_shift=-100.0
+
+export F OMEGA
+
+cd propagate_to_given_f_omega
+./makein.sh
+cd ..
+
+# D_astorbifexists is from elsewhere <- for a particular value of albedo (0.12)
+awk '{ printf("%8.3f\n", $1/2.); }' < D.dat > R.dat
+./yarko.awk < R.dat
+
+cp propagate_to_given_f_omega/dump_pl.dat pl.in_PLANETSONLY
+
+# write the number of asteroids from D_astorbifexists to genvel3.in!
+./genvel3 < genvel3.in > genvel3.out
+./genvel3_RTW_SHIFT.awk $v_R_koef $v_T_koef $v_W_koef $v_R_shift $v_T_shift $v_W_shift genvel3.out propagate_to_given_f_omega/dump_tp.dat > tp.in
+
+xvpl2el < pl.in > pl.elmts
+xvtp2el < tp.in > tp.elmts
+
+# compute histogram of velocities:
+awk '!/^#/{ print sqrt($1**2+$2**2+$4**2); }' genvel3.out > genvel3.out_v
+echo -e "40\n0 1000\ngenvel3.out_v" > hist.in
+hist5 < hist.in > genvel3.out_v_h
+
+# some plots to check
+./genvel3.plt
+./tp.plt
+
+
+
+

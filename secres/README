@@ -1,0 +1,21 @@
+
+Spustit: ./secres_HUNGARIA.sh
+
+Kdyby bylo potreba doplnit dalsi rezonanci je potreba doplnit:
+
+1) prislusnou funkci a volani subrutiny writeout v secres.f a spustit make;
+2) vypocet isocar ve skriptu resonances_cntr.plt;
+3) kresleni isocar Gnuplotem v resonances_ae.plt a *_ai.plt.
+
+--
+
+16. 4. 2009: doplneni dalsi rezonance (2g+s-2g5-s7)
+
+23. 3. 2009: program jsme prepsali tak, aby se rozsahy psaly na JEDNOM miste!
+
+viz secres_*.sh
+
+POZOR! Na Hungarie to zdanlive nefunguje dobre: pravdepodobne se jedna
+o vliv Marsu.
+
+

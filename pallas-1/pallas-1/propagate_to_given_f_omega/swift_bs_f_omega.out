@@ -1,0 +1,786 @@
+---------------------------------------------------
+swift_rmvsy version May 9th 2008
+Author: Miroslav Broz, Charles University
+        e-mail: miroslav.broz@email.cz
+        http://sirrah.troja.mff.cuni.cz/yarko-site/
+---------------------------------------------------
+ 
+************* SWIFT: Version 2.0 *************
+  
+ Authors:
+    Martin Duncan: Queen's University 
+    Hal Levison: Southwest Research Institute 
+  
+  Please address any comments or questions to:
+    Hal Levison 
+    Geophysical, Astrophysical, & Planetary Sciences
+    Southwest Research Institute
+    1050 Walnut St.
+    Suite 429 
+    Boulder, Co  80302 
+    (303) 546-0290 
+    Fax: (303) 546-9687 
+    (D)  swri::levison 
+    (I)  hal@gort.space.swri.edu 
+  
+ Enter name of parameter data file : 
+ Parameter data file is param.in                                                                        
+ t0,tstop,dt :    0.0000000000000000        36525000.000000000        10.000000000000000     
+ dtout,dtdump :    3652.5000000000000        3652.5000000000000     
+ F T F F T F  =           18
+ rmin,rmax,rmaxu,qmin,lclose :   4.6800000000000001E-003   100.00000000000000       -1.0000000000000000        4.6800000000000001E-003 F
+ outfile : bin.dat                                                                         
+  
+  
+ Enter name of planet data file : 
+ Planet data file is pl.in                                                                           
+
+Number of bodies (incl. the Sun) is   5
+For each, list mass 
+Followed by x,y,z,vx,vy,vz : 
+
+   2.9591397914149967E-004
+   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+   2.8253459095242259E-007
+  -3.9699440983145049       -3.6209104829827310       -3.0009587219471778E-002
+   5.1124343060644220E-003  -5.2132666618303711E-003   1.0723051846337389E-005
+   8.4597151856806587E-008
+  -1.5495106250115820       -9.9429387816247168        6.9180962573172661E-002
+   5.2249727165443174E-003  -7.8637951927898063E-004  -7.7916817786037487E-005
+   1.2920249167819691E-008
+   19.391516274450058        4.3277256367168739       0.34923072477765732     
+  -9.3489412300550695E-004   3.6674184643677508E-003   1.2113947877875559E-005
+   1.5243589007842760E-008
+   25.239409114176048       -16.104125480339661       0.18802578705552031     
+   1.6818452377592801E-003   2.6657798579200471E-003  -3.4794920467031398E-005
+ Enter name of test particle data file : 
+ Test particle file called tp.in                                                                           
+  
+ ntp :            1
+ Warning:  The size of istat and rstat arrays is 
+           not NSTAT=          53 , but is            1
+  
+  
+  ************** MAIN LOOP ****************** 
+ Enter the value for eps : 
+  eps =    1.0000000000000000E-008
+  CONTINUE: 
+ Time =  3.66000E+03: fraction done = 0.000: Number of active tp =   1
+ Time =  7.31000E+03: fraction done = 0.000: Number of active tp =   1
+ Time =  1.09600E+04: fraction done = 0.000: Number of active tp =   1
+ Time =  1.46100E+04: fraction done = 0.000: Number of active tp =   1
+ Time =  1.82700E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  2.19200E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  2.55700E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  2.92200E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  3.28800E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  3.65300E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  4.01800E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  4.38300E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  4.74900E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  5.11400E+04: fraction done = 0.001: Number of active tp =   1
+ Time =  5.47900E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  5.84400E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  6.21000E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  6.57500E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  6.94000E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  7.30500E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  7.67100E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  8.03600E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  8.40100E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  8.76600E+04: fraction done = 0.002: Number of active tp =   1
+ Time =  9.13200E+04: fraction done = 0.003: Number of active tp =   1
+ Time =  9.49700E+04: fraction done = 0.003: Number of active tp =   1
+ Time =  9.86200E+04: fraction done = 0.003: Number of active tp =   1
+ Time =  1.02270E+05: fraction done = 0.003: Number of active tp =   1
+ Time =  1.05930E+05: fraction done = 0.003: Number of active tp =   1
+ Time =  1.09580E+05: fraction done = 0.003: Number of active tp =   1
+ Time =  1.13230E+05: fraction done = 0.003: Number of active tp =   1
+ Time =  1.16880E+05: fraction done = 0.003: Number of active tp =   1
+ Time =  1.20540E+05: fraction done = 0.003: Number of active tp =   1
+ Time =  1.24190E+05: fraction done = 0.003: Number of active tp =   1
+ Time =  1.27840E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.31490E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.35150E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.38800E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.42450E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.46100E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.49760E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.53410E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.57060E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.60710E+05: fraction done = 0.004: Number of active tp =   1
+ Time =  1.64370E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.68020E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.71670E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.75320E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.78980E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.82630E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.86280E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.89930E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.93590E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  1.97240E+05: fraction done = 0.005: Number of active tp =   1
+ Time =  2.00890E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.04540E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.08200E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.11850E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.15500E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.19150E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.22810E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.26460E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.30110E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.33760E+05: fraction done = 0.006: Number of active tp =   1
+ Time =  2.37420E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.41070E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.44720E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.48370E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.52030E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.55680E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.59330E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.62980E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.66640E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.70290E+05: fraction done = 0.007: Number of active tp =   1
+ Time =  2.73940E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  2.77590E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  2.81250E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  2.84900E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  2.88550E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  2.92200E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  2.95860E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  2.99510E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  3.03160E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  3.06810E+05: fraction done = 0.008: Number of active tp =   1
+ Time =  3.10470E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.14120E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.17770E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.21420E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.25080E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.28730E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.32380E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.36030E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.39690E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.43340E+05: fraction done = 0.009: Number of active tp =   1
+ Time =  3.46990E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.50640E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.54300E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.57950E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.61600E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.65250E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.68910E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.72560E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.76210E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.79860E+05: fraction done = 0.010: Number of active tp =   1
+ Time =  3.83520E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  3.87170E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  3.90820E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  3.94470E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  3.98130E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  4.01780E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  4.05430E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  4.09080E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  4.12740E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  4.16390E+05: fraction done = 0.011: Number of active tp =   1
+ Time =  4.20040E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.23690E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.27350E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.31000E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.34650E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.38300E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.41960E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.45610E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.49260E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.52910E+05: fraction done = 0.012: Number of active tp =   1
+ Time =  4.56570E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.60220E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.63870E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.67520E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.71180E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.74830E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.78480E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.82130E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.85790E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.89440E+05: fraction done = 0.013: Number of active tp =   1
+ Time =  4.93090E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  4.96740E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.00400E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.04050E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.07700E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.11350E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.15010E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.18660E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.22310E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.25960E+05: fraction done = 0.014: Number of active tp =   1
+ Time =  5.29620E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.33270E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.36920E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.40570E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.44230E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.47880E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.51530E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.55180E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.58840E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.62490E+05: fraction done = 0.015: Number of active tp =   1
+ Time =  5.66140E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.69790E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.73450E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.77100E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.80750E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.84400E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.88060E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.91710E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.95360E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  5.99010E+05: fraction done = 0.016: Number of active tp =   1
+ Time =  6.02670E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.06320E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.09970E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.13620E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.17280E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.20930E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.24580E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.28230E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.31890E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.35540E+05: fraction done = 0.017: Number of active tp =   1
+ Time =  6.39190E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.42840E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.46500E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.50150E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.53800E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.57450E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.61110E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.64760E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.68410E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.72060E+05: fraction done = 0.018: Number of active tp =   1
+ Time =  6.75720E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  6.79370E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  6.83020E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  6.86670E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  6.90330E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  6.93980E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  6.97630E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  7.01280E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  7.04940E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  7.08590E+05: fraction done = 0.019: Number of active tp =   1
+ Time =  7.12240E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.15890E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.19550E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.23200E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.26850E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.30500E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.34160E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.37810E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.41460E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.45110E+05: fraction done = 0.020: Number of active tp =   1
+ Time =  7.48770E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.52420E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.56070E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.59720E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.63380E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.67030E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.70680E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.74330E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.77990E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.81640E+05: fraction done = 0.021: Number of active tp =   1
+ Time =  7.85290E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  7.88940E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  7.92600E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  7.96250E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  7.99900E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  8.03550E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  8.07210E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  8.10860E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  8.14510E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  8.18160E+05: fraction done = 0.022: Number of active tp =   1
+ Time =  8.21820E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.25470E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.29120E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.32770E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.36430E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.40080E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.43730E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.47380E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.51040E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.54690E+05: fraction done = 0.023: Number of active tp =   1
+ Time =  8.58340E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.61990E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.65650E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.69300E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.72950E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.76600E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.80260E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.83910E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.87560E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.91210E+05: fraction done = 0.024: Number of active tp =   1
+ Time =  8.94870E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  8.98520E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.02170E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.05820E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.09480E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.13130E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.16780E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.20430E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.24090E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.27740E+05: fraction done = 0.025: Number of active tp =   1
+ Time =  9.31390E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.35040E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.38700E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.42350E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.46000E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.49650E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.53310E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.56960E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.60610E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.64260E+05: fraction done = 0.026: Number of active tp =   1
+ Time =  9.67920E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  9.71570E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  9.75220E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  9.78870E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  9.82530E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  9.86180E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  9.89830E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  9.93480E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  9.97140E+05: fraction done = 0.027: Number of active tp =   1
+ Time =  1.00079E+06: fraction done = 0.027: Number of active tp =   1
+ Time =  1.00444E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.00809E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.01175E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.01540E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.01905E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.02270E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.02636E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.03001E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.03366E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.03731E+06: fraction done = 0.028: Number of active tp =   1
+ Time =  1.04097E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.04462E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.04827E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.05192E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.05558E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.05923E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.06288E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.06653E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.07019E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.07384E+06: fraction done = 0.029: Number of active tp =   1
+ Time =  1.07749E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.08114E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.08480E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.08845E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.09210E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.09575E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.09941E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.10306E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.10671E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.11036E+06: fraction done = 0.030: Number of active tp =   1
+ Time =  1.11402E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.11767E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.12132E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.12497E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.12863E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.13228E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.13593E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.13958E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.14324E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.14689E+06: fraction done = 0.031: Number of active tp =   1
+ Time =  1.15054E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.15419E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.15785E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.16150E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.16515E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.16880E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.17246E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.17611E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.17976E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.18341E+06: fraction done = 0.032: Number of active tp =   1
+ Time =  1.18707E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.19072E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.19437E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.19802E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.20168E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.20533E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.20898E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.21263E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.21629E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.21994E+06: fraction done = 0.033: Number of active tp =   1
+ Time =  1.22359E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.22724E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.23090E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.23455E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.23820E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.24185E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.24551E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.24916E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.25281E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.25646E+06: fraction done = 0.034: Number of active tp =   1
+ Time =  1.26012E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.26377E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.26742E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.27107E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.27473E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.27838E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.28203E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.28568E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.28934E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.29299E+06: fraction done = 0.035: Number of active tp =   1
+ Time =  1.29664E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.30029E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.30395E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.30760E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.31125E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.31490E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.31856E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.32221E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.32586E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.32951E+06: fraction done = 0.036: Number of active tp =   1
+ Time =  1.33317E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.33682E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.34047E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.34412E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.34778E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.35143E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.35508E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.35873E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.36239E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.36604E+06: fraction done = 0.037: Number of active tp =   1
+ Time =  1.36969E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.37334E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.37700E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.38065E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.38430E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.38795E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.39161E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.39526E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.39891E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.40256E+06: fraction done = 0.038: Number of active tp =   1
+ Time =  1.40622E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.40987E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.41352E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.41717E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.42083E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.42448E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.42813E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.43178E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.43544E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.43909E+06: fraction done = 0.039: Number of active tp =   1
+ Time =  1.44274E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.44639E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.45005E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.45370E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.45735E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.46100E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.46466E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.46831E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.47196E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.47561E+06: fraction done = 0.040: Number of active tp =   1
+ Time =  1.47927E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.48292E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.48657E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.49022E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.49388E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.49753E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.50118E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.50483E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.50849E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.51214E+06: fraction done = 0.041: Number of active tp =   1
+ Time =  1.51579E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.51944E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.52310E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.52675E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.53040E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.53405E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.53771E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.54136E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.54501E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.54866E+06: fraction done = 0.042: Number of active tp =   1
+ Time =  1.55232E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.55597E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.55962E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.56327E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.56693E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.57058E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.57423E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.57788E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.58154E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.58519E+06: fraction done = 0.043: Number of active tp =   1
+ Time =  1.58884E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.59249E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.59615E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.59980E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.60345E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.60710E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.61076E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.61441E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.61806E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.62171E+06: fraction done = 0.044: Number of active tp =   1
+ Time =  1.62537E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.62902E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.63267E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.63632E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.63998E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.64363E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.64728E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.65093E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.65459E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.65824E+06: fraction done = 0.045: Number of active tp =   1
+ Time =  1.66189E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.66554E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.66920E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.67285E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.67650E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.68015E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.68381E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.68746E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.69111E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.69476E+06: fraction done = 0.046: Number of active tp =   1
+ Time =  1.69842E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.70207E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.70572E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.70937E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.71303E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.71668E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.72033E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.72398E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.72764E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.73129E+06: fraction done = 0.047: Number of active tp =   1
+ Time =  1.73494E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.73859E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.74225E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.74590E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.74955E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.75320E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.75686E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.76051E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.76416E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.76781E+06: fraction done = 0.048: Number of active tp =   1
+ Time =  1.77147E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.77512E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.77877E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.78242E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.78608E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.78973E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.79338E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.79703E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.80069E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.80434E+06: fraction done = 0.049: Number of active tp =   1
+ Time =  1.80799E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.81164E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.81530E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.81895E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.82260E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.82625E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.82991E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.83356E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.83721E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.84086E+06: fraction done = 0.050: Number of active tp =   1
+ Time =  1.84452E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.84817E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.85182E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.85547E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.85913E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.86278E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.86643E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.87008E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.87374E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.87739E+06: fraction done = 0.051: Number of active tp =   1
+ Time =  1.88104E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.88469E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.88835E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.89200E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.89565E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.89930E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.90296E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.90661E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.91026E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.91391E+06: fraction done = 0.052: Number of active tp =   1
+ Time =  1.91757E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.92122E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.92487E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.92852E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.93218E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.93583E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.93948E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.94313E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.94679E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.95044E+06: fraction done = 0.053: Number of active tp =   1
+ Time =  1.95409E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.95774E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.96140E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.96505E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.96870E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.97235E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.97601E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.97966E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.98331E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.98696E+06: fraction done = 0.054: Number of active tp =   1
+ Time =  1.99062E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  1.99427E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  1.99792E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  2.00157E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  2.00523E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  2.00888E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  2.01253E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  2.01618E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  2.01984E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  2.02349E+06: fraction done = 0.055: Number of active tp =   1
+ Time =  2.02714E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.03079E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.03445E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.03810E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.04175E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.04540E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.04906E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.05271E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.05636E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.06001E+06: fraction done = 0.056: Number of active tp =   1
+ Time =  2.06367E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.06732E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.07097E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.07462E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.07828E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.08193E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.08558E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.08923E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.09289E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.09654E+06: fraction done = 0.057: Number of active tp =   1
+ Time =  2.10019E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.10384E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.10750E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.11115E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.11480E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.11845E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.12211E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.12576E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.12941E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.13306E+06: fraction done = 0.058: Number of active tp =   1
+ Time =  2.13672E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.14037E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.14402E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.14767E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.15133E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.15498E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.15863E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.16228E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.16594E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.16959E+06: fraction done = 0.059: Number of active tp =   1
+ Time =  2.17324E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.17689E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.18055E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.18420E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.18785E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.19150E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.19516E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.19881E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.20246E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.20611E+06: fraction done = 0.060: Number of active tp =   1
+ Time =  2.20977E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.21342E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.21707E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.22072E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.22438E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.22803E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.23168E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.23533E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.23899E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.24264E+06: fraction done = 0.061: Number of active tp =   1
+ Time =  2.24629E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.24994E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.25360E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.25725E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.26090E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.26455E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.26821E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.27186E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.27551E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.27916E+06: fraction done = 0.062: Number of active tp =   1
+ Time =  2.28282E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.28647E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.29012E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.29377E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.29743E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.30108E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.30473E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.30838E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.31204E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.31569E+06: fraction done = 0.063: Number of active tp =   1
+ Time =  2.31934E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.32299E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.32665E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.33030E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.33395E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.33760E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.34126E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.34491E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.34856E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.35221E+06: fraction done = 0.064: Number of active tp =   1
+ Time =  2.35587E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.35952E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.36317E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.36682E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.37048E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.37413E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.37778E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.38143E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.38509E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.38874E+06: fraction done = 0.065: Number of active tp =   1
+ Time =  2.39239E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.39604E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.39970E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.40335E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.40700E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.41065E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.41431E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.41796E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.42161E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.42526E+06: fraction done = 0.066: Number of active tp =   1
+ Time =  2.42892E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.43257E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.43622E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.43987E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.44353E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.44718E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.45083E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.45448E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.45814E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.46179E+06: fraction done = 0.067: Number of active tp =   1
+ Time =  2.46544E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.46909E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.47275E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.47640E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.48005E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.48370E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.48736E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.49101E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.49466E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.49831E+06: fraction done = 0.068: Number of active tp =   1
+ Time =  2.50197E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.50562E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.50927E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.51292E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.51658E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.52023E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.52388E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.52753E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.53119E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.53484E+06: fraction done = 0.069: Number of active tp =   1
+ Time =  2.53849E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.54214E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.54580E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.54945E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.55310E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.55675E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.56041E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.56406E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.56771E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.57136E+06: fraction done = 0.070: Number of active tp =   1
+ Time =  2.57502E+06: fraction done = 0.071: Number of active tp =   1
+ Time =  2.57867E+06: fraction done = 0.071: Number of active tp =   1
+ Time =  2.58232E+06: fraction done = 0.071: Number of active tp =   1
+ Time =  2.58597E+06: fraction done = 0.071: Number of active tp =   1
+
+ M       =    114.60291932518589       deg
+ u       =    127.97351980399357       deg
+ f       =    140.43567829805301       deg
+ f_final =    140.00000000000000       deg
+ omega       =    59.279330567495307       deg
+ omega_final =    60.000000000000007       deg
+  
+Normal termination of SWIFT (version 2.0)
+ ----------------------------------------------------

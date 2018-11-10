@@ -1,0 +1,146 @@
+#!/usr/bin/perl
+
+# swiftsplit
+# Split SWIFT job into several pieces (according to NTP).
+# Miroslav Broz (miroslav.broz@email.cz), Feb 3rd 2003
+
+if (@ARGV < 1) {
+  print "Split SWIFT job into several pieces (according to NTP).\n";
+  print "Usage: swiftsplit <directory> <ntp>\n";
+  exit 0;
+}
+$dir = $ARGV[0];
+$ntp = $ARGV[1];
+$driver = "swift_mvs2_fp_ye_yorp";
+$driver = "swift_rmvs3_fp_ye_yorp";
+$exefile = $driver;
+$shfile = $driver . ".sh";
+$driver .= ".in";
+
+sub readlines {
+  local ($file) = @_;
+  local ($in);
+
+  open(tmp,"<$dir/$file");
+  read(tmp,$in,-s tmp);
+  close(tmp);
+
+  return split(/\n/,$in);
+}
+
+# read standard input file
+@files = readlines($driver);
+if (@files == 0) {
+  print "File `$driver' not found.\n";
+  exit;
+}
+$tpfile = $files[2];
+$spfile = $files[5];
+$yefile = $files[6];
+$yofile = $files[7];
+$files[10] = $driver;
+$files[11] = $exefile;
+$files[12] = $shfile;
+@others = (0,1,3,4,8, 10,11,12);
+
+# read input files (to split)
+@tp = readlines($tpfile);
+if (length($spfile) > 0) { @sp = readlines($spfile); }
+if (length($yefile) > 0) { @ye = readlines($yefile); }
+if (length($yofile) > 0) { @yo = readlines($yofile); }
+
+# decide on number of TPs
+$ntpall = $tp[0];
+if (($ntpall+0) == 0) {
+  print "Number of TPs = 0. File `tp.in' not found?\n";
+  exit;
+}
+$tpl = int((@tp-1)/$ntpall);
+$nsplit = int($ntpall/$ntp);
+if ($nsplit*$ntp == $ntpall) { $nsplit--; }
+print "Splitting to " . ($nsplit+1) . " jobs.\n";
+
+# split input files
+$i = 0;
+$j = 0;
+$k = 1;
+$k_last = 0;
+$fmt = "%0" . length($nsplit+1) . "d";
+
+while ($i <= $ntpall) {
+  $i++;
+  $j++;
+  if (($j > $ntp) && ($k <= $nsplit)) {
+    $j = $j - $ntp;
+    $k++;
+  }
+  if ($k != $k_last) {
+    $k_last = $k;
+    if ($k <= $nsplit) {
+      $ntpout = $ntp;
+    } else {
+      $ntpout = $ntpall - $i + 1;
+    }
+    if ($k > 1) {
+      close(tp);
+      close(sp);
+      close(ye);
+      close(yo);
+    }
+
+# create output dir
+    $dirname = $dir . "_" . sprintf($fmt, $k);
+    print "$dirname: ntp = $ntpout\n";
+    mkdir $dirname,0755;
+
+# copy other common files
+    foreach $tmp (@others) {
+      if (length($files[$tmp]) > 0) {
+        `cp $dir/$files[$tmp] $dirname`;
+      }
+    }
+
+# print the headers of tp.in, spin.in, yarko.in and yorp.in files
+    open(tp,">$dirname/$tpfile");
+    print tp "$ntpout\n";
+
+    if (@sp > 1) {
+      open(sp,">$dirname/$spfile");
+      print sp "$ntpout\n$sp[1]\n$sp[2]\n";
+    }
+    if (@ye > 1) {
+      open(ye,">$dirname/$yefile");
+      print ye "$ntpout\n";
+    }
+    if (@yo > 1) {
+      open(yo,">$dirname/$yofile");
+      print yo "$ntpout\n";
+      for ($l=1; $l<=12; $l++) {
+        print yo "$yo[$l]\n";
+      }
+    }
+
+  } # k != k_last
+
+# split the files finally
+  for ($l=1; $l<=$tpl; $l++) {
+    print tp "$tp[($i-1)*$tpl+$l]\n";
+  }
+  if (@sp > 1) { print sp "$sp[$i+2]\n"; }
+  if (@ye > 1) { print ye "$ye[$i]\n"; }
+  if (@yo > 1) {
+    @col = split(" ", $yo[$i+12]);
+    print yo "$j	$col[1]\n";
+  }
+
+} # i <= ntpall
+
+# close output files
+close(tp);
+close(sp);
+close(ye);
+close(yo);
+
+exit;
+
+

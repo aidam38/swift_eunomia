@@ -1,0 +1,4 @@
+
+When (2) Pallas is among the PL, all TPs have to be SHIFTED a bit elsewhere!!!
+(Otherwise, there are NaN's in dump_tp.dat.)
+

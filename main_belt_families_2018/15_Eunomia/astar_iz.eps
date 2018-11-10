@@ -1,0 +1,3805 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: astar_iz.eps
+%%Creator: gnuplot 5.2 patchlevel 5
+%%CreationDate: Thu Nov  8 14:27:12 2018
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 410 302
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -60 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.2 (Dec 2017)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto closepath gsave fill grestore stroke} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (astar_iz.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.2 patchlevel 5)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Thu Nov  8 14:27:12 2018)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt Sep 2016
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if }
+    {} ifelse} def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+(Helvetica) findfont 180 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
+1.000 UL
+LTb
+LCb setrgbcolor
+1827 1166 M
+63 0 V
+4040 0 R
+-63 0 V
+stroke
+1719 1166 M
+[ [(Helvetica) 180.0 0.0 true true 0 (-0.4)]
+] -60.0 MRshow
+/Helvetica findfont 180 scalefont setfont
+/vshift -60 def
+1.000 UL
+LTb
+LCb setrgbcolor
+1827 1987 M
+63 0 V
+4040 0 R
+-63 0 V
+stroke
+1719 1987 M
+[ [(Helvetica) 180.0 0.0 true true 0 (-0.2)]
+] -60.0 MRshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1827 2807 M
+63 0 V
+4040 0 R
+-63 0 V
+stroke
+1719 2807 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0)]
+] -60.0 MRshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1827 3628 M
+63 0 V
+4040 0 R
+-63 0 V
+stroke
+1719 3628 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.2)]
+] -60.0 MRshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1827 4449 M
+63 0 V
+4040 0 R
+-63 0 V
+stroke
+1719 4449 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.4)]
+] -60.0 MRshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+2237 756 M
+0 63 V
+0 4040 R
+0 -63 V
+stroke
+2237 576 M
+[ [(Helvetica) 180.0 0.0 true true 0 (-0.4)]
+] -60.0 MCshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+3058 756 M
+0 63 V
+0 4040 R
+0 -63 V
+stroke
+3058 576 M
+[ [(Helvetica) 180.0 0.0 true true 0 (-0.2)]
+] -60.0 MCshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+3878 756 M
+0 63 V
+0 4040 R
+0 -63 V
+stroke
+3878 576 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0)]
+] -60.0 MCshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+4699 756 M
+0 63 V
+0 4040 R
+0 -63 V
+stroke
+4699 576 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.2)]
+] -60.0 MCshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+5520 756 M
+0 63 V
+0 4040 R
+0 -63 V
+stroke
+5520 576 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.4)]
+] -60.0 MCshow
+/Helvetica findfont 180 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCb setrgbcolor
+1827 2808 M
+4103 0 V
+stroke
+LTa
+LCb setrgbcolor
+3879 756 M
+0 4103 V
+stroke
+LTB
+LCb setrgbcolor
+1827 4859 N
+0 -4103 V
+4103 0 V
+0 4103 V
+-4103 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+1107 2807 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (i-z [mag])]
+] -60.0 MCshow
+grestore
+/Helvetica findfont 180 scalefont setfont
+LTb
+LCb setrgbcolor
+3878 306 M
+[ [(Helvetica) 180.0 0.0 true true 0 (a)]
+[(Helvetica) 144.0 90.0 true true 0 (*)]
+[(Helvetica) 180.0 0.0 true true 0 ( [mag])]
+] -78.0 MCshow
+/Helvetica findfont 180 scalefont setfont
+LTb
+% Begin plot #1
+1.000 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C 1.680 UP
+0.95 0.47 0.05 C 4617 2438 CircleF
+1.350 UP
+0.22 0.02 0.77 C 3427 3177 CircleF
+1.420 UP
+0.82 0.37 0.17 C 4412 2602 CircleF
+1.386 UP
+0.60 0.37 0.40 C 4043 2602 CircleF
+1.246 UP
+0.87 0.00 0.12 C 4494 3382 CircleF
+1.196 UP
+0.90 0.52 0.10 C 4535 2356 CircleF
+2.000 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.348 UP
+0.70 0.25 0.30 C 4207 2808 CircleF
+1.070 UP
+0.67 0.17 0.32 C 4166 2931 CircleF
+1.860 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+1.176 UP
+1.00 0.02 0.00 C 4986 3177 CircleF
+1.138 UP
+0.67 0.45 0.32 C 4166 2479 CircleF
+1.640 UP
+0.92 0.42 0.07 C 4576 2520 CircleF
+1.580 UP
+0.95 0.40 0.05 C 4617 2561 CircleF
+1.280 UP
+0.85 0.40 0.15 C 4453 2561 CircleF
+1.560 UP
+0.70 0.32 0.30 C 4207 2684 CircleF
+1.410 UP
+0.75 0.50 0.25 C 4289 2397 CircleF
+1.236 UP
+0.25 0.00 0.75 C 3468 3300 CircleF
+1.476 UP
+0.65 0.00 0.35 C 4125 3710 CircleF
+2.080 UP
+0.77 0.37 0.22 C 4330 2602 CircleF
+1.660 UP
+0.82 0.40 0.17 C 4412 2561 CircleF
+1.380 UP
+0.60 0.00 0.40 C 4043 3546 CircleF
+1.980 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+1.240 UP
+0.87 0.17 0.12 C 4494 2931 CircleF
+1.520 UP
+0.77 0.42 0.22 C 4330 2520 CircleF
+1.980 UP
+0.87 0.30 0.12 C 4494 2725 CircleF
+1.420 UP
+0.97 0.17 0.02 C 4658 2931 CircleF
+1.334 UP
+0.35 0.42 0.65 C 3632 2520 CircleF
+1.580 UP
+0.65 0.45 0.35 C 4125 2479 CircleF
+1.288 UP
+1.00 0.87 0.00 C 4822 1782 CircleF
+1.440 UP
+0.77 0.15 0.22 C 4330 2972 CircleF
+1.194 UP
+0.57 0.82 0.42 C 4002 1864 CircleF
+1.600 UP
+0.77 0.42 0.22 C 4330 2520 CircleF
+1.900 UP
+0.87 0.20 0.12 C 4494 2890 CircleF
+1.720 UP
+0.82 0.27 0.17 C 4412 2766 CircleF
+1.240 UP
+0.75 0.20 0.25 C 4289 2890 CircleF
+1.500 UP
+0.80 0.42 0.20 C 4371 2520 CircleF
+1.282 UP
+0.82 0.42 0.17 C 4412 2520 CircleF
+1.224 UP
+0.57 0.00 0.42 C 4002 3505 CircleF
+1.202 UP
+0.45 0.12 0.55 C 3796 3013 CircleF
+1.520 UP
+0.92 0.35 0.07 C 4576 2643 CircleF
+1.360 UP
+0.97 0.75 0.02 C 4658 1987 CircleF
+1.360 UP
+0.27 0.00 0.72 C 3509 4244 CircleF
+1.360 UP
+0.95 0.15 0.05 C 4617 2972 CircleF
+1.540 UP
+0.75 0.50 0.25 C 4289 2397 CircleF
+1.640 UP
+1.00 0.35 0.00 C 4699 2643 CircleF
+1.440 UP
+0.90 0.40 0.10 C 4535 2561 CircleF
+1.356 UP
+0.70 0.62 0.30 C 4207 2192 CircleF
+1.940 UP
+0.80 0.27 0.20 C 4371 2766 CircleF
+1.540 UP
+0.97 0.75 0.02 C 4658 1987 CircleF
+1.580 UP
+1.00 0.10 0.00 C 4781 3054 CircleF
+1.248 UP
+0.82 0.52 0.17 C 4412 2356 CircleF
+1.500 UP
+0.82 0.27 0.17 C 4412 2766 CircleF
+1.820 UP
+0.52 0.40 0.47 C 3920 2561 CircleF
+1.360 UP
+0.75 0.20 0.25 C 4289 2890 CircleF
+1.262 UP
+0.97 0.00 0.02 C 4658 3874 CircleF
+1.156 UP
+0.55 0.02 0.45 C 3961 3177 CircleF
+1.520 UP
+0.87 0.37 0.12 C 4494 2602 CircleF
+2.260 UP
+0.95 0.32 0.05 C 4617 2684 CircleF
+1.760 UP
+0.85 0.00 0.15 C 4453 3259 CircleF
+1.388 UP
+0.80 0.00 0.20 C 4371 3833 CircleF
+1.360 UP
+0.87 0.40 0.12 C 4494 2561 CircleF
+1.400 UP
+0.90 0.20 0.10 C 4535 2890 CircleF
+1.740 UP
+0.72 0.47 0.27 C 4248 2438 CircleF
+1.344 UP
+0.65 0.35 0.35 C 4125 2643 CircleF
+1.116 UP
+0.87 0.57 0.12 C 4494 2274 CircleF
+1.900 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.340 UP
+0.72 0.07 0.27 C 4248 3095 CircleF
+1.420 UP
+1.00 0.67 0.00 C 4740 2110 CircleF
+1.620 UP
+0.87 0.12 0.12 C 4494 3013 CircleF
+1.224 UP
+0.42 0.77 0.57 C 3755 1946 CircleF
+1.600 UP
+0.87 0.12 0.12 C 4494 3013 CircleF
+2.260 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.180 UP
+0.72 0.00 0.27 C 4248 3505 CircleF
+1.640 UP
+0.72 0.00 0.27 C 4248 3218 CircleF
+1.166 UP
+0.47 0.00 0.52 C 3837 3382 CircleF
+1.600 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.336 UP
+0.75 0.10 0.25 C 4289 3054 CircleF
+1.340 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.740 UP
+0.97 0.45 0.02 C 4658 2479 CircleF
+2.000 UP
+0.77 0.32 0.22 C 4330 2684 CircleF
+1.940 UP
+1.00 0.00 0.00 C 4740 3218 CircleF
+1.360 UP
+0.72 0.02 0.27 C 4248 3177 CircleF
+1.300 UP
+0.55 0.40 0.45 C 3961 2561 CircleF
+1.960 UP
+0.77 0.20 0.22 C 4330 2890 CircleF
+1.174 UP
+0.52 0.60 0.47 C 3920 2233 CircleF
+1.480 UP
+0.80 0.05 0.20 C 4371 3136 CircleF
+1.500 UP
+0.80 0.42 0.20 C 4371 2520 CircleF
+1.382 UP
+0.92 1.00 0.07 C 4576 1248 CircleF
+1.132 UP
+0.65 0.12 0.35 C 4125 3013 CircleF
+1.318 UP
+1.00 0.27 0.00 C 4740 2766 CircleF
+1.260 UP
+0.90 0.05 0.10 C 4535 3136 CircleF
+1.260 UP
+0.77 0.40 0.22 C 4330 2561 CircleF
+1.740 UP
+0.85 0.35 0.15 C 4453 2643 CircleF
+1.360 UP
+0.92 0.00 0.07 C 4576 3546 CircleF
+1.240 UP
+0.77 0.50 0.22 C 4330 2397 CircleF
+1.660 UP
+1.00 0.00 0.00 C 4863 3300 CircleF
+1.340 UP
+0.75 0.35 0.25 C 4289 2643 CircleF
+1.600 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.208 UP
+1.00 0.00 0.00 C 5068 3792 CircleF
+1.480 UP
+0.95 0.50 0.05 C 4617 2397 CircleF
+1.560 UP
+0.85 0.37 0.15 C 4453 2602 CircleF
+1.320 UP
+0.67 0.77 0.32 C 4166 1946 CircleF
+1.700 UP
+0.90 0.42 0.10 C 4535 2520 CircleF
+1.580 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.260 UP
+0.62 0.00 0.37 C 4084 3464 CircleF
+1.180 UP
+0.72 0.32 0.27 C 4248 2684 CircleF
+1.760 UP
+0.87 0.40 0.12 C 4494 2561 CircleF
+1.222 UP
+1.00 0.00 0.00 C 4781 3874 CircleF
+1.234 UP
+0.62 1.00 0.37 C 4084 1166 CircleF
+1.354 UP
+1.00 0.00 0.00 C 5068 3874 CircleF
+1.166 UP
+0.80 0.50 0.20 C 4371 2397 CircleF
+1.164 UP
+0.85 0.77 0.15 C 4453 1946 CircleF
+1.268 UP
+0.80 0.00 0.20 C 4371 3751 CircleF
+1.196 UP
+0.27 0.00 0.72 C 3509 3423 CircleF
+1.360 UP
+0.85 0.65 0.15 C 4453 2151 CircleF
+1.440 UP
+0.82 0.45 0.17 C 4412 2479 CircleF
+1.460 UP
+0.72 0.05 0.27 C 4248 3136 CircleF
+1.320 UP
+0.80 0.62 0.20 C 4371 2192 CircleF
+1.034 UP
+0.80 1.00 0.20 C 4371 1577 CircleF
+1.780 UP
+0.77 0.45 0.22 C 4330 2479 CircleF
+1.358 UP
+1.00 0.42 0.00 C 4740 2520 CircleF
+1.980 UP
+0.82 0.25 0.17 C 4412 2808 CircleF
+1.660 UP
+0.67 0.30 0.32 C 4166 2725 CircleF
+1.314 UP
+0.82 0.40 0.17 C 4412 2561 CircleF
+1.268 UP
+0.70 0.12 0.30 C 4207 3013 CircleF
+1.740 UP
+0.90 0.42 0.10 C 4535 2520 CircleF
+1.280 UP
+0.77 0.35 0.22 C 4330 2643 CircleF
+1.440 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.114 UP
+0.65 0.00 0.35 C 4125 3956 CircleF
+1.800 UP
+0.70 0.22 0.30 C 4207 2849 CircleF
+1.500 UP
+0.90 0.50 0.10 C 4535 2397 CircleF
+1.314 UP
+0.92 1.00 0.07 C 4576 1289 CircleF
+1.640 UP
+0.67 0.17 0.32 C 4166 2931 CircleF
+1.940 UP
+0.87 0.25 0.12 C 4494 2808 CircleF
+1.380 UP
+0.82 0.00 0.17 C 4412 3546 CircleF
+1.660 UP
+0.77 0.30 0.22 C 4330 2725 CircleF
+1.440 UP
+0.77 0.27 0.22 C 4330 2766 CircleF
+1.180 UP
+1.00 1.00 0.00 C 4822 1125 CircleF
+1.780 UP
+0.92 0.32 0.07 C 4576 2684 CircleF
+1.106 UP
+0.80 0.57 0.20 C 4371 2274 CircleF
+1.400 UP
+1.00 0.00 0.00 C 4986 3997 CircleF
+1.120 UP
+0.62 0.20 0.37 C 4084 2890 CircleF
+1.412 UP
+0.72 0.37 0.27 C 4248 2602 CircleF
+2.160 UP
+1.00 0.20 0.00 C 4699 2890 CircleF
+1.700 UP
+0.57 0.10 0.42 C 4002 3054 CircleF
+1.360 UP
+0.67 0.00 0.32 C 4166 3546 CircleF
+1.820 UP
+0.87 0.17 0.12 C 4494 2931 CircleF
+1.340 UP
+0.85 0.12 0.15 C 4453 3013 CircleF
+1.228 UP
+1.00 0.77 0.00 C 5027 1946 CircleF
+1.440 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+1.016 UP
+0.70 0.72 0.30 C 4207 2028 CircleF
+1.312 UP
+0.90 0.22 0.10 C 4535 2849 CircleF
+1.420 UP
+0.95 0.47 0.05 C 4617 2438 CircleF
+1.380 UP
+0.67 1.00 0.32 C 4166 1495 CircleF
+1.660 UP
+0.82 0.00 0.17 C 4412 3218 CircleF
+1.192 UP
+0.72 0.25 0.27 C 4248 2808 CircleF
+1.900 UP
+0.82 0.17 0.17 C 4412 2931 CircleF
+1.580 UP
+1.00 0.05 0.00 C 4863 3136 CircleF
+1.314 UP
+0.75 0.22 0.25 C 4289 2849 CircleF
+1.740 UP
+0.75 0.27 0.25 C 4289 2766 CircleF
+1.760 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.224 UP
+0.57 0.37 0.42 C 4002 2602 CircleF
+1.144 UP
+0.60 0.00 0.40 C 4043 3218 CircleF
+1.400 UP
+0.65 0.57 0.35 C 4125 2274 CircleF
+2.020 UP
+0.80 0.47 0.20 C 4371 2438 CircleF
+1.700 UP
+0.95 0.27 0.05 C 4617 2766 CircleF
+1.190 UP
+0.67 0.42 0.32 C 4166 2520 CircleF
+1.900 UP
+0.82 0.27 0.17 C 4412 2766 CircleF
+1.422 UP
+0.65 0.35 0.35 C 4125 2643 CircleF
+1.360 UP
+0.92 0.65 0.07 C 4576 2151 CircleF
+1.380 UP
+0.80 0.37 0.20 C 4371 2602 CircleF
+1.380 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+2.140 UP
+0.87 0.12 0.12 C 4494 3013 CircleF
+1.560 UP
+0.82 0.30 0.17 C 4412 2725 CircleF
+1.520 UP
+0.72 0.62 0.27 C 4248 2192 CircleF
+1.340 UP
+0.55 1.00 0.45 C 3961 1330 CircleF
+1.090 UP
+0.67 1.00 0.32 C 4166 1248 CircleF
+1.680 UP
+1.00 0.75 0.00 C 4740 1987 CircleF
+1.200 UP
+0.67 0.10 0.32 C 4166 3054 CircleF
+1.188 UP
+0.45 0.57 0.55 C 3796 2274 CircleF
+1.308 UP
+0.85 0.52 0.15 C 4453 2356 CircleF
+1.360 UP
+1.00 0.27 0.00 C 4740 2766 CircleF
+1.920 UP
+0.87 0.27 0.12 C 4494 2766 CircleF
+1.760 UP
+0.85 0.35 0.15 C 4453 2643 CircleF
+1.560 UP
+0.87 0.10 0.12 C 4494 3054 CircleF
+1.660 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.680 UP
+0.77 0.25 0.22 C 4330 2808 CircleF
+1.600 UP
+0.87 0.35 0.12 C 4494 2643 CircleF
+1.540 UP
+0.80 0.35 0.20 C 4371 2643 CircleF
+1.202 UP
+0.77 0.17 0.22 C 4330 2931 CircleF
+1.220 UP
+0.60 0.00 0.40 C 4043 3546 CircleF
+1.260 UP
+0.77 0.30 0.22 C 4330 2725 CircleF
+1.220 UP
+0.75 0.62 0.25 C 4289 2192 CircleF
+1.280 UP
+0.82 0.35 0.17 C 4412 2643 CircleF
+1.860 UP
+0.97 0.50 0.02 C 4658 2397 CircleF
+1.460 UP
+0.75 0.00 0.25 C 4289 3464 CircleF
+1.412 UP
+0.85 0.45 0.15 C 4453 2479 CircleF
+1.208 UP
+0.57 0.00 0.42 C 4002 3464 CircleF
+1.580 UP
+0.80 0.27 0.20 C 4371 2766 CircleF
+1.310 UP
+1.00 0.15 0.00 C 4699 2972 CircleF
+1.332 UP
+0.75 0.55 0.25 C 4289 2315 CircleF
+1.416 UP
+0.95 0.30 0.05 C 4617 2725 CircleF
+1.500 UP
+0.82 0.25 0.17 C 4412 2808 CircleF
+1.420 UP
+0.72 0.55 0.27 C 4248 2315 CircleF
+1.500 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.466 UP
+0.70 0.80 0.30 C 4207 1905 CircleF
+1.420 UP
+0.82 0.32 0.17 C 4412 2684 CircleF
+1.620 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.440 UP
+0.97 0.27 0.02 C 4658 2766 CircleF
+1.440 UP
+0.70 0.55 0.30 C 4207 2315 CircleF
+1.500 UP
+0.85 0.35 0.15 C 4453 2643 CircleF
+1.560 UP
+0.70 0.25 0.30 C 4207 2808 CircleF
+1.118 UP
+0.32 0.40 0.67 C 3591 2561 CircleF
+1.440 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.300 UP
+0.85 0.00 0.15 C 4453 3218 CircleF
+2.040 UP
+0.70 0.30 0.30 C 4207 2725 CircleF
+1.980 UP
+0.87 0.40 0.12 C 4494 2561 CircleF
+1.680 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.088 UP
+0.65 0.70 0.35 C 4125 2069 CircleF
+1.760 UP
+0.87 0.35 0.12 C 4494 2643 CircleF
+1.278 UP
+0.77 0.00 0.22 C 4330 3587 CircleF
+1.158 UP
+1.00 0.27 0.00 C 4740 2766 CircleF
+1.500 UP
+0.75 0.20 0.25 C 4289 2890 CircleF
+1.260 UP
+0.92 0.55 0.07 C 4576 2315 CircleF
+1.620 UP
+1.00 0.30 0.00 C 4740 2725 CircleF
+1.860 UP
+0.90 0.42 0.10 C 4535 2520 CircleF
+1.448 UP
+0.77 0.05 0.22 C 4330 3136 CircleF
+1.324 UP
+0.87 0.27 0.12 C 4494 2766 CircleF
+1.620 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.620 UP
+0.77 0.32 0.22 C 4330 2684 CircleF
+1.200 UP
+0.67 1.00 0.32 C 4166 1371 CircleF
+1.860 UP
+0.75 0.32 0.25 C 4289 2684 CircleF
+1.360 UP
+0.55 0.00 0.45 C 3961 3218 CircleF
+1.260 UP
+0.82 0.97 0.17 C 4412 1618 CircleF
+1.480 UP
+0.87 0.55 0.12 C 4494 2315 CircleF
+1.400 UP
+0.67 0.22 0.32 C 4166 2849 CircleF
+1.300 UP
+0.67 0.07 0.32 C 4166 3095 CircleF
+2.120 UP
+0.87 0.45 0.12 C 4494 2479 CircleF
+1.700 UP
+0.85 0.10 0.15 C 4453 3054 CircleF
+1.440 UP
+0.82 0.35 0.17 C 4412 2643 CircleF
+1.360 UP
+0.70 0.30 0.30 C 4207 2725 CircleF
+1.380 UP
+1.00 0.90 0.00 C 4904 1741 CircleF
+1.252 UP
+0.55 0.47 0.45 C 3961 2438 CircleF
+1.230 UP
+0.75 0.00 0.25 C 4289 3710 CircleF
+1.420 UP
+1.00 0.00 0.00 C 4699 3915 CircleF
+1.520 UP
+0.87 0.57 0.12 C 4494 2274 CircleF
+1.940 UP
+0.85 0.02 0.15 C 4453 3177 CircleF
+1.720 UP
+0.92 0.25 0.07 C 4576 2808 CircleF
+1.280 UP
+0.65 0.00 0.35 C 4125 3710 CircleF
+1.700 UP
+0.85 0.45 0.15 C 4453 2479 CircleF
+1.294 UP
+1.00 0.00 0.00 C 5150 4120 CircleF
+1.460 UP
+0.67 0.02 0.32 C 4166 3177 CircleF
+1.860 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.260 UP
+0.60 0.00 0.40 C 4043 3300 CircleF
+0.400 UP
+0.17 0.22 0.82 C 3345 2849 CircleF
+1.210 UP
+0.72 0.40 0.27 C 4248 2561 CircleF
+1.780 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.320 UP
+1.00 0.22 0.00 C 4699 2849 CircleF
+1.820 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.620 UP
+0.80 0.35 0.20 C 4371 2643 CircleF
+1.400 UP
+1.00 0.02 0.00 C 4781 3177 CircleF
+1.400 UP
+0.95 0.52 0.05 C 4617 2356 CircleF
+1.320 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.440 UP
+0.92 0.17 0.07 C 4576 2931 CircleF
+1.280 UP
+0.92 0.00 0.07 C 4576 3300 CircleF
+1.220 UP
+0.82 0.35 0.17 C 4412 2643 CircleF
+1.640 UP
+0.77 0.45 0.22 C 4330 2479 CircleF
+1.268 UP
+1.00 1.00 0.00 C 4822 1330 CircleF
+1.760 UP
+0.97 0.65 0.02 C 4658 2151 CircleF
+1.920 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.432 UP
+0.62 0.02 0.37 C 4084 3177 CircleF
+1.900 UP
+0.75 0.20 0.25 C 4289 2890 CircleF
+1.560 UP
+0.62 0.15 0.37 C 4084 2972 CircleF
+1.640 UP
+0.77 0.35 0.22 C 4330 2643 CircleF
+1.860 UP
+1.00 0.75 0.00 C 5315 1987 CircleF
+1.240 UP
+0.67 0.47 0.32 C 4166 2438 CircleF
+2.200 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.420 UP
+0.72 0.52 0.27 C 4248 2356 CircleF
+1.820 UP
+0.75 0.10 0.25 C 4289 3054 CircleF
+1.760 UP
+0.87 0.42 0.12 C 4494 2520 CircleF
+1.320 UP
+1.00 0.02 0.00 C 4699 3177 CircleF
+1.368 UP
+0.80 0.37 0.20 C 4371 2602 CircleF
+1.860 UP
+0.72 0.47 0.27 C 4248 2438 CircleF
+1.660 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.840 UP
+0.97 0.45 0.02 C 4658 2479 CircleF
+1.140 UP
+0.27 0.32 0.72 C 3509 2684 CircleF
+1.540 UP
+1.00 0.37 0.00 C 4986 2602 CircleF
+1.420 UP
+0.95 0.42 0.05 C 4617 2520 CircleF
+1.920 UP
+1.00 0.30 0.00 C 4699 2725 CircleF
+1.264 UP
+0.67 0.12 0.32 C 4166 3013 CircleF
+1.880 UP
+1.00 0.67 0.00 C 4863 2110 CircleF
+1.800 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.300 UP
+0.85 0.52 0.15 C 4453 2356 CircleF
+1.920 UP
+0.62 0.17 0.37 C 4084 2931 CircleF
+1.360 UP
+0.72 0.12 0.27 C 4248 3013 CircleF
+1.278 UP
+0.42 0.25 0.57 C 3755 2808 CircleF
+1.384 UP
+1.00 1.00 0.00 C 4740 1577 CircleF
+1.312 UP
+0.82 0.40 0.17 C 4412 2561 CircleF
+1.460 UP
+0.92 0.25 0.07 C 4576 2808 CircleF
+1.420 UP
+1.00 0.97 0.00 C 4822 1618 CircleF
+1.300 UP
+0.50 0.42 0.50 C 3879 2520 CircleF
+1.620 UP
+0.80 0.45 0.20 C 4371 2479 CircleF
+1.520 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.900 UP
+0.87 0.22 0.12 C 4494 2849 CircleF
+1.300 UP
+0.90 0.00 0.10 C 4535 3628 CircleF
+1.600 UP
+0.70 0.00 0.30 C 4207 3218 CircleF
+1.500 UP
+0.82 0.35 0.17 C 4412 2643 CircleF
+1.800 UP
+0.70 0.40 0.30 C 4207 2561 CircleF
+1.720 UP
+0.87 0.27 0.12 C 4494 2766 CircleF
+1.640 UP
+0.97 0.20 0.02 C 4658 2890 CircleF
+1.494 UP
+0.95 0.47 0.05 C 4617 2438 CircleF
+1.420 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.270 UP
+0.95 1.00 0.05 C 4617 1084 CircleF
+1.178 UP
+0.47 0.00 0.52 C 3837 3792 CircleF
+1.326 UP
+0.72 0.42 0.27 C 4248 2520 CircleF
+1.344 UP
+0.60 0.15 0.40 C 4043 2972 CircleF
+1.228 UP
+0.75 0.50 0.25 C 4289 2397 CircleF
+1.840 UP
+0.65 0.07 0.35 C 4125 3095 CircleF
+1.420 UP
+0.85 0.15 0.15 C 4453 2972 CircleF
+2.020 UP
+0.77 0.35 0.22 C 4330 2643 CircleF
+1.320 UP
+0.10 0.00 0.90 C 3222 3997 CircleF
+1.760 UP
+0.85 0.37 0.15 C 4453 2602 CircleF
+1.800 UP
+0.82 0.12 0.17 C 4412 3013 CircleF
+1.240 UP
+0.67 0.00 0.32 C 4166 3218 CircleF
+1.540 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.400 UP
+0.12 0.00 0.87 C 3263 3751 CircleF
+1.360 UP
+0.92 0.17 0.07 C 4576 2931 CircleF
+1.240 UP
+1.00 0.00 0.00 C 5109 3259 CircleF
+1.460 UP
+0.82 0.90 0.17 C 4412 1741 CircleF
+1.580 UP
+0.85 0.35 0.15 C 4453 2643 CircleF
+1.520 UP
+0.82 0.30 0.17 C 4412 2725 CircleF
+1.306 UP
+0.87 0.30 0.12 C 4494 2725 CircleF
+1.340 UP
+0.82 0.62 0.17 C 4412 2192 CircleF
+1.980 UP
+0.92 0.45 0.07 C 4576 2479 CircleF
+1.880 UP
+0.80 0.27 0.20 C 4371 2766 CircleF
+1.820 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.540 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.540 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.900 UP
+0.80 0.27 0.20 C 4371 2766 CircleF
+2.316 UP
+0.35 0.15 0.65 C 3632 2972 CircleF
+1.720 UP
+1.00 0.17 0.00 C 4863 2931 CircleF
+1.360 UP
+0.97 0.27 0.02 C 4658 2766 CircleF
+1.780 UP
+0.82 0.45 0.17 C 4412 2479 CircleF
+2.000 UP
+0.50 0.00 0.50 C 3879 3382 CircleF
+1.860 UP
+0.80 0.40 0.20 C 4371 2561 CircleF
+1.242 UP
+0.77 0.00 0.22 C 4330 3300 CircleF
+1.880 UP
+0.92 0.20 0.07 C 4576 2890 CircleF
+1.760 UP
+1.00 1.00 0.00 C 4945 1125 CircleF
+1.294 UP
+0.72 0.67 0.27 C 4248 2110 CircleF
+1.280 UP
+0.72 0.02 0.27 C 4248 3177 CircleF
+1.188 UP
+0.57 0.30 0.42 C 4002 2725 CircleF
+1.740 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+1.324 UP
+0.72 0.22 0.27 C 4248 2849 CircleF
+1.400 UP
+0.92 0.60 0.07 C 4576 2233 CircleF
+1.980 UP
+0.97 0.32 0.02 C 4658 2684 CircleF
+1.620 UP
+0.80 0.30 0.20 C 4371 2725 CircleF
+1.276 UP
+0.60 0.67 0.40 C 4043 2110 CircleF
+1.560 UP
+0.82 0.45 0.17 C 4412 2479 CircleF
+1.460 UP
+1.00 0.50 0.00 C 4863 2397 CircleF
+1.900 UP
+0.90 0.27 0.10 C 4535 2766 CircleF
+1.540 UP
+0.80 0.17 0.20 C 4371 2931 CircleF
+1.740 UP
+0.70 0.27 0.30 C 4207 2766 CircleF
+1.320 UP
+1.00 0.12 0.00 C 4822 3013 CircleF
+2.140 UP
+0.82 0.25 0.17 C 4412 2808 CircleF
+1.480 UP
+0.67 0.35 0.32 C 4166 2643 CircleF
+1.360 UP
+0.82 0.72 0.17 C 4412 2028 CircleF
+1.620 UP
+0.87 0.42 0.12 C 4494 2520 CircleF
+1.162 UP
+0.77 0.07 0.22 C 4330 3095 CircleF
+1.300 UP
+0.65 0.37 0.35 C 4125 2602 CircleF
+1.224 UP
+0.70 0.00 0.30 C 4207 3505 CircleF
+1.840 UP
+0.72 0.35 0.27 C 4248 2643 CircleF
+1.760 UP
+0.80 0.27 0.20 C 4371 2766 CircleF
+1.520 UP
+0.92 0.57 0.07 C 4576 2274 CircleF
+1.580 UP
+0.70 0.25 0.30 C 4207 2808 CircleF
+1.860 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.540 UP
+0.90 0.10 0.10 C 4535 3054 CircleF
+1.880 UP
+0.75 0.22 0.25 C 4289 2849 CircleF
+1.290 UP
+0.95 0.27 0.05 C 4617 2766 CircleF
+1.840 UP
+0.67 0.12 0.32 C 4166 3013 CircleF
+1.900 UP
+1.00 0.42 0.00 C 4699 2520 CircleF
+1.280 UP
+0.70 0.35 0.30 C 4207 2643 CircleF
+1.640 UP
+1.00 0.72 0.00 C 4822 2028 CircleF
+1.400 UP
+0.87 0.65 0.12 C 4494 2151 CircleF
+1.440 UP
+0.70 0.55 0.30 C 4207 2315 CircleF
+1.560 UP
+0.87 0.35 0.12 C 4494 2643 CircleF
+1.400 UP
+0.72 0.20 0.27 C 4248 2890 CircleF
+1.600 UP
+0.92 0.20 0.07 C 4576 2890 CircleF
+1.380 UP
+0.72 0.22 0.27 C 4248 2849 CircleF
+1.660 UP
+0.75 0.47 0.25 C 4289 2438 CircleF
+1.316 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+1.780 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.700 UP
+0.87 0.22 0.12 C 4494 2849 CircleF
+1.064 UP
+0.92 0.35 0.07 C 4576 2643 CircleF
+1.060 UP
+0.80 0.45 0.20 C 4371 2479 CircleF
+1.224 UP
+0.77 0.17 0.22 C 4330 2931 CircleF
+1.340 UP
+0.82 0.55 0.17 C 4412 2315 CircleF
+1.600 UP
+0.70 0.32 0.30 C 4207 2684 CircleF
+1.474 UP
+0.85 0.50 0.15 C 4453 2397 CircleF
+1.224 UP
+0.22 0.00 0.77 C 3427 4367 CircleF
+1.560 UP
+0.67 0.35 0.32 C 4166 2643 CircleF
+1.520 UP
+0.55 0.00 0.45 C 3961 3423 CircleF
+1.780 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.780 UP
+0.67 0.37 0.32 C 4166 2602 CircleF
+1.222 UP
+0.92 0.72 0.07 C 4576 2028 CircleF
+1.620 UP
+0.82 0.20 0.17 C 4412 2890 CircleF
+1.600 UP
+0.82 0.25 0.17 C 4412 2808 CircleF
+1.700 UP
+0.75 0.32 0.25 C 4289 2684 CircleF
+1.780 UP
+0.82 0.20 0.17 C 4412 2890 CircleF
+1.018 UP
+0.90 0.12 0.10 C 4535 3013 CircleF
+1.560 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.520 UP
+0.80 0.45 0.20 C 4371 2479 CircleF
+1.540 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.580 UP
+0.90 0.27 0.10 C 4535 2766 CircleF
+1.700 UP
+1.00 0.32 0.00 C 4699 2684 CircleF
+1.860 UP
+0.82 0.37 0.17 C 4412 2602 CircleF
+2.000 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.334 UP
+0.80 1.00 0.20 C 4371 1495 CircleF
+1.244 UP
+0.85 0.00 0.15 C 4453 3751 CircleF
+1.780 UP
+0.95 0.25 0.05 C 4617 2808 CircleF
+1.420 UP
+0.77 0.17 0.22 C 4330 2931 CircleF
+1.560 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.560 UP
+0.42 0.10 0.57 C 3755 3054 CircleF
+1.340 UP
+0.92 0.17 0.07 C 4576 2931 CircleF
+1.210 UP
+0.75 0.60 0.25 C 4289 2233 CircleF
+1.260 UP
+0.70 0.07 0.30 C 4207 3095 CircleF
+1.050 UP
+0.77 0.62 0.22 C 4330 2192 CircleF
+1.620 UP
+0.82 0.00 0.17 C 4412 3218 CircleF
+2.060 UP
+0.85 0.52 0.15 C 4453 2356 CircleF
+1.308 UP
+0.70 0.35 0.30 C 4207 2643 CircleF
+1.460 UP
+0.92 0.50 0.07 C 4576 2397 CircleF
+1.800 UP
+0.72 0.27 0.27 C 4248 2766 CircleF
+1.420 UP
+0.75 0.20 0.25 C 4289 2890 CircleF
+1.920 UP
+1.00 0.35 0.00 C 4699 2643 CircleF
+1.940 UP
+0.70 0.20 0.30 C 4207 2890 CircleF
+2.040 UP
+0.90 0.25 0.10 C 4535 2808 CircleF
+1.340 UP
+1.00 0.70 0.00 C 4740 2069 CircleF
+1.760 UP
+0.97 0.30 0.02 C 4658 2725 CircleF
+1.300 UP
+0.75 0.57 0.25 C 4289 2274 CircleF
+1.236 UP
+0.45 0.25 0.55 C 3796 2808 CircleF
+1.166 UP
+0.70 0.00 0.30 C 4207 3218 CircleF
+1.420 UP
+0.82 0.42 0.17 C 4412 2520 CircleF
+1.140 UP
+0.80 0.40 0.20 C 4371 2561 CircleF
+1.600 UP
+0.72 0.12 0.27 C 4248 3013 CircleF
+1.284 UP
+0.87 0.05 0.12 C 4494 3136 CircleF
+1.440 UP
+0.77 0.37 0.22 C 4330 2602 CircleF
+1.276 UP
+1.00 0.10 0.00 C 4699 3054 CircleF
+1.160 UP
+0.72 1.00 0.27 C 4248 1577 CircleF
+1.380 UP
+1.00 0.65 0.00 C 4699 2151 CircleF
+1.620 UP
+0.70 0.25 0.30 C 4207 2808 CircleF
+1.820 UP
+0.75 0.37 0.25 C 4289 2602 CircleF
+1.200 UP
+0.77 0.37 0.22 C 4330 2602 CircleF
+1.460 UP
+0.77 0.10 0.22 C 4330 3054 CircleF
+1.720 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.780 UP
+0.77 0.45 0.22 C 4330 2479 CircleF
+1.300 UP
+0.95 0.87 0.05 C 4617 1782 CircleF
+1.346 UP
+0.75 0.87 0.25 C 4289 1782 CircleF
+1.442 UP
+0.82 0.67 0.17 C 4412 2110 CircleF
+2.100 UP
+0.70 0.15 0.30 C 4207 2972 CircleF
+1.280 UP
+0.72 0.22 0.27 C 4248 2849 CircleF
+1.340 UP
+0.72 0.72 0.27 C 4248 2028 CircleF
+1.380 UP
+0.67 0.07 0.32 C 4166 3095 CircleF
+1.780 UP
+0.67 0.42 0.32 C 4166 2520 CircleF
+1.840 UP
+0.70 0.32 0.30 C 4207 2684 CircleF
+1.380 UP
+0.77 0.00 0.22 C 4330 3341 CircleF
+2.080 UP
+0.87 0.25 0.12 C 4494 2808 CircleF
+1.900 UP
+0.95 0.40 0.05 C 4617 2561 CircleF
+1.400 UP
+0.92 0.12 0.07 C 4576 3013 CircleF
+1.640 UP
+0.72 0.40 0.27 C 4248 2561 CircleF
+1.740 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.260 UP
+0.90 0.00 0.10 C 4535 3751 CircleF
+1.336 UP
+0.72 0.05 0.27 C 4248 3136 CircleF
+1.300 UP
+0.82 0.92 0.17 C 4412 1700 CircleF
+1.780 UP
+0.92 0.05 0.07 C 4576 3136 CircleF
+1.400 UP
+0.72 0.20 0.27 C 4248 2890 CircleF
+1.350 UP
+0.82 0.40 0.17 C 4412 2561 CircleF
+1.400 UP
+0.65 0.07 0.35 C 4125 3095 CircleF
+1.320 UP
+1.00 0.35 0.00 C 4986 2643 CircleF
+1.720 UP
+0.85 0.42 0.15 C 4453 2520 CircleF
+1.760 UP
+0.70 0.20 0.30 C 4207 2890 CircleF
+1.360 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.408 UP
+0.75 0.50 0.25 C 4289 2397 CircleF
+1.680 UP
+0.87 0.35 0.12 C 4494 2643 CircleF
+1.720 UP
+0.87 0.35 0.12 C 4494 2643 CircleF
+1.310 UP
+0.97 0.65 0.02 C 4658 2151 CircleF
+1.880 UP
+0.82 0.12 0.17 C 4412 3013 CircleF
+1.700 UP
+0.85 0.35 0.15 C 4453 2643 CircleF
+1.328 UP
+0.85 0.17 0.15 C 4453 2931 CircleF
+1.760 UP
+0.72 0.32 0.27 C 4248 2684 CircleF
+1.480 UP
+0.42 0.00 0.57 C 3755 3300 CircleF
+1.700 UP
+0.87 0.17 0.12 C 4494 2931 CircleF
+1.258 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.820 UP
+1.00 0.40 0.00 C 4904 2561 CircleF
+1.220 UP
+1.00 0.12 0.00 C 4904 3013 CircleF
+1.500 UP
+0.97 0.22 0.02 C 4658 2849 CircleF
+1.600 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.760 UP
+0.82 0.42 0.17 C 4412 2520 CircleF
+1.330 UP
+0.75 0.00 0.25 C 4289 3259 CircleF
+1.252 UP
+0.17 0.45 0.82 C 3345 2479 CircleF
+1.500 UP
+0.80 0.77 0.20 C 4371 1946 CircleF
+1.560 UP
+0.85 0.47 0.15 C 4453 2438 CircleF
+1.280 UP
+0.57 0.10 0.42 C 4002 3054 CircleF
+1.200 UP
+0.67 0.00 0.32 C 4166 3218 CircleF
+2.180 UP
+0.70 0.70 0.30 C 4207 2069 CircleF
+1.560 UP
+0.77 0.52 0.22 C 4330 2356 CircleF
+1.398 UP
+0.80 0.50 0.20 C 4371 2397 CircleF
+1.820 UP
+0.57 0.35 0.42 C 4002 2643 CircleF
+1.980 UP
+0.82 0.42 0.17 C 4412 2520 CircleF
+1.444 UP
+0.65 0.37 0.35 C 4125 2602 CircleF
+1.420 UP
+0.77 0.12 0.22 C 4330 3013 CircleF
+1.340 UP
+0.62 0.55 0.37 C 4084 2315 CircleF
+1.144 UP
+0.65 0.12 0.35 C 4125 3013 CircleF
+1.360 UP
+0.60 0.00 0.40 C 4043 3669 CircleF
+1.640 UP
+0.62 0.10 0.37 C 4084 3054 CircleF
+1.600 UP
+0.62 0.25 0.37 C 4084 2808 CircleF
+1.860 UP
+0.62 0.35 0.37 C 4084 2643 CircleF
+1.346 UP
+0.85 0.07 0.15 C 4453 3095 CircleF
+1.680 UP
+0.75 0.27 0.25 C 4289 2766 CircleF
+1.420 UP
+0.70 0.42 0.30 C 4207 2520 CircleF
+1.280 UP
+0.87 0.07 0.12 C 4494 3095 CircleF
+1.940 UP
+0.90 0.27 0.10 C 4535 2766 CircleF
+1.740 UP
+0.92 0.15 0.07 C 4576 2972 CircleF
+1.380 UP
+0.30 0.52 0.70 C 3550 2356 CircleF
+1.220 UP
+0.85 0.45 0.15 C 4453 2479 CircleF
+1.340 UP
+0.85 0.10 0.15 C 4453 3054 CircleF
+1.132 UP
+0.57 0.55 0.42 C 4002 2315 CircleF
+1.820 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.820 UP
+0.62 0.00 0.37 C 4084 3218 CircleF
+1.560 UP
+0.75 0.45 0.25 C 4289 2479 CircleF
+1.220 UP
+0.70 0.37 0.30 C 4207 2602 CircleF
+1.520 UP
+0.85 0.50 0.15 C 4453 2397 CircleF
+1.282 UP
+1.00 0.00 0.00 C 4863 3505 CircleF
+1.454 UP
+0.65 0.27 0.35 C 4125 2766 CircleF
+1.200 UP
+0.75 0.32 0.25 C 4289 2684 CircleF
+1.920 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.538 UP
+0.72 0.35 0.27 C 4248 2643 CircleF
+1.460 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.140 UP
+0.95 0.50 0.05 C 4617 2397 CircleF
+1.680 UP
+0.82 0.15 0.17 C 4412 2972 CircleF
+1.270 UP
+0.62 0.00 0.37 C 4084 3915 CircleF
+1.280 UP
+0.42 0.10 0.57 C 3755 3054 CircleF
+1.500 UP
+0.95 0.45 0.05 C 4617 2479 CircleF
+1.410 UP
+0.87 0.07 0.12 C 4494 3095 CircleF
+1.700 UP
+0.90 0.45 0.10 C 4535 2479 CircleF
+1.360 UP
+0.87 0.50 0.12 C 4494 2397 CircleF
+1.378 UP
+0.80 0.40 0.20 C 4371 2561 CircleF
+1.460 UP
+0.82 0.45 0.17 C 4412 2479 CircleF
+1.780 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.280 UP
+0.87 0.40 0.12 C 4494 2561 CircleF
+1.440 UP
+0.62 0.30 0.37 C 4084 2725 CircleF
+1.134 UP
+0.80 0.35 0.20 C 4371 2643 CircleF
+1.800 UP
+0.90 0.45 0.10 C 4535 2479 CircleF
+1.212 UP
+0.65 0.62 0.35 C 4125 2192 CircleF
+1.720 UP
+0.72 0.27 0.27 C 4248 2766 CircleF
+1.540 UP
+1.00 0.40 0.00 C 4740 2561 CircleF
+1.900 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.458 UP
+0.90 0.50 0.10 C 4535 2397 CircleF
+1.432 UP
+0.77 0.15 0.22 C 4330 2972 CircleF
+1.940 UP
+0.90 0.37 0.10 C 4535 2602 CircleF
+1.280 UP
+0.92 0.07 0.07 C 4576 3095 CircleF
+1.900 UP
+1.00 0.40 0.00 C 4822 2561 CircleF
+1.194 UP
+0.72 0.70 0.27 C 4248 2069 CircleF
+1.720 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.720 UP
+0.82 0.25 0.17 C 4412 2808 CircleF
+1.560 UP
+1.00 0.62 0.00 C 4822 2192 CircleF
+1.264 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.220 UP
+0.67 0.60 0.32 C 4166 2233 CircleF
+1.740 UP
+0.92 0.47 0.07 C 4576 2438 CircleF
+1.600 UP
+0.90 0.37 0.10 C 4535 2602 CircleF
+1.182 UP
+0.85 0.95 0.15 C 4453 1659 CircleF
+1.980 UP
+0.97 0.30 0.02 C 4658 2725 CircleF
+1.780 UP
+0.82 0.45 0.17 C 4412 2479 CircleF
+1.620 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.336 UP
+0.80 0.52 0.20 C 4371 2356 CircleF
+1.432 UP
+0.85 1.00 0.15 C 4453 1412 CircleF
+1.940 UP
+0.87 0.27 0.12 C 4494 2766 CircleF
+1.620 UP
+0.90 0.45 0.10 C 4535 2479 CircleF
+1.248 UP
+0.97 0.30 0.02 C 4658 2725 CircleF
+1.200 UP
+0.55 0.30 0.45 C 3961 2725 CircleF
+1.410 UP
+0.77 0.87 0.22 C 4330 1782 CircleF
+1.360 UP
+0.55 0.30 0.45 C 3961 2725 CircleF
+1.740 UP
+0.82 0.30 0.17 C 4412 2725 CircleF
+1.466 UP
+0.87 0.77 0.12 C 4494 1946 CircleF
+1.800 UP
+0.82 0.32 0.17 C 4412 2684 CircleF
+1.260 UP
+0.65 0.35 0.35 C 4125 2643 CircleF
+1.340 UP
+0.80 0.30 0.20 C 4371 2725 CircleF
+1.560 UP
+0.90 0.10 0.10 C 4535 3054 CircleF
+1.420 UP
+0.82 0.37 0.17 C 4412 2602 CircleF
+1.426 UP
+0.65 0.30 0.35 C 4125 2725 CircleF
+1.760 UP
+0.77 0.40 0.22 C 4330 2561 CircleF
+1.240 UP
+0.85 0.50 0.15 C 4453 2397 CircleF
+1.460 UP
+0.75 0.40 0.25 C 4289 2561 CircleF
+0.924 UP
+0.72 0.42 0.27 C 4248 2520 CircleF
+1.244 UP
+0.92 0.87 0.07 C 4576 1782 CircleF
+1.760 UP
+0.92 0.47 0.07 C 4576 2438 CircleF
+1.600 UP
+0.77 0.00 0.22 C 4330 3259 CircleF
+1.270 UP
+1.00 0.00 0.00 C 5520 3300 CircleF
+1.760 UP
+0.82 0.30 0.17 C 4412 2725 CircleF
+1.254 UP
+0.72 0.00 0.27 C 4248 3382 CircleF
+1.420 UP
+0.82 0.27 0.17 C 4412 2766 CircleF
+1.820 UP
+0.82 0.30 0.17 C 4412 2725 CircleF
+1.500 UP
+0.97 0.22 0.02 C 4658 2849 CircleF
+1.346 UP
+0.62 0.45 0.37 C 4084 2479 CircleF
+1.520 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.280 UP
+0.70 0.45 0.30 C 4207 2479 CircleF
+1.264 UP
+0.67 0.27 0.32 C 4166 2766 CircleF
+1.184 UP
+0.52 0.00 0.47 C 3920 3833 CircleF
+1.600 UP
+0.82 0.30 0.17 C 4412 2725 CircleF
+1.620 UP
+0.85 0.10 0.15 C 4453 3054 CircleF
+2.020 UP
+0.90 0.30 0.10 C 4535 2725 CircleF
+1.680 UP
+0.80 0.27 0.20 C 4371 2766 CircleF
+1.240 UP
+0.75 0.00 0.25 C 4289 3259 CircleF
+1.720 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.900 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.580 UP
+0.77 0.40 0.22 C 4330 2561 CircleF
+1.272 UP
+1.00 0.75 0.00 C 4781 1987 CircleF
+1.280 UP
+0.62 0.00 0.37 C 4084 3505 CircleF
+1.740 UP
+0.97 0.40 0.02 C 4658 2561 CircleF
+1.600 UP
+0.92 0.47 0.07 C 4576 2438 CircleF
+1.084 UP
+1.00 0.60 0.00 C 4863 2233 CircleF
+1.920 UP
+0.70 0.25 0.30 C 4207 2808 CircleF
+1.440 UP
+0.92 0.65 0.07 C 4576 2151 CircleF
+1.680 UP
+0.77 0.35 0.22 C 4330 2643 CircleF
+1.480 UP
+0.80 0.02 0.20 C 4371 3177 CircleF
+1.640 UP
+0.95 0.35 0.05 C 4617 2643 CircleF
+1.520 UP
+0.85 0.15 0.15 C 4453 2972 CircleF
+1.400 UP
+0.92 0.17 0.07 C 4576 2931 CircleF
+1.104 UP
+0.92 0.00 0.07 C 4576 3669 CircleF
+1.280 UP
+0.70 0.15 0.30 C 4207 2972 CircleF
+1.302 UP
+0.27 0.12 0.72 C 3509 3013 CircleF
+1.320 UP
+0.77 0.50 0.22 C 4330 2397 CircleF
+1.900 UP
+0.77 0.35 0.22 C 4330 2643 CircleF
+1.720 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.820 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.400 UP
+0.70 0.22 0.30 C 4207 2849 CircleF
+1.454 UP
+1.00 0.15 0.00 C 4822 2972 CircleF
+1.800 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.262 UP
+0.95 0.27 0.05 C 4617 2766 CircleF
+1.320 UP
+0.67 0.15 0.32 C 4166 2972 CircleF
+1.660 UP
+0.90 0.42 0.10 C 4535 2520 CircleF
+1.440 UP
+0.65 0.60 0.35 C 4125 2233 CircleF
+1.840 UP
+0.87 0.40 0.12 C 4494 2561 CircleF
+1.440 UP
+0.82 0.30 0.17 C 4412 2725 CircleF
+1.560 UP
+1.00 0.35 0.00 C 5027 2643 CircleF
+1.380 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.480 UP
+1.00 0.42 0.00 C 4699 2520 CircleF
+1.500 UP
+0.52 0.05 0.47 C 3920 3136 CircleF
+1.400 UP
+0.70 0.45 0.30 C 4207 2479 CircleF
+1.580 UP
+1.00 0.30 0.00 C 4699 2725 CircleF
+1.330 UP
+0.97 0.37 0.02 C 4658 2602 CircleF
+1.094 UP
+0.55 0.60 0.45 C 3961 2233 CircleF
+1.940 UP
+0.72 0.25 0.27 C 4248 2808 CircleF
+1.680 UP
+0.85 0.17 0.15 C 4453 2931 CircleF
+1.288 UP
+1.00 1.00 0.00 C 4699 1536 CircleF
+1.114 UP
+0.57 0.22 0.42 C 4002 2849 CircleF
+1.760 UP
+1.00 0.12 0.00 C 4740 3013 CircleF
+1.380 UP
+0.67 0.15 0.32 C 4166 2972 CircleF
+1.374 UP
+0.87 0.22 0.12 C 4494 2849 CircleF
+1.262 UP
+0.87 0.77 0.12 C 4494 1946 CircleF
+1.300 UP
+0.70 0.52 0.30 C 4207 2356 CircleF
+1.300 UP
+0.92 0.70 0.07 C 4576 2069 CircleF
+1.300 UP
+0.72 0.32 0.27 C 4248 2684 CircleF
+1.198 UP
+0.72 0.00 0.27 C 4248 3464 CircleF
+1.420 UP
+0.95 0.37 0.05 C 4617 2602 CircleF
+1.068 UP
+0.85 0.42 0.15 C 4453 2520 CircleF
+1.440 UP
+0.72 0.25 0.27 C 4248 2808 CircleF
+1.304 UP
+0.70 0.00 0.30 C 4207 3751 CircleF
+1.240 UP
+0.72 0.80 0.27 C 4248 1905 CircleF
+1.600 UP
+0.85 0.35 0.15 C 4453 2643 CircleF
+1.300 UP
+0.97 0.32 0.02 C 4658 2684 CircleF
+1.540 UP
+0.82 0.42 0.17 C 4412 2520 CircleF
+1.440 UP
+0.80 0.00 0.20 C 4371 3218 CircleF
+1.880 UP
+0.87 0.30 0.12 C 4494 2725 CircleF
+1.460 UP
+0.70 0.35 0.30 C 4207 2643 CircleF
+1.340 UP
+0.87 0.60 0.12 C 4494 2233 CircleF
+1.354 UP
+0.72 0.32 0.27 C 4248 2684 CircleF
+1.500 UP
+0.80 0.57 0.20 C 4371 2274 CircleF
+1.316 UP
+0.90 0.30 0.10 C 4535 2725 CircleF
+1.440 UP
+0.80 0.00 0.20 C 4371 4161 CircleF
+1.290 UP
+0.50 0.35 0.50 C 3879 2643 CircleF
+1.640 UP
+0.80 0.30 0.20 C 4371 2725 CircleF
+1.220 UP
+0.87 0.47 0.12 C 4494 2438 CircleF
+1.260 UP
+0.72 0.00 0.27 C 4248 3259 CircleF
+1.376 UP
+0.62 0.42 0.37 C 4084 2520 CircleF
+1.520 UP
+0.80 0.20 0.20 C 4371 2890 CircleF
+1.800 UP
+0.70 0.45 0.30 C 4207 2479 CircleF
+1.820 UP
+0.85 0.17 0.15 C 4453 2931 CircleF
+1.332 UP
+0.72 0.47 0.27 C 4248 2438 CircleF
+1.380 UP
+1.00 0.50 0.00 C 4822 2397 CircleF
+1.320 UP
+0.70 1.00 0.30 C 4207 879 CircleF
+1.520 UP
+0.57 0.20 0.42 C 4002 2890 CircleF
+1.420 UP
+0.82 0.35 0.17 C 4412 2643 CircleF
+1.360 UP
+0.40 0.10 0.60 C 3714 3054 CircleF
+1.212 UP
+0.65 0.00 0.35 C 4125 3218 CircleF
+1.500 UP
+0.95 0.42 0.05 C 4617 2520 CircleF
+1.158 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.460 UP
+0.80 0.40 0.20 C 4371 2561 CircleF
+1.260 UP
+0.77 1.00 0.22 C 4330 1084 CircleF
+1.900 UP
+0.92 0.30 0.07 C 4576 2725 CircleF
+1.420 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.800 UP
+0.97 0.40 0.02 C 4658 2561 CircleF
+1.560 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.364 UP
+0.70 0.67 0.30 C 4207 2110 CircleF
+1.540 UP
+0.45 0.55 0.55 C 3796 2315 CircleF
+1.420 UP
+0.80 0.27 0.20 C 4371 2766 CircleF
+1.520 UP
+0.75 0.27 0.25 C 4289 2766 CircleF
+1.354 UP
+1.00 0.17 0.00 C 4945 2931 CircleF
+1.288 UP
+0.95 0.00 0.05 C 4617 3300 CircleF
+1.500 UP
+0.75 0.35 0.25 C 4289 2643 CircleF
+1.194 UP
+0.60 0.40 0.40 C 4043 2561 CircleF
+1.440 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.248 UP
+0.75 0.22 0.25 C 4289 2849 CircleF
+1.480 UP
+0.77 0.12 0.22 C 4330 3013 CircleF
+1.560 UP
+0.70 1.00 0.30 C 4207 1412 CircleF
+1.940 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.400 UP
+0.87 0.22 0.12 C 4494 2849 CircleF
+1.478 UP
+0.97 0.45 0.02 C 4658 2479 CircleF
+1.144 UP
+0.57 0.00 0.42 C 4002 3423 CircleF
+1.600 UP
+0.62 0.30 0.37 C 4084 2725 CircleF
+1.418 UP
+0.77 0.35 0.22 C 4330 2643 CircleF
+1.380 UP
+0.77 0.15 0.22 C 4330 2972 CircleF
+1.300 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.274 UP
+0.40 0.30 0.60 C 3714 2725 CircleF
+1.146 UP
+0.87 0.02 0.12 C 4494 3177 CircleF
+1.860 UP
+0.97 0.40 0.02 C 4658 2561 CircleF
+1.640 UP
+0.80 0.07 0.20 C 4371 3095 CircleF
+1.402 UP
+0.32 0.00 0.67 C 3591 4531 CircleF
+1.840 UP
+0.87 0.22 0.12 C 4494 2849 CircleF
+1.440 UP
+0.82 0.22 0.17 C 4412 2849 CircleF
+1.340 UP
+1.00 0.27 0.00 C 4699 2766 CircleF
+1.760 UP
+0.95 0.40 0.05 C 4617 2561 CircleF
+1.640 UP
+0.90 0.05 0.10 C 4535 3136 CircleF
+1.680 UP
+0.75 0.12 0.25 C 4289 3013 CircleF
+1.680 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.400 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.600 UP
+0.75 0.10 0.25 C 4289 3054 CircleF
+1.160 UP
+0.60 0.00 0.40 C 4043 3587 CircleF
+1.420 UP
+0.87 0.35 0.12 C 4494 2643 CircleF
+1.182 UP
+0.82 0.10 0.17 C 4412 3054 CircleF
+1.320 UP
+0.87 0.47 0.12 C 4494 2438 CircleF
+1.500 UP
+0.25 0.00 0.75 C 3468 3710 CircleF
+1.320 UP
+0.47 0.00 0.52 C 3837 3300 CircleF
+2.100 UP
+0.77 0.50 0.22 C 4330 2397 CircleF
+1.170 UP
+0.45 0.30 0.55 C 3796 2725 CircleF
+1.186 UP
+0.77 0.00 0.22 C 4330 3669 CircleF
+2.280 UP
+0.92 0.32 0.07 C 4576 2684 CircleF
+1.340 UP
+0.95 0.27 0.05 C 4617 2766 CircleF
+1.220 UP
+0.82 0.17 0.17 C 4412 2931 CircleF
+1.124 UP
+0.52 0.52 0.47 C 3920 2356 CircleF
+1.800 UP
+0.90 0.10 0.10 C 4535 3054 CircleF
+1.420 UP
+0.92 0.92 0.07 C 4576 1700 CircleF
+1.422 UP
+0.72 0.52 0.27 C 4248 2356 CircleF
+1.740 UP
+0.62 0.20 0.37 C 4084 2890 CircleF
+1.340 UP
+0.80 0.55 0.20 C 4371 2315 CircleF
+1.460 UP
+0.75 0.20 0.25 C 4289 2890 CircleF
+1.740 UP
+0.85 0.50 0.15 C 4453 2397 CircleF
+1.224 UP
+0.75 0.57 0.25 C 4289 2274 CircleF
+1.580 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.620 UP
+0.82 0.47 0.17 C 4412 2438 CircleF
+1.396 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.500 UP
+0.72 0.00 0.27 C 4248 3505 CircleF
+1.400 UP
+0.67 0.00 0.32 C 4166 3259 CircleF
+1.340 UP
+0.80 0.47 0.20 C 4371 2438 CircleF
+1.222 UP
+0.90 0.30 0.10 C 4535 2725 CircleF
+2.060 UP
+0.90 0.40 0.10 C 4535 2561 CircleF
+1.760 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.680 UP
+0.85 0.12 0.15 C 4453 3013 CircleF
+1.520 UP
+0.80 0.30 0.20 C 4371 2725 CircleF
+1.344 UP
+0.15 0.67 0.85 C 3304 2110 CircleF
+1.406 UP
+0.72 1.00 0.27 C 4248 1371 CircleF
+1.400 UP
+0.70 0.47 0.30 C 4207 2438 CircleF
+1.580 UP
+0.62 0.37 0.37 C 4084 2602 CircleF
+1.680 UP
+1.00 0.20 0.00 C 4945 2890 CircleF
+1.560 UP
+0.80 0.50 0.20 C 4371 2397 CircleF
+1.360 UP
+0.67 0.00 0.32 C 4166 4079 CircleF
+1.066 UP
+0.37 0.00 0.62 C 3673 3669 CircleF
+1.620 UP
+0.92 0.32 0.07 C 4576 2684 CircleF
+1.270 UP
+0.77 0.00 0.22 C 4330 4161 CircleF
+1.580 UP
+0.65 0.02 0.35 C 4125 3177 CircleF
+1.260 UP
+0.95 1.00 0.05 C 4617 1536 CircleF
+1.360 UP
+0.95 0.55 0.05 C 4617 2315 CircleF
+1.280 UP
+0.72 0.00 0.27 C 4248 3546 CircleF
+1.140 UP
+0.85 0.75 0.15 C 4453 1987 CircleF
+1.380 UP
+0.80 0.20 0.20 C 4371 2890 CircleF
+1.880 UP
+0.92 0.07 0.07 C 4576 3095 CircleF
+1.380 UP
+0.87 0.25 0.12 C 4494 2808 CircleF
+1.860 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.302 UP
+0.72 0.22 0.27 C 4248 2849 CircleF
+1.272 UP
+0.37 0.40 0.62 C 3673 2561 CircleF
+1.740 UP
+0.65 0.00 0.35 C 4125 3259 CircleF
+1.200 UP
+0.70 0.37 0.30 C 4207 2602 CircleF
+1.280 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.720 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.300 UP
+0.77 0.52 0.22 C 4330 2356 CircleF
+1.440 UP
+0.80 0.42 0.20 C 4371 2520 CircleF
+1.660 UP
+0.50 0.55 0.50 C 3879 2315 CircleF
+1.320 UP
+0.75 0.00 0.25 C 4289 3218 CircleF
+1.380 UP
+0.90 0.22 0.10 C 4535 2849 CircleF
+1.220 UP
+0.87 0.00 0.12 C 4494 3956 CircleF
+1.900 UP
+0.75 0.20 0.25 C 4289 2890 CircleF
+1.360 UP
+0.80 0.00 0.20 C 4371 3546 CircleF
+1.580 UP
+0.57 0.35 0.42 C 4002 2643 CircleF
+1.116 UP
+0.72 0.17 0.27 C 4248 2931 CircleF
+1.320 UP
+0.70 0.30 0.30 C 4207 2725 CircleF
+1.760 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.414 UP
+0.95 0.30 0.05 C 4617 2725 CircleF
+1.560 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.156 UP
+0.75 1.00 0.25 C 4289 1289 CircleF
+1.420 UP
+1.00 0.32 0.00 C 4740 2684 CircleF
+1.280 UP
+0.90 0.55 0.10 C 4535 2315 CircleF
+1.480 UP
+0.57 0.12 0.42 C 4002 3013 CircleF
+1.222 UP
+0.82 0.22 0.17 C 4412 2849 CircleF
+1.180 UP
+0.75 0.15 0.25 C 4289 2972 CircleF
+1.114 UP
+0.77 0.00 0.22 C 4330 3587 CircleF
+1.048 UP
+0.80 0.75 0.20 C 4371 1987 CircleF
+1.192 UP
+0.55 0.00 0.45 C 3961 3464 CircleF
+1.192 UP
+0.80 0.00 0.20 C 4371 3874 CircleF
+1.820 UP
+1.00 0.22 0.00 C 4699 2849 CircleF
+1.460 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.270 UP
+0.75 0.37 0.25 C 4289 2602 CircleF
+1.218 UP
+0.90 0.60 0.10 C 4535 2233 CircleF
+1.024 UP
+0.60 0.37 0.40 C 4043 2602 CircleF
+1.340 UP
+0.65 0.30 0.35 C 4125 2725 CircleF
+1.500 UP
+0.70 0.65 0.30 C 4207 2151 CircleF
+1.620 UP
+0.82 0.32 0.17 C 4412 2684 CircleF
+1.172 UP
+0.72 0.62 0.27 C 4248 2192 CircleF
+1.860 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.244 UP
+0.82 0.07 0.17 C 4412 3095 CircleF
+1.280 UP
+0.57 0.00 0.42 C 4002 3833 CircleF
+1.242 UP
+0.82 0.22 0.17 C 4412 2849 CircleF
+1.480 UP
+0.70 0.37 0.30 C 4207 2602 CircleF
+1.700 UP
+0.87 0.27 0.12 C 4494 2766 CircleF
+1.620 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.480 UP
+0.82 0.50 0.17 C 4412 2397 CircleF
+1.366 UP
+0.62 0.00 0.37 C 4084 3259 CircleF
+1.380 UP
+1.00 0.25 0.00 C 4699 2808 CircleF
+1.046 UP
+0.62 0.30 0.37 C 4084 2725 CircleF
+1.340 UP
+0.77 0.55 0.22 C 4330 2315 CircleF
+1.900 UP
+1.00 0.40 0.00 C 4699 2561 CircleF
+1.380 UP
+0.82 0.22 0.17 C 4412 2849 CircleF
+1.260 UP
+0.67 0.25 0.32 C 4166 2808 CircleF
+1.700 UP
+0.80 0.57 0.20 C 4371 2274 CircleF
+1.740 UP
+0.77 0.62 0.22 C 4330 2192 CircleF
+1.280 UP
+0.77 0.07 0.22 C 4330 3095 CircleF
+1.620 UP
+0.87 0.20 0.12 C 4494 2890 CircleF
+1.340 UP
+0.75 0.35 0.25 C 4289 2643 CircleF
+1.420 UP
+0.67 0.90 0.32 C 4166 1741 CircleF
+1.460 UP
+0.70 0.35 0.30 C 4207 2643 CircleF
+1.880 UP
+0.50 0.00 0.50 C 3879 3546 CircleF
+1.340 UP
+0.67 0.25 0.32 C 4166 2808 CircleF
+1.282 UP
+0.82 0.35 0.17 C 4412 2643 CircleF
+1.400 UP
+0.85 0.00 0.15 C 4453 3464 CircleF
+1.358 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+1.280 UP
+0.75 0.32 0.25 C 4289 2684 CircleF
+1.360 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.320 UP
+0.55 0.32 0.45 C 3961 2684 CircleF
+1.580 UP
+0.77 0.52 0.22 C 4330 2356 CircleF
+1.480 UP
+0.55 0.77 0.45 C 3961 1946 CircleF
+1.200 UP
+0.90 0.30 0.10 C 4535 2725 CircleF
+1.500 UP
+1.00 1.00 0.00 C 4781 1289 CircleF
+1.700 UP
+0.90 0.27 0.10 C 4535 2766 CircleF
+1.800 UP
+0.87 0.20 0.12 C 4494 2890 CircleF
+1.204 UP
+0.90 0.27 0.10 C 4535 2766 CircleF
+1.820 UP
+1.00 0.25 0.00 C 4822 2808 CircleF
+1.900 UP
+0.92 0.10 0.07 C 4576 3054 CircleF
+1.326 UP
+0.77 0.32 0.22 C 4330 2684 CircleF
+1.328 UP
+0.72 0.00 0.27 C 4248 3300 CircleF
+1.860 UP
+0.87 0.30 0.12 C 4494 2725 CircleF
+1.460 UP
+0.80 0.05 0.20 C 4371 3136 CircleF
+1.760 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.380 UP
+0.77 0.55 0.22 C 4330 2315 CircleF
+1.310 UP
+0.85 1.00 0.15 C 4453 1454 CircleF
+1.114 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.400 UP
+0.57 0.55 0.42 C 4002 2315 CircleF
+1.200 UP
+0.72 1.00 0.27 C 4248 1207 CircleF
+1.640 UP
+1.00 0.95 0.00 C 5109 1659 CircleF
+1.224 UP
+0.42 1.00 0.57 C 3755 920 CircleF
+1.384 UP
+1.00 0.37 0.00 C 4822 2602 CircleF
+1.300 UP
+0.75 0.37 0.25 C 4289 2602 CircleF
+1.500 UP
+0.80 0.05 0.20 C 4371 3136 CircleF
+1.660 UP
+0.85 0.00 0.15 C 4453 3587 CircleF
+1.400 UP
+0.67 0.25 0.32 C 4166 2808 CircleF
+1.560 UP
+0.95 0.27 0.05 C 4617 2766 CircleF
+1.420 UP
+0.82 0.37 0.17 C 4412 2602 CircleF
+1.640 UP
+0.70 0.67 0.30 C 4207 2110 CircleF
+1.460 UP
+0.80 1.00 0.20 C 4371 1248 CircleF
+1.388 UP
+0.75 0.82 0.25 C 4289 1864 CircleF
+1.464 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.660 UP
+0.75 0.47 0.25 C 4289 2438 CircleF
+1.186 UP
+0.42 0.00 0.57 C 3755 3505 CircleF
+1.384 UP
+0.80 0.47 0.20 C 4371 2438 CircleF
+1.520 UP
+0.92 0.20 0.07 C 4576 2890 CircleF
+1.440 UP
+0.60 0.12 0.40 C 4043 3013 CircleF
+1.780 UP
+0.90 0.42 0.10 C 4535 2520 CircleF
+1.900 UP
+0.87 0.22 0.12 C 4494 2849 CircleF
+1.400 UP
+0.87 0.27 0.12 C 4494 2766 CircleF
+1.680 UP
+0.82 0.35 0.17 C 4412 2643 CircleF
+1.680 UP
+0.75 0.35 0.25 C 4289 2643 CircleF
+1.640 UP
+0.82 0.37 0.17 C 4412 2602 CircleF
+1.500 UP
+0.75 0.30 0.25 C 4289 2725 CircleF
+1.600 UP
+1.00 0.22 0.00 C 4699 2849 CircleF
+1.440 UP
+1.00 0.65 0.00 C 4904 2151 CircleF
+1.420 UP
+0.85 0.50 0.15 C 4453 2397 CircleF
+1.254 UP
+0.57 1.00 0.42 C 4002 1166 CircleF
+1.460 UP
+0.80 0.45 0.20 C 4371 2479 CircleF
+1.192 UP
+0.75 0.12 0.25 C 4289 3013 CircleF
+1.300 UP
+0.77 0.17 0.22 C 4330 2931 CircleF
+1.420 UP
+1.00 0.40 0.00 C 4781 2561 CircleF
+1.700 UP
+0.87 0.35 0.12 C 4494 2643 CircleF
+1.362 UP
+0.87 0.12 0.12 C 4494 3013 CircleF
+1.320 UP
+0.62 0.92 0.37 C 4084 1700 CircleF
+1.600 UP
+0.67 0.20 0.32 C 4166 2890 CircleF
+1.440 UP
+0.57 0.05 0.42 C 4002 3136 CircleF
+1.340 UP
+0.90 0.77 0.10 C 4535 1946 CircleF
+1.640 UP
+0.90 0.30 0.10 C 4535 2725 CircleF
+1.340 UP
+0.85 0.82 0.15 C 4453 1864 CircleF
+1.198 UP
+0.75 0.00 0.25 C 4289 3710 CircleF
+1.760 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.440 UP
+0.77 0.12 0.22 C 4330 3013 CircleF
+1.400 UP
+0.82 1.00 0.17 C 4412 1043 CircleF
+1.360 UP
+0.52 0.27 0.47 C 3920 2766 CircleF
+1.480 UP
+0.82 0.47 0.17 C 4412 2438 CircleF
+1.440 UP
+0.67 0.17 0.32 C 4166 2931 CircleF
+1.260 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.320 UP
+0.75 0.37 0.25 C 4289 2602 CircleF
+1.360 UP
+0.87 0.52 0.12 C 4494 2356 CircleF
+2.040 UP
+0.70 0.15 0.30 C 4207 2972 CircleF
+1.500 UP
+0.25 0.20 0.75 C 3468 2890 CircleF
+1.760 UP
+0.82 0.40 0.17 C 4412 2561 CircleF
+1.860 UP
+0.70 0.20 0.30 C 4207 2890 CircleF
+1.340 UP
+0.92 0.30 0.07 C 4576 2725 CircleF
+1.322 UP
+0.67 0.30 0.32 C 4166 2725 CircleF
+1.920 UP
+0.97 0.37 0.02 C 4658 2602 CircleF
+1.440 UP
+0.72 0.20 0.27 C 4248 2890 CircleF
+1.780 UP
+0.82 0.32 0.17 C 4412 2684 CircleF
+1.460 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.400 UP
+0.95 0.65 0.05 C 4617 2151 CircleF
+1.232 UP
+0.65 0.00 0.35 C 4125 3464 CircleF
+1.106 UP
+0.47 0.00 0.52 C 3837 3997 CircleF
+1.324 UP
+0.25 0.50 0.75 C 3468 2397 CircleF
+1.700 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.580 UP
+0.62 0.30 0.37 C 4084 2725 CircleF
+1.296 UP
+0.27 0.00 0.72 C 3509 3874 CircleF
+1.600 UP
+0.87 0.30 0.12 C 4494 2725 CircleF
+1.980 UP
+0.90 0.22 0.10 C 4535 2849 CircleF
+1.480 UP
+0.95 0.52 0.05 C 4617 2356 CircleF
+1.860 UP
+0.87 0.20 0.12 C 4494 2890 CircleF
+1.356 UP
+0.47 0.57 0.52 C 3837 2274 CircleF
+1.340 UP
+0.87 0.45 0.12 C 4494 2479 CircleF
+1.740 UP
+0.92 0.40 0.07 C 4576 2561 CircleF
+1.820 UP
+0.72 0.37 0.27 C 4248 2602 CircleF
+1.820 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.800 UP
+0.80 0.37 0.20 C 4371 2602 CircleF
+1.172 UP
+0.90 0.80 0.10 C 4535 1905 CircleF
+1.700 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.360 UP
+0.70 0.00 0.30 C 4207 3669 CircleF
+1.280 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.284 UP
+0.27 0.15 0.72 C 3509 2972 CircleF
+1.136 UP
+0.77 0.10 0.22 C 4330 3054 CircleF
+2.020 UP
+0.85 0.45 0.15 C 4453 2479 CircleF
+1.720 UP
+0.95 0.45 0.05 C 4617 2479 CircleF
+1.560 UP
+0.67 0.27 0.32 C 4166 2766 CircleF
+1.440 UP
+0.60 0.37 0.40 C 4043 2602 CircleF
+1.240 UP
+0.62 0.75 0.37 C 4084 1987 CircleF
+1.300 UP
+0.65 0.00 0.35 C 4125 3423 CircleF
+1.400 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.272 UP
+0.87 0.47 0.12 C 4494 2438 CircleF
+1.460 UP
+0.80 0.80 0.20 C 4371 1905 CircleF
+1.460 UP
+0.67 0.37 0.32 C 4166 2602 CircleF
+1.740 UP
+0.87 0.37 0.12 C 4494 2602 CircleF
+2.000 UP
+0.80 0.40 0.20 C 4371 2561 CircleF
+1.840 UP
+0.92 0.77 0.07 C 4576 1946 CircleF
+1.460 UP
+0.75 0.17 0.25 C 4289 2931 CircleF
+1.280 UP
+0.90 0.15 0.10 C 4535 2972 CircleF
+1.174 UP
+0.20 0.12 0.80 C 3386 3013 CircleF
+1.252 UP
+0.92 0.05 0.07 C 4576 3136 CircleF
+1.360 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.258 UP
+1.00 0.30 0.00 C 5643 2725 CircleF
+1.520 UP
+0.87 0.22 0.12 C 4494 2849 CircleF
+1.620 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.300 UP
+0.62 0.22 0.37 C 4084 2849 CircleF
+1.440 UP
+0.87 0.07 0.12 C 4494 3095 CircleF
+1.212 UP
+0.62 0.10 0.37 C 4084 3054 CircleF
+1.248 UP
+0.80 0.47 0.20 C 4371 2438 CircleF
+1.960 UP
+0.60 0.37 0.40 C 4043 2602 CircleF
+1.326 UP
+0.20 0.52 0.80 C 3386 2356 CircleF
+1.960 UP
+0.70 0.35 0.30 C 4207 2643 CircleF
+1.150 UP
+0.75 1.00 0.25 C 4289 1536 CircleF
+1.800 UP
+0.97 0.42 0.02 C 4658 2520 CircleF
+1.540 UP
+0.90 0.47 0.10 C 4535 2438 CircleF
+1.260 UP
+0.82 0.65 0.17 C 4412 2151 CircleF
+1.218 UP
+0.70 0.50 0.30 C 4207 2397 CircleF
+1.460 UP
+0.92 0.20 0.07 C 4576 2890 CircleF
+1.260 UP
+0.55 0.40 0.45 C 3961 2561 CircleF
+1.394 UP
+0.90 0.55 0.10 C 4535 2315 CircleF
+1.380 UP
+0.95 0.47 0.05 C 4617 2438 CircleF
+1.400 UP
+0.72 0.00 0.27 C 4248 3874 CircleF
+1.580 UP
+0.90 0.30 0.10 C 4535 2725 CircleF
+1.344 UP
+0.55 0.37 0.45 C 3961 2602 CircleF
+1.108 UP
+0.97 0.70 0.02 C 4658 2069 CircleF
+1.640 UP
+0.85 0.57 0.15 C 4453 2274 CircleF
+1.260 UP
+0.67 0.25 0.32 C 4166 2808 CircleF
+1.204 UP
+0.60 1.00 0.40 C 4043 1495 CircleF
+1.560 UP
+0.77 0.00 0.22 C 4330 3382 CircleF
+1.880 UP
+0.75 0.30 0.25 C 4289 2725 CircleF
+1.468 UP
+0.85 0.05 0.15 C 4453 3136 CircleF
+1.880 UP
+0.67 0.17 0.32 C 4166 2931 CircleF
+1.740 UP
+1.00 0.40 0.00 C 4740 2561 CircleF
+1.166 UP
+0.65 0.72 0.35 C 4125 2028 CircleF
+1.640 UP
+0.62 0.25 0.37 C 4084 2808 CircleF
+1.880 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.640 UP
+0.80 0.35 0.20 C 4371 2643 CircleF
+1.338 UP
+1.00 0.15 0.00 C 4740 2972 CircleF
+1.300 UP
+0.90 0.37 0.10 C 4535 2602 CircleF
+1.720 UP
+0.82 0.40 0.17 C 4412 2561 CircleF
+1.300 UP
+0.77 0.70 0.22 C 4330 2069 CircleF
+1.496 UP
+0.57 0.35 0.42 C 4002 2643 CircleF
+1.800 UP
+0.75 0.22 0.25 C 4289 2849 CircleF
+1.460 UP
+0.90 0.00 0.10 C 4535 3218 CircleF
+1.320 UP
+0.67 0.32 0.32 C 4166 2684 CircleF
+1.442 UP
+0.87 0.45 0.12 C 4494 2479 CircleF
+1.580 UP
+0.85 0.20 0.15 C 4453 2890 CircleF
+1.362 UP
+0.95 0.30 0.05 C 4617 2725 CircleF
+2.040 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.720 UP
+0.72 0.00 0.27 C 4248 3259 CircleF
+1.220 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.580 UP
+0.82 0.25 0.17 C 4412 2808 CircleF
+1.126 UP
+0.65 0.00 0.35 C 4125 4531 CircleF
+1.192 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.340 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.580 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.420 UP
+0.87 0.37 0.12 C 4494 2602 CircleF
+1.740 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.720 UP
+0.75 0.32 0.25 C 4289 2684 CircleF
+1.400 UP
+0.77 0.50 0.22 C 4330 2397 CircleF
+1.320 UP
+0.30 0.17 0.70 C 3550 2931 CircleF
+1.540 UP
+0.87 0.40 0.12 C 4494 2561 CircleF
+1.600 UP
+0.82 0.22 0.17 C 4412 2849 CircleF
+1.320 UP
+0.80 0.27 0.20 C 4371 2766 CircleF
+1.460 UP
+0.62 0.87 0.37 C 4084 1782 CircleF
+1.354 UP
+0.80 0.87 0.20 C 4371 1782 CircleF
+1.440 UP
+0.57 0.00 0.42 C 4002 3874 CircleF
+1.220 UP
+0.87 0.65 0.12 C 4494 2151 CircleF
+1.168 UP
+0.45 0.00 0.55 C 3796 3423 CircleF
+1.980 UP
+1.00 0.32 0.00 C 4740 2684 CircleF
+1.700 UP
+0.92 0.62 0.07 C 4576 2192 CircleF
+1.420 UP
+0.85 0.10 0.15 C 4453 3054 CircleF
+1.440 UP
+1.00 0.07 0.00 C 4740 3095 CircleF
+1.220 UP
+0.75 0.70 0.25 C 4289 2069 CircleF
+1.380 UP
+0.37 0.07 0.62 C 3673 3095 CircleF
+1.820 UP
+0.77 0.25 0.22 C 4330 2808 CircleF
+1.640 UP
+0.92 0.25 0.07 C 4576 2808 CircleF
+1.900 UP
+0.77 0.47 0.22 C 4330 2438 CircleF
+1.280 UP
+0.90 0.20 0.10 C 4535 2890 CircleF
+1.620 UP
+0.77 0.35 0.22 C 4330 2643 CircleF
+1.400 UP
+0.80 0.52 0.20 C 4371 2356 CircleF
+1.380 UP
+0.77 0.52 0.22 C 4330 2356 CircleF
+1.500 UP
+0.90 0.40 0.10 C 4535 2561 CircleF
+1.150 UP
+0.62 0.00 0.37 C 4084 3915 CircleF
+1.304 UP
+0.82 0.55 0.17 C 4412 2315 CircleF
+1.420 UP
+0.97 0.12 0.02 C 4658 3013 CircleF
+1.560 UP
+0.62 0.02 0.37 C 4084 3177 CircleF
+2.120 UP
+1.00 0.40 0.00 C 4699 2561 CircleF
+1.700 UP
+0.62 0.30 0.37 C 4084 2725 CircleF
+1.780 UP
+0.90 0.22 0.10 C 4535 2849 CircleF
+1.500 UP
+0.82 0.20 0.17 C 4412 2890 CircleF
+1.600 UP
+0.90 0.17 0.10 C 4535 2931 CircleF
+1.294 UP
+0.72 0.00 0.27 C 4248 3546 CircleF
+1.300 UP
+0.75 0.32 0.25 C 4289 2684 CircleF
+1.640 UP
+0.42 0.10 0.57 C 3755 3054 CircleF
+1.220 UP
+0.82 0.42 0.17 C 4412 2520 CircleF
+2.040 UP
+0.72 0.20 0.27 C 4248 2890 CircleF
+2.060 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.178 UP
+0.65 0.77 0.35 C 4125 1946 CircleF
+1.760 UP
+0.77 0.25 0.22 C 4330 2808 CircleF
+1.380 UP
+0.87 0.75 0.12 C 4494 1987 CircleF
+1.430 UP
+0.87 1.00 0.12 C 4494 1125 CircleF
+1.360 UP
+0.72 0.47 0.27 C 4248 2438 CircleF
+1.340 UP
+0.82 0.27 0.17 C 4412 2766 CircleF
+1.448 UP
+0.62 1.00 0.37 C 4084 1577 CircleF
+1.660 UP
+0.82 0.32 0.17 C 4412 2684 CircleF
+1.314 UP
+0.77 0.05 0.22 C 4330 3136 CircleF
+1.300 UP
+1.00 0.47 0.00 C 4822 2438 CircleF
+1.220 UP
+0.87 1.00 0.12 C 4494 1207 CircleF
+1.300 UP
+0.85 0.40 0.15 C 4453 2561 CircleF
+1.820 UP
+0.82 0.40 0.17 C 4412 2561 CircleF
+1.380 UP
+1.00 0.45 0.00 C 4822 2479 CircleF
+1.380 UP
+0.72 0.42 0.27 C 4248 2520 CircleF
+1.162 UP
+0.77 1.00 0.22 C 4330 1002 CircleF
+1.480 UP
+0.67 0.00 0.32 C 4166 3218 CircleF
+1.620 UP
+0.67 0.15 0.32 C 4166 2972 CircleF
+1.920 UP
+0.95 0.47 0.05 C 4617 2438 CircleF
+1.940 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.520 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.304 UP
+1.00 0.65 0.00 C 4904 2151 CircleF
+1.260 UP
+0.97 0.00 0.02 C 4658 3464 CircleF
+1.580 UP
+0.72 0.17 0.27 C 4248 2931 CircleF
+1.380 UP
+1.00 0.27 0.00 C 4863 2766 CircleF
+1.370 UP
+0.80 0.37 0.20 C 4371 2602 CircleF
+1.680 UP
+0.80 0.35 0.20 C 4371 2643 CircleF
+1.300 UP
+0.75 0.00 0.25 C 4289 3423 CircleF
+1.520 UP
+1.00 0.45 0.00 C 4822 2479 CircleF
+1.460 UP
+0.42 0.35 0.57 C 3755 2643 CircleF
+1.780 UP
+0.80 0.20 0.20 C 4371 2890 CircleF
+1.340 UP
+0.67 0.57 0.32 C 4166 2274 CircleF
+1.118 UP
+0.50 0.00 0.50 C 3879 3669 CircleF
+1.040 UP
+0.80 0.42 0.20 C 4371 2520 CircleF
+1.740 UP
+0.92 0.15 0.07 C 4576 2972 CircleF
+1.098 UP
+0.70 0.00 0.30 C 4207 4326 CircleF
+1.800 UP
+0.90 0.30 0.10 C 4535 2725 CircleF
+1.340 UP
+0.67 0.30 0.32 C 4166 2725 CircleF
+1.440 UP
+0.80 0.62 0.20 C 4371 2192 CircleF
+1.260 UP
+0.97 0.00 0.02 C 4658 3423 CircleF
+1.520 UP
+0.77 0.32 0.22 C 4330 2684 CircleF
+1.400 UP
+0.50 0.05 0.50 C 3879 3136 CircleF
+1.520 UP
+0.62 0.45 0.37 C 4084 2479 CircleF
+1.460 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.400 UP
+0.92 0.40 0.07 C 4576 2561 CircleF
+1.580 UP
+0.75 0.25 0.25 C 4289 2808 CircleF
+1.320 UP
+0.87 0.17 0.12 C 4494 2931 CircleF
+1.700 UP
+0.92 0.45 0.07 C 4576 2479 CircleF
+1.276 UP
+0.72 0.15 0.27 C 4248 2972 CircleF
+1.164 UP
+0.50 0.00 0.50 C 3879 3505 CircleF
+1.500 UP
+0.77 0.32 0.22 C 4330 2684 CircleF
+1.172 UP
+0.62 0.57 0.37 C 4084 2274 CircleF
+1.246 UP
+0.77 0.75 0.22 C 4330 1987 CircleF
+1.380 UP
+0.32 1.00 0.67 C 3591 1454 CircleF
+1.144 UP
+0.77 0.00 0.22 C 4330 3382 CircleF
+1.600 UP
+0.97 0.40 0.02 C 4658 2561 CircleF
+1.400 UP
+0.87 0.40 0.12 C 4494 2561 CircleF
+1.440 UP
+1.00 0.17 0.00 C 4904 2931 CircleF
+1.400 UP
+0.82 0.37 0.17 C 4412 2602 CircleF
+1.292 UP
+0.47 0.47 0.52 C 3837 2438 CircleF
+1.272 UP
+0.80 1.00 0.20 C 4371 756 CircleF
+1.158 UP
+0.70 0.67 0.30 C 4207 2110 CircleF
+1.310 UP
+0.57 0.15 0.42 C 4002 2972 CircleF
+1.660 UP
+0.92 0.42 0.07 C 4576 2520 CircleF
+1.204 UP
+0.87 0.27 0.12 C 4494 2766 CircleF
+1.740 UP
+0.97 0.72 0.02 C 4658 2028 CircleF
+1.480 UP
+0.82 0.00 0.17 C 4412 3382 CircleF
+1.400 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.440 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.156 UP
+0.65 0.55 0.35 C 4125 2315 CircleF
+2.240 UP
+0.77 0.25 0.22 C 4330 2808 CircleF
+1.082 UP
+0.70 0.32 0.30 C 4207 2684 CircleF
+1.380 UP
+0.45 0.30 0.55 C 3796 2725 CircleF
+1.226 UP
+0.60 0.35 0.40 C 4043 2643 CircleF
+1.090 UP
+0.57 0.05 0.42 C 4002 3136 CircleF
+1.256 UP
+0.75 0.82 0.25 C 4289 1864 CircleF
+1.202 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.338 UP
+0.75 0.47 0.25 C 4289 2438 CircleF
+1.460 UP
+0.37 0.12 0.62 C 3673 3013 CircleF
+1.940 UP
+0.75 0.32 0.25 C 4289 2684 CircleF
+1.520 UP
+0.85 0.17 0.15 C 4453 2931 CircleF
+1.740 UP
+1.00 0.47 0.00 C 4781 2438 CircleF
+1.700 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.500 UP
+0.65 0.02 0.35 C 4125 3177 CircleF
+1.340 UP
+0.67 0.32 0.32 C 4166 2684 CircleF
+1.180 UP
+1.00 0.52 0.00 C 4781 2356 CircleF
+1.680 UP
+0.70 0.27 0.30 C 4207 2766 CircleF
+1.354 UP
+0.67 0.07 0.32 C 4166 3095 CircleF
+1.420 UP
+0.95 0.30 0.05 C 4617 2725 CircleF
+1.460 UP
+0.92 0.17 0.07 C 4576 2931 CircleF
+1.360 UP
+0.47 0.00 0.52 C 3837 3751 CircleF
+1.128 UP
+0.80 0.20 0.20 C 4371 2890 CircleF
+1.250 UP
+0.97 0.57 0.02 C 4658 2274 CircleF
+1.332 UP
+0.90 0.20 0.10 C 4535 2890 CircleF
+1.338 UP
+0.70 0.40 0.30 C 4207 2561 CircleF
+1.780 UP
+0.65 0.35 0.35 C 4125 2643 CircleF
+1.500 UP
+0.82 0.07 0.17 C 4412 3095 CircleF
+1.580 UP
+0.95 0.07 0.05 C 4617 3095 CircleF
+1.560 UP
+0.77 0.27 0.22 C 4330 2766 CircleF
+1.248 UP
+0.55 0.37 0.45 C 3961 2602 CircleF
+1.320 UP
+0.72 0.52 0.27 C 4248 2356 CircleF
+1.600 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.980 UP
+0.87 0.42 0.12 C 4494 2520 CircleF
+1.126 UP
+0.72 0.72 0.27 C 4248 2028 CircleF
+1.800 UP
+0.65 0.12 0.35 C 4125 3013 CircleF
+1.480 UP
+0.77 0.25 0.22 C 4330 2808 CircleF
+1.900 UP
+0.52 0.15 0.47 C 3920 2972 CircleF
+1.240 UP
+1.00 0.47 0.00 C 4904 2438 CircleF
+1.520 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.152 UP
+0.45 0.57 0.55 C 3796 2274 CircleF
+1.520 UP
+0.70 0.40 0.30 C 4207 2561 CircleF
+2.040 UP
+0.97 0.22 0.02 C 4658 2849 CircleF
+1.340 UP
+0.82 0.67 0.17 C 4412 2110 CircleF
+1.176 UP
+0.80 0.42 0.20 C 4371 2520 CircleF
+1.540 UP
+0.70 0.57 0.30 C 4207 2274 CircleF
+1.240 UP
+0.90 0.00 0.10 C 4535 3587 CircleF
+1.300 UP
+0.80 0.42 0.20 C 4371 2520 CircleF
+1.320 UP
+0.75 0.00 0.25 C 4289 3505 CircleF
+1.620 UP
+0.70 0.22 0.30 C 4207 2849 CircleF
+1.920 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.700 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.880 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.480 UP
+1.00 0.32 0.00 C 4699 2684 CircleF
+1.540 UP
+0.70 0.52 0.30 C 4207 2356 CircleF
+1.420 UP
+0.70 0.32 0.30 C 4207 2684 CircleF
+1.500 UP
+0.82 0.55 0.17 C 4412 2315 CircleF
+1.460 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.720 UP
+0.72 0.32 0.27 C 4248 2684 CircleF
+1.520 UP
+0.80 1.00 0.20 C 4371 1454 CircleF
+1.272 UP
+0.82 0.70 0.17 C 4412 2069 CircleF
+1.322 UP
+1.00 0.25 0.00 C 4740 2808 CircleF
+1.314 UP
+0.82 0.12 0.17 C 4412 3013 CircleF
+1.362 UP
+0.92 0.30 0.07 C 4576 2725 CircleF
+1.388 UP
+0.77 0.50 0.22 C 4330 2397 CircleF
+1.216 UP
+0.67 0.27 0.32 C 4166 2766 CircleF
+0.796 UP
+0.00 0.00 1.00 C 3058 3382 CircleF
+1.100 UP
+0.92 0.07 0.07 C 4576 3095 CircleF
+1.260 UP
+0.72 0.47 0.27 C 4248 2438 CircleF
+1.260 UP
+0.82 0.50 0.17 C 4412 2397 CircleF
+1.228 UP
+0.70 0.00 0.30 C 4207 3341 CircleF
+1.720 UP
+0.85 0.57 0.15 C 4453 2274 CircleF
+1.400 UP
+0.40 0.00 0.60 C 3714 3259 CircleF
+1.208 UP
+0.82 0.60 0.17 C 4412 2233 CircleF
+1.300 UP
+1.00 0.05 0.00 C 4740 3136 CircleF
+1.500 UP
+0.95 0.30 0.05 C 4617 2725 CircleF
+1.222 UP
+0.72 1.00 0.27 C 4248 1536 CircleF
+1.400 UP
+0.77 0.30 0.22 C 4330 2725 CircleF
+1.520 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.052 UP
+0.87 0.97 0.12 C 4494 1618 CircleF
+1.154 UP
+0.82 0.65 0.17 C 4412 2151 CircleF
+1.486 UP
+0.95 0.67 0.05 C 4617 2110 CircleF
+1.336 UP
+0.87 0.10 0.12 C 4494 3054 CircleF
+1.700 UP
+0.92 0.40 0.07 C 4576 2561 CircleF
+1.540 UP
+0.75 0.15 0.25 C 4289 2972 CircleF
+1.180 UP
+0.55 0.00 0.45 C 3961 3382 CircleF
+1.620 UP
+0.95 0.57 0.05 C 4617 2274 CircleF
+1.400 UP
+0.77 0.22 0.22 C 4330 2849 CircleF
+1.310 UP
+0.65 0.00 0.35 C 4125 3300 CircleF
+1.800 UP
+0.75 0.35 0.25 C 4289 2643 CircleF
+1.580 UP
+0.85 0.60 0.15 C 4453 2233 CircleF
+1.380 UP
+0.60 0.15 0.40 C 4043 2972 CircleF
+1.228 UP
+0.60 0.00 0.40 C 4043 3300 CircleF
+1.880 UP
+0.62 0.35 0.37 C 4084 2643 CircleF
+2.100 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.540 UP
+0.82 0.40 0.17 C 4412 2561 CircleF
+1.260 UP
+0.67 0.50 0.32 C 4166 2397 CircleF
+1.262 UP
+0.95 0.10 0.05 C 4617 3054 CircleF
+1.740 UP
+0.87 0.60 0.12 C 4494 2233 CircleF
+1.460 UP
+0.67 0.10 0.32 C 4166 3054 CircleF
+1.340 UP
+0.70 0.40 0.30 C 4207 2561 CircleF
+1.082 UP
+0.87 0.45 0.12 C 4494 2479 CircleF
+1.140 UP
+0.72 0.47 0.27 C 4248 2438 CircleF
+1.480 UP
+0.75 0.00 0.25 C 4289 3259 CircleF
+1.500 UP
+0.92 0.42 0.07 C 4576 2520 CircleF
+1.328 UP
+1.00 0.00 0.00 C 4863 3751 CircleF
+1.240 UP
+0.95 0.00 0.05 C 4617 3382 CircleF
+1.520 UP
+0.92 0.30 0.07 C 4576 2725 CircleF
+1.282 UP
+0.67 0.22 0.32 C 4166 2849 CircleF
+1.600 UP
+0.70 0.42 0.30 C 4207 2520 CircleF
+1.640 UP
+0.97 0.37 0.02 C 4658 2602 CircleF
+1.460 UP
+1.00 0.45 0.00 C 4699 2479 CircleF
+1.520 UP
+0.92 0.57 0.07 C 4576 2274 CircleF
+1.760 UP
+0.85 0.25 0.15 C 4453 2808 CircleF
+1.440 UP
+0.95 0.47 0.05 C 4617 2438 CircleF
+1.720 UP
+0.72 0.22 0.27 C 4248 2849 CircleF
+1.380 UP
+0.95 0.47 0.05 C 4617 2438 CircleF
+1.760 UP
+0.92 0.50 0.07 C 4576 2397 CircleF
+1.600 UP
+0.80 0.35 0.20 C 4371 2643 CircleF
+1.322 UP
+1.00 0.37 0.00 C 4781 2602 CircleF
+1.620 UP
+0.87 0.50 0.12 C 4494 2397 CircleF
+1.338 UP
+0.82 0.00 0.17 C 4412 3628 CircleF
+1.100 UP
+0.52 0.00 0.47 C 3920 3956 CircleF
+1.320 UP
+0.77 0.77 0.22 C 4330 1946 CircleF
+1.382 UP
+0.95 0.17 0.05 C 4617 2931 CircleF
+1.172 UP
+0.95 0.00 0.05 C 4617 3218 CircleF
+1.800 UP
+0.37 0.17 0.62 C 3673 2931 CircleF
+1.840 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.380 UP
+0.72 0.47 0.27 C 4248 2438 CircleF
+1.446 UP
+0.80 0.02 0.20 C 4371 3177 CircleF
+1.800 UP
+0.72 0.22 0.27 C 4248 2849 CircleF
+1.340 UP
+0.67 0.55 0.32 C 4166 2315 CircleF
+1.340 UP
+0.67 0.32 0.32 C 4166 2684 CircleF
+1.520 UP
+0.75 0.40 0.25 C 4289 2561 CircleF
+1.174 UP
+0.72 0.00 0.27 C 4248 3751 CircleF
+1.412 UP
+0.82 0.00 0.17 C 4412 3997 CircleF
+1.700 UP
+0.75 0.45 0.25 C 4289 2479 CircleF
+1.640 UP
+1.00 0.67 0.00 C 4740 2110 CircleF
+1.420 UP
+1.00 0.50 0.00 C 5068 2397 CircleF
+1.700 UP
+0.72 0.45 0.27 C 4248 2479 CircleF
+1.800 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.340 UP
+0.77 0.40 0.22 C 4330 2561 CircleF
+1.400 UP
+1.00 0.27 0.00 C 4781 2766 CircleF
+1.560 UP
+0.90 0.30 0.10 C 4535 2725 CircleF
+1.440 UP
+0.47 0.10 0.52 C 3837 3054 CircleF
+1.560 UP
+0.70 0.25 0.30 C 4207 2808 CircleF
+1.760 UP
+0.90 0.70 0.10 C 4535 2069 CircleF
+1.760 UP
+0.87 0.52 0.12 C 4494 2356 CircleF
+1.720 UP
+0.75 0.35 0.25 C 4289 2643 CircleF
+1.720 UP
+0.95 0.32 0.05 C 4617 2684 CircleF
+1.920 UP
+0.80 0.52 0.20 C 4371 2356 CircleF
+0.920 UP
+0.95 0.22 0.05 C 4617 2849 CircleF
+1.240 UP
+0.62 0.80 0.37 C 4084 1905 CircleF
+1.480 UP
+0.85 0.40 0.15 C 4453 2561 CircleF
+1.504 UP
+1.00 0.35 0.00 C 4822 2643 CircleF
+1.256 UP
+0.97 0.27 0.02 C 4658 2766 CircleF
+1.380 UP
+0.82 0.37 0.17 C 4412 2602 CircleF
+1.320 UP
+1.00 0.32 0.00 C 4699 2684 CircleF
+1.860 UP
+0.77 0.12 0.22 C 4330 3013 CircleF
+0.988 UP
+0.80 0.42 0.20 C 4371 2520 CircleF
+1.360 UP
+0.85 0.00 0.15 C 4453 3505 CircleF
+1.440 UP
+0.40 0.20 0.60 C 3714 2890 CircleF
+1.620 UP
+0.80 0.35 0.20 C 4371 2643 CircleF
+1.424 UP
+0.87 0.70 0.12 C 4494 2069 CircleF
+1.400 UP
+0.72 0.35 0.27 C 4248 2643 CircleF
+1.520 UP
+0.65 0.22 0.35 C 4125 2849 CircleF
+1.880 UP
+0.72 0.52 0.27 C 4248 2356 CircleF
+2.020 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.520 UP
+0.75 0.17 0.25 C 4289 2931 CircleF
+1.860 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.820 UP
+1.00 0.42 0.00 C 4781 2520 CircleF
+1.180 UP
+0.62 0.32 0.37 C 4084 2684 CircleF
+1.040 UP
+0.62 1.00 0.37 C 4084 838 CircleF
+1.200 UP
+1.00 0.70 0.00 C 4945 2069 CircleF
+2.060 UP
+0.62 0.32 0.37 C 4084 2684 CircleF
+1.400 UP
+0.97 0.07 0.02 C 4658 3095 CircleF
+1.680 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.840 UP
+0.87 0.17 0.12 C 4494 2931 CircleF
+1.540 UP
+0.97 0.17 0.02 C 4658 2931 CircleF
+1.168 UP
+0.75 0.52 0.25 C 4289 2356 CircleF
+1.600 UP
+0.97 0.40 0.02 C 4658 2561 CircleF
+1.580 UP
+0.92 0.22 0.07 C 4576 2849 CircleF
+1.700 UP
+0.67 0.35 0.32 C 4166 2643 CircleF
+1.126 UP
+0.75 1.00 0.25 C 4289 1454 CircleF
+1.540 UP
+0.87 0.10 0.12 C 4494 3054 CircleF
+1.540 UP
+0.80 1.00 0.20 C 4371 1577 CircleF
+1.760 UP
+0.70 0.30 0.30 C 4207 2725 CircleF
+1.220 UP
+0.90 0.35 0.10 C 4535 2643 CircleF
+1.180 UP
+0.82 0.47 0.17 C 4412 2438 CircleF
+1.042 UP
+0.82 0.50 0.17 C 4412 2397 CircleF
+1.302 UP
+0.70 0.25 0.30 C 4207 2808 CircleF
+1.332 UP
+0.90 0.40 0.10 C 4535 2561 CircleF
+1.298 UP
+1.00 0.25 0.00 C 4740 2808 CircleF
+1.188 UP
+0.95 0.65 0.05 C 4617 2151 CircleF
+1.340 UP
+0.75 0.30 0.25 C 4289 2725 CircleF
+1.900 UP
+0.80 0.17 0.20 C 4371 2931 CircleF
+1.120 UP
+0.82 0.20 0.17 C 4412 2890 CircleF
+1.800 UP
+0.97 0.42 0.02 C 4658 2520 CircleF
+1.244 UP
+0.85 0.00 0.15 C 4453 3382 CircleF
+1.320 UP
+0.97 0.62 0.02 C 4658 2192 CircleF
+1.740 UP
+0.82 0.45 0.17 C 4412 2479 CircleF
+1.464 UP
+0.85 0.10 0.15 C 4453 3054 CircleF
+1.660 UP
+0.75 0.15 0.25 C 4289 2972 CircleF
+1.760 UP
+1.00 0.25 0.00 C 4699 2808 CircleF
+1.014 UP
+0.52 0.07 0.47 C 3920 3095 CircleF
+1.500 UP
+0.90 0.00 0.10 C 4535 4120 CircleF
+1.380 UP
+0.72 0.75 0.27 C 4248 1987 CircleF
+1.260 UP
+0.75 0.32 0.25 C 4289 2684 CircleF
+1.522 UP
+0.92 0.22 0.07 C 4576 2849 CircleF
+1.140 UP
+1.00 0.40 0.00 C 4781 2561 CircleF
+1.800 UP
+0.92 0.47 0.07 C 4576 2438 CircleF
+1.860 UP
+0.92 0.22 0.07 C 4576 2849 CircleF
+1.014 UP
+0.67 0.00 0.32 C 4166 4038 CircleF
+1.640 UP
+0.85 0.42 0.15 C 4453 2520 CircleF
+1.200 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.760 UP
+0.75 0.42 0.25 C 4289 2520 CircleF
+1.640 UP
+0.72 0.40 0.27 C 4248 2561 CircleF
+1.334 UP
+1.00 1.00 0.00 C 5232 1207 CircleF
+1.480 UP
+0.87 0.35 0.12 C 4494 2643 CircleF
+1.560 UP
+0.92 0.50 0.07 C 4576 2397 CircleF
+1.400 UP
+0.60 0.00 0.40 C 4043 3587 CircleF
+1.320 UP
+0.80 0.35 0.20 C 4371 2643 CircleF
+1.340 UP
+0.65 0.42 0.35 C 4125 2520 CircleF
+1.600 UP
+0.90 0.10 0.10 C 4535 3054 CircleF
+1.380 UP
+1.00 0.32 0.00 C 4822 2684 CircleF
+1.700 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.620 UP
+0.85 0.22 0.15 C 4453 2849 CircleF
+1.120 UP
+1.00 0.02 0.00 C 4740 3177 CircleF
+1.800 UP
+0.85 0.40 0.15 C 4453 2561 CircleF
+1.352 UP
+0.80 0.17 0.20 C 4371 2931 CircleF
+1.100 UP
+0.77 0.32 0.22 C 4330 2684 CircleF
+1.540 UP
+0.87 0.57 0.12 C 4494 2274 CircleF
+1.220 UP
+0.90 0.42 0.10 C 4535 2520 CircleF
+1.260 UP
+0.80 0.67 0.20 C 4371 2110 CircleF
+1.580 UP
+0.72 0.10 0.27 C 4248 3054 CircleF
+1.262 UP
+0.80 0.05 0.20 C 4371 3136 CircleF
+1.320 UP
+0.72 0.15 0.27 C 4248 2972 CircleF
+1.780 UP
+0.85 0.42 0.15 C 4453 2520 CircleF
+1.240 UP
+0.65 0.92 0.35 C 4125 1700 CircleF
+1.220 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+1.440 UP
+0.92 0.32 0.07 C 4576 2684 CircleF
+1.166 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.420 UP
+0.72 0.40 0.27 C 4248 2561 CircleF
+1.640 UP
+0.80 0.17 0.20 C 4371 2931 CircleF
+1.440 UP
+0.85 0.62 0.15 C 4453 2192 CircleF
+1.520 UP
+0.70 0.50 0.30 C 4207 2397 CircleF
+1.288 UP
+0.95 0.00 0.05 C 4617 3546 CircleF
+1.580 UP
+0.75 0.40 0.25 C 4289 2561 CircleF
+1.460 UP
+0.67 0.42 0.32 C 4166 2520 CircleF
+1.800 UP
+0.90 0.40 0.10 C 4535 2561 CircleF
+1.344 UP
+0.85 0.17 0.15 C 4453 2931 CircleF
+1.700 UP
+0.87 0.32 0.12 C 4494 2684 CircleF
+1.720 UP
+0.95 0.40 0.05 C 4617 2561 CircleF
+1.298 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.500 UP
+0.67 0.10 0.32 C 4166 3054 CircleF
+1.400 UP
+0.50 0.00 0.50 C 3879 3259 CircleF
+1.220 UP
+0.77 0.20 0.22 C 4330 2890 CircleF
+1.700 UP
+0.77 0.15 0.22 C 4330 2972 CircleF
+1.500 UP
+0.80 0.22 0.20 C 4371 2849 CircleF
+1.420 UP
+0.85 0.27 0.15 C 4453 2766 CircleF
+1.440 UP
+1.00 0.07 0.00 C 4699 3095 CircleF
+1.540 UP
+0.67 0.25 0.32 C 4166 2808 CircleF
+1.300 UP
+0.67 0.77 0.32 C 4166 1946 CircleF
+1.700 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.320 UP
+0.77 0.32 0.22 C 4330 2684 CircleF
+1.520 UP
+0.92 0.37 0.07 C 4576 2602 CircleF
+1.360 UP
+0.87 0.47 0.12 C 4494 2438 CircleF
+1.740 UP
+1.00 0.25 0.00 C 4822 2808 CircleF
+1.260 UP
+0.77 0.02 0.22 C 4330 3177 CircleF
+1.360 UP
+0.80 0.67 0.20 C 4371 2110 CircleF
+0.950 UP
+0.62 0.00 0.37 C 4084 3382 CircleF
+1.720 UP
+0.97 0.35 0.02 C 4658 2643 CircleF
+1.540 UP
+0.87 0.47 0.12 C 4494 2438 CircleF
+1.320 UP
+0.70 0.42 0.30 C 4207 2520 CircleF
+1.200 UP
+0.75 0.27 0.25 C 4289 2766 CircleF
+1.500 UP
+1.00 0.52 0.00 C 4740 2356 CircleF
+1.520 UP
+0.85 1.00 0.15 C 4453 1577 CircleF
+1.680 UP
+0.92 0.65 0.07 C 4576 2151 CircleF
+1.560 UP
+0.85 0.30 0.15 C 4453 2725 CircleF
+1.380 UP
+0.72 0.25 0.27 C 4248 2808 CircleF
+1.400 UP
+1.00 0.60 0.00 C 4699 2233 CircleF
+1.380 UP
+0.92 0.02 0.07 C 4576 3177 CircleF
+1.580 UP
+0.87 0.25 0.12 C 4494 2808 CircleF
+1.460 UP
+0.90 0.47 0.10 C 4535 2438 CircleF
+1.458 UP
+1.00 0.00 0.00 C 5232 3218 CircleF
+1.380 UP
+0.92 0.47 0.07 C 4576 2438 CircleF
+1.340 UP
+0.85 0.35 0.15 C 4453 2643 CircleF
+1.224 UP
+1.00 0.12 0.00 C 4822 3013 CircleF
+1.400 UP
+1.00 0.15 0.00 C 4699 2972 CircleF
+1.400 UP
+0.47 0.35 0.52 C 3837 2643 CircleF
+1.280 UP
+0.50 0.37 0.50 C 3879 2602 CircleF
+1.600 UP
+0.90 0.27 0.10 C 4535 2766 CircleF
+1.620 UP
+0.70 0.25 0.30 C 4207 2808 CircleF
+1.540 UP
+0.72 0.52 0.27 C 4248 2356 CircleF
+1.192 UP
+0.65 0.30 0.35 C 4125 2725 CircleF
+1.800 UP
+0.85 0.37 0.15 C 4453 2602 CircleF
+1.520 UP
+0.75 0.52 0.25 C 4289 2356 CircleF
+1.320 UP
+0.55 0.20 0.45 C 3961 2890 CircleF
+1.420 UP
+0.85 0.60 0.15 C 4453 2233 CircleF
+1.680 UP
+0.75 0.22 0.25 C 4289 2849 CircleF
+1.240 UP
+0.67 0.42 0.32 C 4166 2520 CircleF
+1.360 UP
+0.65 0.67 0.35 C 4125 2110 CircleF
+1.300 UP
+1.00 0.47 0.00 C 4699 2438 CircleF
+1.620 UP
+0.75 0.60 0.25 C 4289 2233 CircleF
+1.560 UP
+0.62 0.20 0.37 C 4084 2890 CircleF
+1.340 UP
+0.90 0.32 0.10 C 4535 2684 CircleF
+1.800 UP
+0.82 0.27 0.17 C 4412 2766 CircleF
+1.380 UP
+0.87 0.50 0.12 C 4494 2397 CircleF
+1.360 UP
+0.62 0.60 0.37 C 4084 2233 CircleF
+1.460 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.660 UP
+0.90 0.27 0.10 C 4535 2766 CircleF
+1.476 UP
+0.77 0.27 0.22 C 4330 2766 CircleF
+1.278 UP
+0.80 0.32 0.20 C 4371 2684 CircleF
+1.400 UP
+0.80 0.82 0.20 C 4371 1864 CircleF
+1.102 UP
+0.72 1.00 0.27 C 4248 1125 CircleF
+1.620 UP
+1.00 0.37 0.00 C 4781 2602 CircleF
+1.760 UP
+0.75 0.27 0.25 C 4289 2766 CircleF
+1.620 UP
+0.72 0.10 0.27 C 4248 3054 CircleF
+1.420 UP
+0.92 0.35 0.07 C 4576 2643 CircleF
+1.504 UP
+0.80 0.25 0.20 C 4371 2808 CircleF
+1.520 UP
+1.00 0.22 0.00 C 4740 2849 CircleF
+1.680 UP
+0.87 0.25 0.12 C 4494 2808 CircleF
+0.860 UP
+1.00 0.30 0.00 C 4945 2725 CircleF
+1.460 UP
+0.82 0.35 0.17 C 4412 2643 CircleF
+1.260 UP
+0.65 0.07 0.35 C 4125 3095 CircleF
+1.276 UP
+0.75 0.47 0.25 C 4289 2438 CircleF
+1.340 UP
+0.87 0.70 0.12 C 4494 2069 CircleF
+1.256 UP
+0.62 0.37 0.37 C 4084 2602 CircleF
+1.280 UP
+0.72 0.40 0.27 C 4248 2561 CircleF
+1.386 UP
+0.90 0.85 0.10 C 4535 1823 CircleF
+1.244 UP
+0.60 0.00 0.40 C 4043 3505 CircleF
+1.480 UP
+0.82 0.37 0.17 C 4412 2602 CircleF
+1.480 UP
+0.75 0.40 0.25 C 4289 2561 CircleF
+1.162 UP
+0.80 1.00 0.20 C 4371 1536 CircleF
+1.220 UP
+0.85 0.32 0.15 C 4453 2684 CircleF
+1.560 UP
+0.85 0.05 0.15 C 4453 3136 CircleF
+1.460 UP
+0.75 0.22 0.25 C 4289 2849 CircleF
+1.800 UP
+0.82 0.10 0.17 C 4412 3054 CircleF
+1.640 UP
+0.72 0.22 0.27 C 4248 2849 CircleF
+1.140 UP
+1.00 0.00 0.00 C 5027 3341 CircleF
+1.520 UP
+0.77 0.32 0.22 C 4330 2684 CircleF
+1.342 UP
+0.67 0.00 0.32 C 4166 3546 CircleF
+1.380 UP
+0.90 0.20 0.10 C 4535 2890 CircleF
+1.720 UP
+0.77 0.42 0.22 C 4330 2520 CircleF
+1.372 UP
+0.57 0.90 0.42 C 4002 1741 CircleF
+0.904 UP
+1.00 1.00 0.00 C 4904 961 CircleF
+1.396 UP
+0.97 0.50 0.02 C 4658 2397 CircleF
+1.320 UP
+0.57 0.20 0.42 C 4002 2890 CircleF
+1.160 UP
+0.65 0.55 0.35 C 4125 2315 CircleF
+1.800 UP
+0.72 0.17 0.27 C 4248 2931 CircleF
+1.240 UP
+0.67 0.35 0.32 C 4166 2643 CircleF
+1.640 UP
+0.82 0.12 0.17 C 4412 3013 CircleF
+1.680 UP
+1.00 0.40 0.00 C 4699 2561 CircleF
+1.270 UP
+0.50 0.00 0.50 C 3879 3874 CircleF
+1.240 UP
+0.90 0.50 0.10 C 4535 2397 CircleF
+1.420 UP
+0.32 0.10 0.67 C 3591 3054 CircleF
+1.280 UP
+0.75 0.00 0.25 C 4289 3792 CircleF
+1.580 UP
+0.75 0.50 0.25 C 4289 2397 CircleF
+1.700 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.206 UP
+0.82 1.00 0.17 C 4412 1084 CircleF
+1.580 UP
+0.80 0.37 0.20 C 4371 2602 CircleF
+1.120 UP
+0.87 0.50 0.12 C 4494 2397 CircleF
+1.440 UP
+0.92 0.47 0.07 C 4576 2438 CircleF
+1.780 UP
+0.62 0.40 0.37 C 4084 2561 CircleF
+1.700 UP
+0.82 0.20 0.17 C 4412 2890 CircleF
+1.406 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.920 UP
+0.90 0.15 0.10 C 4535 2972 CircleF
+1.290 UP
+0.95 0.37 0.05 C 4617 2602 CircleF
+1.376 UP
+0.87 0.25 0.12 C 4494 2808 CircleF
+1.238 UP
+0.42 0.30 0.57 C 3755 2725 CircleF
+1.328 UP
+1.00 0.55 0.00 C 4945 2315 CircleF
+1.740 UP
+0.70 0.12 0.30 C 4207 3013 CircleF
+1.720 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.400 UP
+0.67 0.57 0.32 C 4166 2274 CircleF
+1.760 UP
+0.95 0.32 0.05 C 4617 2684 CircleF
+1.260 UP
+0.70 0.17 0.30 C 4207 2931 CircleF
+1.560 UP
+0.70 0.22 0.30 C 4207 2849 CircleF
+1.660 UP
+1.00 0.40 0.00 C 4822 2561 CircleF
+1.560 UP
+0.72 0.12 0.27 C 4248 3013 CircleF
+1.240 UP
+0.82 0.45 0.17 C 4412 2479 CircleF
+1.262 UP
+0.80 0.00 0.20 C 4371 3423 CircleF
+1.176 UP
+0.95 0.82 0.05 C 4617 1864 CircleF
+1.700 UP
+0.92 0.30 0.07 C 4576 2725 CircleF
+1.700 UP
+0.70 0.55 0.30 C 4207 2315 CircleF
+1.360 UP
+0.75 0.27 0.25 C 4289 2766 CircleF
+1.600 UP
+0.85 0.05 0.15 C 4453 3136 CircleF
+1.880 UP
+0.92 0.27 0.07 C 4576 2766 CircleF
+1.400 UP
+0.72 0.30 0.27 C 4248 2725 CircleF
+1.348 UP
+0.50 0.00 0.50 C 3879 3341 CircleF
+1.540 UP
+0.80 0.47 0.20 C 4371 2438 CircleF
+1.390 UP
+0.82 0.05 0.17 C 4412 3136 CircleF
+1.540 UP
+0.80 0.47 0.20 C 4371 2438 CircleF
+1.420 UP
+0.17 0.00 0.82 C 3345 3546 CircleF
+1.350 UP
+0.87 0.00 0.12 C 4494 3710 CircleF
+% End plot #1
+% Begin plot #2
+1.000 UP
+1.000 UL
+LTb
+LC3 setrgbcolor
+3427 2972 Circle
+2935 4120 Circle
+3304 2766 Circle
+3140 2972 Circle
+3099 1536 Circle
+3550 3054 Circle
+3632 2520 Circle
+% End plot #2
+% Begin plot #3
+1.000 UL
+LTb
+LCb setrgbcolor
+% End plot #3
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+1827 4859 N
+0 -4103 V
+4103 0 V
+0 4103 V
+-4103 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica

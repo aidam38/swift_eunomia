@@ -1,0 +1,8 @@
+param.in
+pl.in
+tp.in
+30	! f [deg]
+60	! omega [deg]
+1	! tolerance [deg]
+1.e-8
+

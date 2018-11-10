@@ -1,0 +1,9 @@
+V1    = 119353000.0 km^3
+D_complete = 6.0 km
+D_PB(>D_complete) = 610.864526270386 km
+V(>D) = 119357410.903635 km^3
+D_PB = 610.872051374816 km
+D_LF = 610.818 km
+V_LF = 119325730.645952 km^3
+LF/PB = 0.999734576534096 (Largest Fragment/Parent Body mass ratio)
+v_esc = 361.004390555802 m/s = 0.361004390555802 km/s

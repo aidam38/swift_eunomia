@@ -1,0 +1,11 @@
+#!/bin/sh
+
+NGRID=101
+
+AMIN=1.800
+AMAX=2.050
+ECC=0.080
+INC=19.500
+
+./secres.sh $NGRID $AMIN $AMAX $ECC $INC
+

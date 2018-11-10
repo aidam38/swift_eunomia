@@ -1,0 +1,4 @@
+# desig_to_start = 1270
+# v_cutoff = 10 m/s
+# maglimit = 20 mag
+# catalogue = astorb_astdys_wise_akari_sloan.dat_WITH_PROPER_ELMTS

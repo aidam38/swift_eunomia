@@ -1,0 +1,126 @@
+#!/usr/bin/env python
+
+import os
+import re
+import sys
+import math
+import subprocess
+
+########################################################################
+
+def loginterp(x,y,x0):
+    n = len(x)
+    if x0 < x[0]:
+        extra = True
+        y0 = y[0]
+    elif x0 > x[n-1]:
+        extra = True
+        y0 = y[n-1]
+    else:
+        extra = False
+        i = 1
+        while x[i] < x0:
+            i = i + 1
+
+        if (y[i] > 0.) and (y[i-1] > 0.) and (x[i] > 0.) and (x[i-1] > 0.):
+            y0 = 10.0** (math.log10(y[i-1]) + (math.log10(y[i])-math.log10(y[i-1])) * (math.log10(x0)-math.log10(x[i-1]))/(math.log10(x[i])-math.log10(x[i-1])) )
+        else:
+            y0 = y[i-1] + (y[i]-y[i-1]) * (x0-x[i-1])/(x[i]-x[i-1])
+
+    return (y0, extra)
+
+########################################################################
+
+def chi2_func(D_obs, N_obs, D, N, D_1, D_2):
+    chi2 = 0.
+    n_fit = 0
+    f = open("durda.tmp1", "w")
+    f2 = open("durda.tmp2", "w")
+    f.write("# x_syn & y_syn or y_obs\n")
+    f2.write("# x_syn & y_obs & sigma\n")
+
+    for i in range(0,len(D)):
+        x_syn = D[i]
+        y_syn = N[i]
+        if x_syn >= D_1 and x_syn <= D_2:
+             (y_obs, extra) = loginterp(D_obs, N_obs, x_syn)
+             if extra:
+#                  print "Error: extrapolation is NOT allowed!"
+#                  sys.exit(1)
+                 pass
+             else:
+                 sigma2 = (y_obs/10.)**2
+                 chi2 = chi2 + (y_syn-y_obs)**2/sigma2
+                 n_fit = n_fit + 1
+                 f.write("%f %f\n%f %f\n\n" % (x_syn, y_syn, x_syn, y_obs))
+                 f2.write("%f %f %f\n" % (x_syn, y_obs, math.sqrt(sigma2)))
+
+    f.close()
+    f2.close()
+    return (chi2, n_fit)
+
+########################################################################
+
+# read the observed family SFD
+
+f = open("family.dat_hc", "r")
+D_obs = []
+N_obs = []
+for line in f:
+    l = line.split()
+    D_obs.append(float(l[0]))
+    N_obs.append(float(l[1]))
+f.close()
+D_obs.reverse()
+N_obs.reverse()
+D_obs.pop()
+N_obs.pop()
+D_obs.pop(0)
+N_obs.pop(0)
+
+# ranges for parent-body size
+
+#D_PBs = range(1,20,1) + range(20,100,5) + range(100,500,10)
+#D_PBs = range(20,100,5) + range(100,500,10)
+D_1 = 0.
+D_2 = 500.
+
+# read Durda's SFD data files
+
+files = sys.argv[1:]
+
+for filename in files:
+    if os.path.isfile(filename) and re.match(".*\.sfd",filename):
+        f = open(filename, "r")
+        D = []
+        N = []
+        for line in f:
+            l = line.split()
+            D.append(float(l[0]))
+            N.append(float(l[1]))
+        f.close()
+        D.reverse()
+        N.reverse()
+
+#        print D[-1]
+#        print D_obs[-1]
+        D_PB = 100.*D_obs[-1]/D[-1]
+        D_scaled = []
+        for i in range(0,len(D)):
+            D_scaled.append(D[i]*D_PB/100.)
+
+        (chi2, n_fit) = chi2_func(D_obs, N_obs, D_scaled, N, D_1, D_2)
+
+        print "%10.2f  %3d  %8.3f  %s" % (chi2, n_fit, D_PB, filename)
+
+        f = open("durda.tmp3", "w")
+        f.write("filename = \"%s\"\nD_PB = %f\nchi2 = %f\n" % (filename, D_PB, chi2))
+        f.close()
+
+        print subprocess.check_output("./durda.plt", shell=True)
+#        sys.exit(1)
+        
+
+#        print ""
+
+
