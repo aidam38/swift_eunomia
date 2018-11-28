@@ -1,7 +1,7 @@
 #!/usr/bin/gnuplot
 
 set colors classic
-set term x11
+#set term x11
 
 set xl "a_p [AU]"
 set yl "H [mag]"

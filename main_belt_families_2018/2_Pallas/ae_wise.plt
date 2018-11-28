@@ -1,9 +1,9 @@
 #!/usr/bin/gnuplot
 
 set colors classic
-set term x11
+#set term x11
 
-#set xl "{/Helvetica-Oblique a}_p [AU]"
+set xl "{/Helvetica-Oblique a}_p [AU]"
 set yl "{/Helvetica-Oblique e}_p" offset 1.5,0
 
 a = 2.77092
@@ -41,7 +41,7 @@ D(H, p_V) = 10.**(0.5*(6.259 - log10(p_V) - 0.4*H))
 
 set lmargin 7.5
 set rmargin 1.2
-set bmargin 0.5
+set bmargin 3.5
 set tmargin 1.1
 
 a_J = 5.2027129998802337

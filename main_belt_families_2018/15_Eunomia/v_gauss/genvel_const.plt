@@ -1,6 +1,6 @@
 #!/usr/bin/gnuplot
 
-set term x11
+#set term x11
 
 set xl "vx [m/s]"
 set yl "vy [m/s]"

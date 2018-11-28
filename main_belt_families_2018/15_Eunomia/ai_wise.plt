@@ -1,19 +1,19 @@
 #!/usr/bin/gnuplot
 
 set colors classic
-set term x11
+#set term x11
 set ang deg
 
 set xl "{/Helvetica-Oblique a}_p [au]"
 set yl "sin {/Helvetica-Oblique I}_p" offset 1.5,0
 
-a = 2.77092
-e = 0.281258
-sini = 0.547547
+a = 2.643666 
+e = 0.1485956 
+sini = 0.2266469
 
 load "family.rng"
-i1=0.52
-i2=0.58
+i1=0.20
+i2=0.25
 #set xr [a1:a2]
 set yr [i1:i2]
 tmp=0.13
@@ -33,7 +33,7 @@ load "COLOR_wise.plt"
 #f_(H) = 0.1 + (H-17.)/(6.-17.)*1.0
 #f_(H) = 0.1 + (H-17.)/(6.-17.)*1.5
 
-f_(D) = 0.5 + (log10(D)-0.)/(3.-0.)*3.0
+f_(D) = 0.5 + (log10(D)-0.)/(3.-0.)*1.5
 
 p_V = 0.15
 D(H, p_V) = 10.**(0.5*(6.259 - log10(p_V) - 0.4*H))
@@ -63,15 +63,24 @@ load "../../secres/ranges.plt"
 
 p \
   "box.dat" u (x1+$1*(x2-x1)):(y1+$2*(y2-y1)) not w filledcurves lt 9 lw 0.0 fill pattern 4,\
-  "<./v_gauss/genvel_ellip2 300 361 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 80.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
-  "<./v_gauss/genvel_ellip2 300 361 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 70.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
-  "<./v_gauss/genvel_ellip2 300 361 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 60.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
-  "<./v_gauss/genvel_ellip2 300 361 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 50.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
   "<awk '($48 == \"?\")' family.list" u 36:38:(f_(D($35,p_V))) not w p pt 7 ps variable lc 7,\
   "<awk '($48 != \"?\")' family.list" u 36:38:(f_($47)):(pV_pIR($57, $59)) not w p pt 7 ps variable lc rgb variable,\
   "interlopers.out" u 36:38 not w p pt 6 lt 2 ps 1,\
   "../../secres/ai/d46_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(sin(imax-$2/ngrid*(imax-imin))) title "{/Helvetica-Oblique s}-{/Helvetica-Oblique s}_6-{/Helvetica-Oblique g}_5+{/Helvetica-Oblique g}_6"  w lines lt 0,\
-#pa -1
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 0.0 0.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 0.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 180.0 0.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 0.0 30.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 30.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 180.0 30.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 0.0 60.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 60.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 180.0 60.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 0.0 90.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 90.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 180.0 90.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5
+
+pa -1
 
 set term post eps enh color dashed "Helvetica" 18
 set size 0.8,0.475

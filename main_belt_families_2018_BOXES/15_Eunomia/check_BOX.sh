@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./check_BOX.py 15 0.12 0.05 0.05
+./check_BOX.py 15 0.3 0.05 0.05
 
 ./aei_sloan.plt
 ./aei_wise.plt

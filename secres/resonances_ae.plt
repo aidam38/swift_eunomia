@@ -13,7 +13,7 @@ set title "secular resonances by Milani and Knezevic (1997)"
 set xlabel "semimajor axis a [AU]"
 set ylabel "eccentricity e []"
 
-set term x11
+#set term x11
 set out
 p "ae/d10_cntr.dat" u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g+s-g6-s6" w l,\
   "ae/d13_cntr.dat" u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g-2g6+g5" w l,\
