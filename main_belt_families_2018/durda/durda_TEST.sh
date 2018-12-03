@@ -5,6 +5,6 @@ rm png/*.png
 
 ./durda.py *.sfd | sort -n > durda.out
 
-qiv png/*.png
+sxiv png/*.png
 
 

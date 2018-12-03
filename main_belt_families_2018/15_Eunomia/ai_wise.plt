@@ -33,7 +33,7 @@ load "COLOR_wise.plt"
 #f_(H) = 0.1 + (H-17.)/(6.-17.)*1.0
 #f_(H) = 0.1 + (H-17.)/(6.-17.)*1.5
 
-f_(D) = 0.5 + (log10(D)-0.)/(3.-0.)*1.5
+f_(D) = (0.5 + (log10(D)-0.)/(3.-0.)*1.5)*0.5
 
 p_V = 0.15
 D(H, p_V) = 10.**(0.5*(6.259 - log10(p_V) - 0.4*H))
@@ -67,6 +67,18 @@ p \
   "<awk '($48 != \"?\")' family.list" u 36:38:(f_($47)):(pV_pIR($57, $59)) not w p pt 7 ps variable lc rgb variable,\
   "interlopers.out" u 36:38 not w p pt 6 lt 2 ps 1,\
   "../../secres/ai/d46_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(sin(imax-$2/ngrid*(imax-imin))) title "{/Helvetica-Oblique s}-{/Helvetica-Oblique s}_6-{/Helvetica-Oblique g}_5+{/Helvetica-Oblique g}_6"  w lines lt 0,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 50.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 2.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 0.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+  "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 90.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5
+#pa -1
+
+set term post eps enh color dashed "Helvetica" 18
+set size 0.8,0.475
+set out "ai_wise.eps"
+rep
+
+q
+
   "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 0.0 0.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
   "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 0.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
   "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 180.0 0.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
@@ -80,14 +92,11 @@ p \
   "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 90.0 90.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
   "<./v_gauss/genvel_ellip2 300 350 -1 | ./v_gauss/v_gauss 2.643666 0.1485956 180.0 90.0 | awk '(FNR>1)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5
 
-pa -1
-
-set term post eps enh color dashed "Helvetica" 18
-set size 0.8,0.475
-set out "ai_wise.eps"
-rep
-
-q
+   "<./v_gauss/genvel_ellip2 300 115 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 70.0"                    u (a+$1):(sini+$3) not w l lt 2 lc 8 lw 2.0,\
+   "<./v_gauss/genvel_ellip2 300 115 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 80.0"                    u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+   "<./v_gauss/genvel_ellip2 300 115 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 90.0 | awk '(FNR<=150)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
+   "family.label" u 36:38:34 w labels center,\
+   "../families.syn" u 36:38:34 w labels center
 
   "../../secres/ai/d10_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(sin(imax-$2/ngrid*(imax-imin))) title "g+s-g6-s6"   w lines,\
   "../../secres/ai/d13_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(sin(imax-$2/ngrid*(imax-imin))) title "g-2g6+g5"    w lines,\
@@ -98,11 +107,3 @@ q
   "../../secres/ai/g_s_g5_s6_cntr.dat"   u ($1/ngrid*(amax-amin)+amin):(sin(imax-$2/ngrid*(imax-imin))) title "g+s-g5-s6"   w lines,\
   "../../secres/ai/2g_g5_g6_cntr.dat"    u ($1/ngrid*(amax-amin)+amin):(sin(imax-$2/ngrid*(imax-imin))) title "2g-g5-g6"    w lines,\
   "../../secres/ai/2g_s_2g5_s7_cntr.dat" u ($1/ngrid*(amax-amin)+amin):(sin(imax-$2/ngrid*(imax-imin))) title "2g+s-2g5-s7" w lines
-
-
-   "<./v_gauss/genvel_ellip2 300 115 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 70.0"                    u (a+$1):(sini+$3) not w l lt 2 lc 8 lw 2.0,\
-   "<./v_gauss/genvel_ellip2 300 115 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 80.0"                    u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
-   "<./v_gauss/genvel_ellip2 300 115 -1 | ./v_gauss/v_gauss 2.77092 0.281258 170.0 90.0 | awk '(FNR<=150)'" u (a+$1):(sini+$3) not w l lt 2 lc 9 lw 0.5,\
-   "family.label" u 36:38:34 w labels center,\
-   "../families.syn" u 36:38:34 w labels center
-

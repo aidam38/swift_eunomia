@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # geometry of the impact disruption
-F=140
-OMEGA=60
+F=90
+OMEGA=50
 
 v_R_koef=1.0
 v_T_koef=1.0
 v_W_koef=1.0
 v_R_shift=0.0
 v_T_shift=0.0
-v_W_shift=200.0
+v_W_shift=0.0
 
 export F OMEGA
 
@@ -21,7 +21,7 @@ cd ..
 awk '{ printf("%8.3f\n", $1/2.); }' < D.dat > R.dat
 ./yarko.awk < R.dat
 
-cp propagate_to_given_f_omega/dump_pl.dat pl.in_PLANETSONLY
+cp propagate_to_given_f_omega/dump_pl.dat pl.in
 
 # write the number of asteroids from D_astorbifexists to genvel3.in!
 ./genvel3 < genvel3.in > genvel3.out
@@ -37,7 +37,5 @@ hist6 40 0 1000 genvel3.out_v > genvel3.out_v_h
 # some plots to check
 ./genvel3.plt
 ./tp.plt
-
-
 
 

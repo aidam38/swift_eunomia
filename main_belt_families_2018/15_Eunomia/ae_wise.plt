@@ -34,7 +34,7 @@ load "COLOR_wise.plt"
 #f_(H) = 0.1 + (H-17.)/(6.-17.)*1.0
 #f_(H) = 0.1 + (H-17.)/(6.-17.)*1.5
 
-f_(D) = 0.5 + (log10(D)-0.)/(3.-0.)*2.0
+f_(D) = (0.5 + (log10(D)-0.)/(3.-0.)*2.0)*0.5
 
 p_V = 0.15
 D(H, p_V) = 10.**(0.5*(6.259 - log10(p_V) - 0.4*H))
@@ -75,28 +75,10 @@ p \
   "<awk '($48 == \"?\")' family.list" u 36:37:(f_(D($35,p_V))) not w p pt 7 ps variable lc 7,\
   "<awk '($48 != \"?\")' family.list" u 36:37:(f_($47)):(pV_pIR($57, $59)) not w p pt 7 ps variable lc rgb variable,\
   "interlopers.out" u 36:37 not w p pt 6 lt 2 ps 1,\
-  "../../secres/ae/d10_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g+s-g6-s6"   w lines,\
-  "../../secres/ae/d13_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g-2g6+g5"    w lines,\
-  "../../secres/ae/d46_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "{/Helvetica-Oblique s}-{/Helvetica-Oblique s}_6-{/Helvetica-Oblique g}_5+{/Helvetica-Oblique g}_6"  w lines lt 0,\
-  "../../secres/ae/d2_cntr.dat"          u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "nu6"         w lines,\
-  "../../secres/ae/z2_cntr.dat"          u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "z2"          w lines,\
-  "../../secres/ae/z3_cntr.dat"          u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "z3"          w lines,\
-  "../../secres/ae/d61_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g-3g6+2g5"   w lines,\
-  "../../secres/ae/g_s_g5_s6_cntr.dat"   u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g+s-g5-s6"   w lines,\
-  "../../secres/ae/2g_g5_g6_cntr.dat"    u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "2g-g5-g6"    w lines,\
-  "../../secres/ae/2g_s_2g5_s7_cntr.dat" u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "2g+s-2g5-s7" w lines, \
+  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 90.0 50.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 2.5,\
   sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 0.0 0.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 90.0 0.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 2.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 180.0 0.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 0.0 30.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 90.0 30.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 2.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 180.0 30.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 0.0 60.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 90.0 60.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 2.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 180.0 60.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 0.0 90.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 90.0 90.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 2.5,\
-  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 180.0 90.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5
+  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 90.0 0.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5,\
+  sprintf("<./v_gauss/genvel_ellip 300 350 -1 | ./v_gauss/v_gauss 2.6436660 %.8f 180.0 0.0 | awk '(FNR>1)'", e_) u (a+$1):(e_+$2) not w l lt 2 lc 9 lw 0.5
 
 pa -1
 
@@ -111,3 +93,13 @@ q
    "family.label" u 36:38:34 w labels center,\
    "../families.syn" u 36:38:34 w labels center
 
+  "../../secres/ae/d10_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g+s-g6-s6"   w lines,\
+  "../../secres/ae/d13_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g-2g6+g5"    w lines,\
+  "../../secres/ae/d46_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "{/Helvetica-Oblique s}-{/Helvetica-Oblique s}_6-{/Helvetica-Oblique g}_5+{/Helvetica-Oblique g}_6"  w lines lt 0,\
+  "../../secres/ae/d2_cntr.dat"          u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "nu6"         w lines,\
+  "../../secres/ae/z2_cntr.dat"          u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "z2"          w lines,\
+  "../../secres/ae/z3_cntr.dat"          u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "z3"          w lines,\
+  "../../secres/ae/d61_cntr.dat"         u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g-3g6+2g5"   w lines,\
+  "../../secres/ae/g_s_g5_s6_cntr.dat"   u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "g+s-g5-s6"   w lines,\
+  "../../secres/ae/2g_g5_g6_cntr.dat"    u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "2g-g5-g6"    w lines,\
+  "../../secres/ae/2g_s_2g5_s7_cntr.dat" u ($1/ngrid*(amax-amin)+amin):(emax-$2/ngrid*(emax-emin)) title "2g+s-2g5-s7" w lines, \

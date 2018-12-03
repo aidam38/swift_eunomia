@@ -13,7 +13,7 @@ BEGIN{
 }
 END{
   NTP=i;
-  clone=10
+  clone=1
   print clone*NTP;
   print clone*NTP >YARKO;
   print clone*NTP"\n-1\n1" >SPIN;
@@ -24,7 +24,7 @@ END{
 
     for (j=1; j<=clone; j++) {
 
-      printf("%10.2f 2860.0 1500.0 0.0010  680.0 0.10 0.90\n", r[i]) >YARKO;
+      printf("%10.2f 3540.0 2000.0 0.0010  680.0 0.10 0.90\n", r[i]) >YARKO; # r, rho_bulk, rho_surf, K (vodivost), c (merna tepelna kapacita), Bondovo albedo, emisivita
 
       s1 = 2.*pi*rand();
       sins2 = 2.*rand()-1.;

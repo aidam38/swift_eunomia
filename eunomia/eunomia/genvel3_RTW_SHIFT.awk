@@ -50,8 +50,8 @@ END{
     print s[j];
   }
 
-  print n;
-#  print n-1;
+#  print n;
+  print n-1;
   split(s[N+2],R);
   split(s[N+3],V);
 
@@ -61,7 +61,7 @@ END{
   cross_product(n_W,n_R,n_T);
 
 # BEWARE!!! There was 2 instead of 1, because Julia was considered as massive body.
-  for (i=1; i<=n; i++) {
+  for (i=2; i<=n; i++) {
 #    print s[N+2];
     print " "  R[1] + R_shift*n_R[1] + T_shift*n_T[1] + W_shift*n_W[1],
                R[2] + R_shift*n_R[2] + T_shift*n_T[2] + W_shift*n_W[2],

@@ -1,8 +1,8 @@
 #!/bin/sh
 
-FILE=pallas-1
+FILE=eunomia
 
-./swiftsplit $FILE 100
+./swiftsplit $FILE 400
 tar -czf $FILE.tar.gz ${FILE}_[0-9]*
 rm -r ${FILE}_[0-9]*
 

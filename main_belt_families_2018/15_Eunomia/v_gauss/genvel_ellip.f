@@ -37,7 +37,7 @@ c check command-line arguments
 c       s1=TWOPI*ran1(idum)
 c        coss2=2.d0*ran1(idum)-1.d0
         s1=TWOPI/4.d0+TWOPI*(i-1)/(n-1)
-       coss2=0.d0
+        coss2=0.d0
         sins2=sqrt(1.d0-coss2**2)
         vx=vej*cos(s1)*sins2
         vy=vej*sin(s1)*sins2

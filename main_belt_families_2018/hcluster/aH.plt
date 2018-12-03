@@ -24,6 +24,7 @@ set samples 300
 load "COLOR_sloan.plt"
 
 f_(H) = 0.33 + (H-19.)/(6.-19.)*1.5
+   H(x,a_c,C)       not lt 10 lw 3
 g_(H) = 1.*f_(H)
 
 p \

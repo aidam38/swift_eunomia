@@ -27,7 +27,7 @@ def main():
     # constnants
 
     G = 6.67e-11  # SI
-    rho_PB = 2500.  # kg/m^3
+    rho_PB = 3540.  # kg/m^3
 
     # command-line arguments
 

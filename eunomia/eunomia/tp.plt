@@ -14,8 +14,8 @@ set view 0,0,1,1
 set ang deg
 
 sp 'tp.elmts'                u 1:2:(sin($3)) w p,\
-   '2_Pallas_family.list_450_WO_INTERLOPERS' u 36:37:38      w p,\
-   "<awk '($1==89)' 2_Pallas_family.list_450_WO_INTERLOPERS" u 36:37:38:1 not w labels
+   'EUNOMIA_family.list_WO_INTERLOPERS' u 36:37:38      w p,\
+   "<awk '($1==15)' EUNOMIA_family.list_WO_INTERLOPERS" u 36:37:38:1 not w labels
 pa -1
 
 set term png small

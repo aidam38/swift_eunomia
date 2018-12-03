@@ -1,8 +1,8 @@
-1380	! N
+6211	! N
 1.25d0	! alpha (slope)
 1	! vmin [m/s]
 600	! vmax [m/s]
-256.5	! R [km]
-2860	! rho [kg/m^3]
+249.04	! R [km]
+3540	! rho [kg/m^3]
 -1	! idum
 

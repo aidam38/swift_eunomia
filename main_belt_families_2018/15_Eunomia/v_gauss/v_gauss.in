@@ -1,6 +1,6 @@
 2.6436660 	! a [AU]
 0.281258	! e
-90		! f [deg]
-90		! omega + f [deg]
+30		! f [deg]
+60		! omega + f [deg]
 genvel_ellip.out
 
