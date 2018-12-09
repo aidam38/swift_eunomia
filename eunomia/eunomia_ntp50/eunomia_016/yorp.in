@@ -1,0 +1,63 @@
+50
+1.0d3			! dt_YORP [yr]; time step for the YORP integrator
+1.0d5			! dt_YORP_out [yr]; time step for the output (reorient.out)
+200			! number of Gaussian spheres in fg_functions/ directory
+7			! number of data points in each fg_functions/ file
+30.0			! dobliq [deg], corresponding step in obliquity
+2.5			! a_0 [AU] reference value of semimajor axis
+1.0d3			! R_0 [m] reference radius
+2500.d0			! rho_0 [kg/m^3] reference density
+2.9088821d-4		! omega_0 [rad/s] reference spin rate <=> P_0 = 6 hours
+0.33d0			! c_YORP efficiency parameter
+T                       ! change Gauss sphere randomly after reaching omega_crit
+../fg_functions_K1e-3/
+1	128
+2	44
+3	196
+4	141
+5	61
+6	169
+7	200
+8	64
+9	159
+10	75
+11	72
+12	194
+13	67
+14	127
+15	30
+16	37
+17	165
+18	140
+19	50
+20	17
+21	192
+22	92
+23	172
+24	17
+25	58
+26	100
+27	90
+28	187
+29	24
+30	105
+31	109
+32	73
+33	66
+34	98
+35	67
+36	182
+37	194
+38	7
+39	144
+40	94
+41	31
+42	170
+43	71
+44	186
+45	122
+46	173
+47	10
+48	78
+49	44
+50	162
