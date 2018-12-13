@@ -1,4 +1,3 @@
-rho_PB = 3540 kg/m^3
-D_PB = 234.391 km
-LF/PB = 0.965817 (Largest Fragment/Parent Body mass ratio)
-v_esc = 164.829 m/s =  0.164829  km/s
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4547848afe3d2b24f0b7440bf753de4c49f664a69fbb811d17062dbd80f87a4
+size 136

@@ -1,6 +1,3 @@
- 365250000.0 365249999.9989999 365.25
- 36525000.0 36525000.0
-F T F T T F 
- -1.0 1000.0 -1.0 -1.0 F
-bin.dat                                                                         
-append
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ebff7f15e2cd0efbcfaa2f106b1f4de3e46f64df9daa2510a5c7711e1d4cd52
+size 187

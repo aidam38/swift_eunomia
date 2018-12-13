@@ -5,7 +5,7 @@
 f77 = gfortran
 cc = gcc
 
-opt = -O3
+opt = -m32 -O3
 
 libswift = -lswift -L.
 

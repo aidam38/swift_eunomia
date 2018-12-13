@@ -1,11 +1,11 @@
 #!/bin/csh
 
 # USERS MUST CHANGE THESE !!!!!!
-set SWIFT_DIR=~/a/2_Pallas/pallas-1/swift/
+set SWIFT_DIR=~/soc/swift_eunomia/eunomia/swift
 #set FORTRAN=f77
 #set FORTRAN=omf77
-set FORTRAN=gfortran
-set FFLAGS='-c -O3'
+set FORTRAN=gfortran 
+set FFLAGS='-m32 -c -O3'
 
 # To Profile the code:
 #set FFLAGS='-G -c'

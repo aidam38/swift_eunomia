@@ -1,9 +1,3 @@
-V1    = 6670770.0 km^3
-D_complete = 6.0 km
-D_PB(>D_complete) = 233.556763397801 km
-V(>D) = 6729698.44599558 km^3
-D_PB = 234.242481727134 km
-D_LF = 231.689 km
-V_LF = 6512007.13286187 km^3
-LF/PB = 0.967652144463732 (Largest Fragment/Parent Body mass ratio)
-v_esc = 138.42925726895 m/s = 0.13842925726895 km/s
+version https://git-lfs.github.com/spec/v1
+oid sha256:d57c5cb554f390ae637f9e8245595fcef7daf5b25b282cfd280e72f4aba4796a
+size 307
